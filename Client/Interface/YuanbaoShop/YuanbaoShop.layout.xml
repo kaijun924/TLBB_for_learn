@@ -1,0 +1,1622 @@
+﻿<?xml version="1.0"?>
+<GUILayout>
+  <Window Type="TLBB_MainFrameNULL" Name="YuanbaoShop_Frame">
+    <Property Name="UnifiedSize" Value="{{0.000000,800.000000},{0.000000,490.000000}}"/>
+    <Property Name="UnifiedPosition" Value="{{0.500000,-400.000000},{0.500000,-245.000000}}"/>
+    <Event Name="Hidden" Function="YuanbaoShop_Close();" />
+    <Window Type="TLBB_MainFrame2" Name="YuanbaoShop_ShopFrame">
+      <Property Name="UnifiedSize" Value="{{0.000000,634.000000},{1.000000,0.000000}}"/>
+      <Event Name="Hidden" Function="YuanbaoShop_Close();"/>
+      <Window Type="TLBB_DragTitle" Name="YuanbaoShop_DragTitle">
+        <Property Name="AbsolutePosition" Value="x:40.000000 y:4.000000" />
+        <Property Name="UnifiedSize" Value="{{1.000000,-80.000000},{0.000000,20.000000}" />
+        <Property Name="DragTarget" Value="YuanbaoShop_Frame"/>
+        <Window Type="TLBB_SimpleText" Name="YuanbaoShop_Text">
+          <Property Name="RelativePosition" Value="x:0.000000 y:0.000000"/>
+          <Property Name="RelativeSize" Value="w:1.000000 h:1.000000"/>
+          <Property Name="Font" Value="YouYuan11.25"/>
+          <Property Name="HorzFormatting" Value="HorzCentred"/>
+          <Property Name="RiseOnClick" Value="False"/>
+          <Property Name="Text" Value="#{YBSD_081225_073}"/>
+          <Property Name="VertFormatting" Value="VertCentred"/>
+        </Window>
+      </Window>
+      <Window Type="TLBB_ButtonHelp" Name="YuanbaoShop_Help">
+        <Property Name="UnifiedPosition" Value="{{0.000000,25.000000},{0.000000,7.000000}" />
+        <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000"/>
+        <Event Name="Clicked" Function="Helper:GotoHelper(&quot;*YuanbaoShop&quot;);"/>
+      </Window>
+      <Window Type="TLBB_ButtonClose" Name="YuanbaoShop_Close">
+        <Property Name="UnifiedPosition" Value="{{1.000000,-39.000000},{0.000000,7.000000}" />
+        <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000"/>
+        <Event Name="Clicked" Function="YuanbaoShop_Close();"/>
+      </Window>
+      <Window Type="DefaultWindow" Name="YuanbaoShop_Background_Frame1">
+        <Property Name="UnifiedSize" Value="{{1.000000,-10.000000},{1.000000,-33.000000}}"/>
+        <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,29.000000}}"/>
+        <Window Type="DefaultWindow" Name="YuanbaoShop_CheckBox_Frame">
+          <Property Name="UnifiedPosition" Value="{{0.000000,3.000000},{0.000000,1.000000}" />
+          <Property Name="UnifiedSize" Value="{{1.000000,-6.000000},{0.000000,24.000000}" />
+          <Window Type="TLBB_ButtonFenYe2" Name="YuanbaoShop_Yuanbao">
+            <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+            <Property Name="AbsoluteSize" Value="w:90.000000 h:25.000000" />
+            <Property Name="Text" Value="#{BDYB_090714_16}" />
+            <Property Name="CheckMode" Value="1" />
+            <Property Name="Selected" Value="True" />
+            <Event Name="MouseLButtonDown" Function="YuanbaoShop_ChangeTabIndex(0);" />
+          </Window>
+          <Window Type="TLBB_ButtonFenYe2" Name="YuanbaoShop_VIP">
+            <Property Name="AbsolutePosition" Value="x:95.000000 y:0.000000" />
+            <Property Name="AbsoluteSize" Value="w:90.000000 h:25.000000" />
+            <Property Name="Text" Value="红利商店" />
+            <Property Name="CheckMode" Value="1" />
+            <Property Name="Selected" Value="False" />
+            <Property Name="Tooltip" Value ="#{BDYB_XML_090817_2}"/>
+            <Event Name="MouseLButtonDown" Function="YuanbaoShop_ChangeTabIndex(1);" />
+          </Window>  -->
+		  <!-- 下面是扩展 -->
+		  
+<!-- 	     <Window Type="TLBB_ButtonFenYe2" Name="YuanbaoShop_VIP">
+            <Property Name="AbsolutePosition" Value="x:95.000000 y:0.000000" />
+            <Property Name="AbsoluteSize" Value="w:90.000000 h:25.000000" />
+            <Property Name="Text" Value="至尊商店" />
+            <Property Name="CheckMode" Value="1" />
+            <Property Name="Selected" Value="False" />
+            <Property Name="Tooltip" Value ="至尊商店是天龙传奇VIP专属的通宝商店，购买时需花费通宝且购买后道具绑定,并且无法进行购买赠送"/>
+            <Event Name="MouseLButtonDown" Function="YuanbaoShop_ChangeTabIndex(4);" />
+          </Window>  --> 
+	  
+		  	  
+		  
+	<!--
+          <Window Type="TLBB_ButtonFenYe2" Name="YuanbaoShop_XuanShop">
+            <Property Name="AbsolutePosition" Value="x:210.000000 y:0.000000" />
+            <Property Name="AbsoluteSize" Value="w:90.000000 h:25.000000" />
+            <Property Name="Text" Value="#{IMXZ_20100813_07}" />
+            <Property Name="Tooltip" Value="#{IMXZ_20100813_08}" />
+            <Property Name="CheckMode" Value="1" />
+            <Property Name="Selected" Value="False" />
+            <Event Name="MouseLButtonDown" Function="YuanbaoShop_ChangeTabIndex(3);"/>
+          </Window>
+  
+          <Window Type="TLBB_ButtonFenYe2" Name="YuanbaoShop_Fanquan">
+            <Property Name="AbsolutePosition" Value="x:300.000000 y:0.000000" />
+            <Property Name="AbsoluteSize" Value="w:90.000000 h:25.000000" />
+            <Property Name="Text" Value="#{YBFQ_XML_3}" />
+            <Property Name="CheckMode" Value="1" />
+            <Property Name="Selected" Value="False" />
+            <Property Name="Tooltip" Value="#{FQ_101210_05}" />
+            <Event Name="MouseLButtonDown" Function="YuanbaoShop_ChangeTabIndex(2);" />
+          </Window>
+		  
+          <Window Type="TLBB_ButtonFenYe2" Name="YuanbaoShop_VIP">
+            <Property Name="AbsolutePosition" Value="x:390.000000 y:0.000000" />
+            <Property Name="AbsoluteSize" Value="w:90.000000 h:25.000000" />
+            <Property Name="Text" Value="#{FFSDGZ_120615_72}" />
+            <Property Name="CheckMode" Value="1" />
+            <Property Name="Selected" Value="False" />
+            <Property Name="Tooltip" Value="#{FFSDGZ_120615_123}"/>
+            <Event Name="MouseLButtonDown" Function="YuanbaoShop_ChangeTabIndex(4);" />
+          </Window>
+          <Window Type="TLBB_ButtonFenYe2" Name="YuanbaoShop_Lijin">
+            <Property Name="AbsolutePosition" Value="x:480.000000 y:0.000000" />
+            <Property Name="AbsoluteSize" Value="w:90.000000 h:25.000000" />
+            <Property Name="Text" Value="#{TBSD_130816_8}" />
+            <Property Name="CheckMode" Value="1" />
+            <Property Name="Selected" Value="False" />
+            <Property Name="Tooltip" Value="#{TBSD_130816_9}"/>
+            <Event Name="MouseLButtonDown" Function="YuanbaoShop_ChangeTabIndex(5);" />
+          </Window>
+		  	-->
+
+
+        </Window>
+        <Window Type="DefaultWindow" Name="YuanbaoShop_fbk_Frame">
+          <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,24.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{1.0000,-1.000000},{0.000000,83.000000}}" />
+          <Window Type="TLBB_Frame_Lace2" Name="YuanbaoShop_fbk">
+            <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,2.000000}}"/>
+            <Property Name="RiseOnClick" Value="False"/>
+          </Window>
+		    
+			<!-- 元宝行 -->
+		  
+          <Window Type="TLBB_SimpleText" Name="YuanbaoShop_Bk1">
+            <Property Name="UnifiedPosition" Value="{{0.020000,-12.0},{0.000000,8.000000}}"/>
+            <Property Name="UnifiedSize" Value="{{0.84000,-12.000000},{0.000000,47.000000}}" />
+            <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button1">
+              <Property Name="UnifiedPosition" Value="{{0.050000,0.000000},{0.040000,0.000000}}" />
+              <Property Name="UnifiedSize" Value="{{0.000000,80.000000},{0.000000,21.000000}}"/>
+              <Property Name="CheckMode" Value="1"/>
+              <Property Name="Text" Value="#{YBSD_081225_003}"/>
+              <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateList(1);"/>
+              <Property Name="Tooltip" Value="#{YBSD_081225_083}" />
+            </Window>
+            <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button2">
+              <Property Name="UnifiedPosition" Value="{{0.30000,0.000000},{0.040000,0.000000}}" />
+              <Property Name="UnifiedSize" Value="{{0.000000,80.000000},{0.000000,21.000000}}"/>
+              <Property Name="CheckMode" Value="1"/>
+              <Property Name="Text" Value="#{YBSD_081225_004}"/>
+              <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateList(2);"/>
+              <Property Name="Tooltip" Value="#{YBSD_081225_084}" />
+            </Window>
+            <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button3">
+              <Property Name="UnifiedPosition" Value="{{0.55000,0.000000},{0.040000,0.000000}}" />
+              <Property Name="UnifiedSize" Value="{{0.000000,80.000000},{0.000000,21.000000}}"/>
+              <Property Name="CheckMode" Value="1"/>
+              <Property Name="Text" Value="#{YBSD_081225_005}"/>
+              <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateList(3);"/>
+              <Property Name="Tooltip" Value="#{YBSD_081225_085}" />
+            </Window>
+            <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button4">
+              <Property Name="UnifiedPosition" Value="{{0.800000,0.000000},{0.040000,0.000000}}" />
+              <Property Name="UnifiedSize" Value="{{0.000000,80.000000},{0.000000,21.000000}}"/>
+              <Property Name="CheckMode" Value="1"/>
+              <Property Name="Text" Value="#{YBSD_081225_006}"/>
+              <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateList(4);"/>
+              <Property Name="Tooltip" Value="#{YBSD_081225_086}" />
+            </Window>
+            <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button5">
+              <Property Name="UnifiedPosition" Value="{{0.050000,0.000000},{0.520000,0.000000}}" />
+              <Property Name="UnifiedSize" Value="{{0.000000,80.000000},{0.000000,21.000000}}"/>
+              <Property Name="CheckMode" Value="1"/>
+              <Property Name="Text" Value="#{YBSD_081225_007}"/>
+              <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateList(5);"/>
+              <Property Name="Tooltip" Value="#{YBSD_081225_087}" />
+            </Window>
+            <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button6">
+              <Property Name="UnifiedPosition" Value="{{0.30000,0.000000},{0.520000,0.000000}}" />
+              <Property Name="UnifiedSize" Value="{{0.000000,80.000000},{0.000000,21.000000}}"/>
+              <Property Name="CheckMode" Value="1"/>
+              <Property Name="Text" Value="坐骑栏目"/>
+              <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateList(6);"/>
+              <Property Name="Tooltip" Value="#{YBSD_081225_088}" />
+            </Window>
+            <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button7">
+              <Property Name="UnifiedPosition" Value="{{0.550000,0.000000},{0.520000,0.000000}}" />
+              <Property Name="UnifiedSize" Value="{{0.000000,80.000000},{0.000000,21.000000}}"/>
+              <Property Name="CheckMode" Value="1"/>
+              <Property Name="Text" Value="#{YBSD_081225_009}"/>
+              <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateList(7);"/>
+              <Property Name="Tooltip" Value="#{YBSD_081225_089}" />
+            </Window>
+            <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button8">
+              <Property Name="UnifiedPosition" Value="{{0.800000,0.000000},{0.520000,0.000000}}" />
+              <Property Name="UnifiedSize" Value="{{0.000000,80.000000},{0.000000,21.000000}}"/>
+              <Property Name="CheckMode" Value="1"/>
+              <Property Name="Text" Value="#{YBSD_081225_010}"/>
+              <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateList(8);"/>
+              <Property Name="Tooltip" Value="#{YBSD_081225_090}" />
+            </Window>
+          </Window>
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  <!-- 绑定行 -->
+		  
+		  
+          <Window Type="TLBB_SimpleText" Name="YuanbaoShop_Bk1_Bind">
+            <Property Name="UnifiedPosition" Value="{{0.020000,-12},{0.000000,8.000000}}"/>
+            <Property Name="UnifiedSize" Value="{{0.84000,-12.000000},{0.000000,47.000000}}" />
+            <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button1_Bind">
+              <Property Name="UnifiedPosition" Value="{{0.050000,0.000000},{0.040000,0.000000}}" />
+              <Property Name="UnifiedSize" Value="{{0.000000,80.000000},{0.000000,21.000000}}"/>
+              <Property Name="CheckMode" Value="1"/>
+              <Property Name="Text" Value="#{YBSD_081225_003}"/>
+              <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateList_Bind(1);"/>
+              <Property Name="Tooltip" Value="#{BDYB_XML_090817_2}" />
+            </Window>
+            <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button2_Bind">
+              <Property Name="UnifiedPosition" Value="{{0.30000,0.000000},{0.040000,0.000000}}" />
+              <Property Name="UnifiedSize" Value="{{0.000000,80.000000},{0.000000,21.000000}}"/>
+              <Property Name="CheckMode" Value="1"/>
+              <Property Name="Text" Value="#{YBSD_081225_004}"/>
+              <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateList_Bind(2);"/>
+              <Property Name="Tooltip" Value="#{BDYB_XML_090817_3}" />
+            </Window>
+            <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button3_Bind">
+              <Property Name="UnifiedPosition" Value="{{0.55000,0.000000},{0.040000,0.000000}}" />
+              <Property Name="UnifiedSize" Value="{{0.000000,80.000000},{0.000000,21.000000}}"/>
+              <Property Name="CheckMode" Value="1"/>
+              <Property Name="Text" Value="#{YBSD_081225_005}"/>
+              <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateList_Bind(3);"/>
+              <Property Name="Tooltip" Value="#{BDYB_XML_090817_4}" />
+            </Window>
+            <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button4_Bind">
+              <Property Name="UnifiedPosition" Value="{{0.800000,0.000000},{0.040000,0.000000}}" />
+              <Property Name="UnifiedSize" Value="{{0.000000,80.000000},{0.000000,21.000000}}"/>
+              <Property Name="CheckMode" Value="1"/>
+              <Property Name="Text" Value="#{YBSD_081225_006}"/>
+              <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateList_Bind(4);"/>
+              <Property Name="Tooltip" Value="#{BDYB_XML_090817_5}" />
+            </Window>
+            <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button5_Bind">
+              <Property Name="UnifiedPosition" Value="{{0.050000,0.000000},{0.520000,0.000000}}" />
+              <Property Name="UnifiedSize" Value="{{0.000000,80.000000},{0.000000,21.000000}}"/>
+              <Property Name="CheckMode" Value="1"/>
+              <Property Name="Text" Value="#{YBSD_081225_007}"/>
+              <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateList_Bind(5);"/>
+              <Property Name="Visible" Value="False" />
+              <Property Name="Tooltip" Value="#{YBSD_081225_087}" />
+            </Window>
+            <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button6_Bind">
+              <Property Name="UnifiedPosition" Value="{{0.30000,0.000000},{0.520000,0.000000}}" />
+              <Property Name="UnifiedSize" Value="{{0.000000,80.000000},{0.000000,21.000000}}"/>
+              <Property Name="CheckMode" Value="1"/>
+              <Property Name="Text" Value="#{YBSD_081225_008}"/>
+              <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateList_Bind(6);"/>
+              <Property Name="Visible" Value="False" />
+              <Property Name="Tooltip" Value="#{YBSD_081225_088}" />
+            </Window>
+            <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button7_Bind">
+              <Property Name="UnifiedPosition" Value="{{0.550000,0.000000},{0.520000,0.000000}}" />
+              <Property Name="UnifiedSize" Value="{{0.000000,80.000000},{0.000000,21.000000}}"/>
+              <Property Name="CheckMode" Value="1"/>
+              <Property Name="Text" Value="#{YBSD_081225_009}"/>
+              <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateList_Bind(7);"/>
+              <Property Name="Visible" Value="False" />
+              <Property Name="Tooltip" Value="#{YBSD_081225_089}" />
+            </Window>
+            <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button8_Bind">
+              <Property Name="UnifiedPosition" Value="{{0.800000,0.000000},{0.520000,0.000000}}" />
+              <Property Name="UnifiedSize" Value="{{0.000000,80.000000},{0.000000,21.000000}}"/>
+              <Property Name="CheckMode" Value="1"/>
+              <Property Name="Text" Value="#{YBSD_081225_010}"/>
+              <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateList_Bind(8);"/>
+              <Property Name="Visible" Value="False" />
+              <Property Name="Tooltip" Value="#{YBSD_081225_090}" />
+            </Window>
+          </Window>
+		  
+		  
+          <Window Type="TLBB_SimpleText" Name="YuanbaoShop_Bk1_Fanquan">
+            <Property Name="UnifiedSize" Value="{{0.840000,-24.000000},{0.000000,52.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.020000,-1.000000},{0.000000,4.000000}}"/>
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned"/>
+          </Window>
+		  
+		  
+          <Window Type="TLBB_SimpleText" Name="YuanbaoShop_Bk1_VIP">
+            <Property Name="UnifiedSize" Value="{{0.840000,85.880005},{0.000000,60.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.020000,-12.000000},{0.000000,1.000000}}"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_Bk1_VIP_test1">
+              <Property Name="UnifiedSize" Value="{{0.000000,117.000000},{0.000000,13.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,7.000000}}"/>
+            </Window>
+            <Window Type="TLBB_Frame_LaceSnsGame" Name="YuanbaoShop_Bk1_VIPdis">
+              <Property Name="UnifiedSize" Value="{{0.000000,212.000000},{0.000000,16.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,122.000000},{0.000000,5.000000}}"/>
+              <Property Name="RiseOnClick" Value="False"/>
+              <Window Type="TLBB_ProgressPropertyPure" Name="YuanbaoShop_Bk1_VIPexp">
+                <Property Name="UnifiedSize" Value="{{0.000000,201.000000},{0.000000,9.000000}}"/>
+                <Property Name="UnifiedPosition" Value="{{0.000000,6.000000},{0.000000,3.000000}}"/>
+                <Property Name="AlwaysOnTop" Value="True"/>
+              </Window>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_Bk1_VIP_test2">
+              <Property Name="UnifiedSize" Value="{{1.000000,-5.000000},{0.000000,28.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,26.000000}}"/>
+              <Property Name="HorzFormatting" Value="WordWrapLeftAligned"/>
+            </Window>
+          </Window>
+		  
+          <Window Type="TLBB_SimpleText" Name="YuanbaoShop_Bk3">
+            <Property Name="UnifiedSize" Value="{{0.177066,-0.000153},{0.000000,53.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.822934,0.000153},{0.000000,4.000000}}"/>
+            <Property Name="AlwaysOnTop" Value="True"/>
+            <Window Type="TLBB_ButtonCheck" Name="YuanbaoShop_querengoumai">
+              <Property Name="UnifiedSize" Value="{{0.000000,12.000000},{0.000000,13.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,6.000000}}"/>
+              <Property Name="Tooltip" Value="#{YBSD_081225_053}"/>
+              <Property Name="AlwaysOnTop" Value="True"/>
+              <Event Name="MouseLButtonDown" Function="YuanbaoShop_querengoumai_Clicked();"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_querengoumai_Text">
+              <Property Name="UnifiedSize" Value="{{0.819000,0.000000},{0.000000,18.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-87.000000},{0.000000,4.000000}}"/>
+              <Property Name="Text" Value="#{YBSD_081225_074}"/>
+              <Property Name="AlwaysOnTop" Value="True"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_SimpleText" Name="YuanbaoShop_Bk4">
+            <Property Name="UnifiedSize" Value="{{0.177066,0.000000},{0.000000,47.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.822934,0.000153},{0.000000,4.000000}}"/>
+            <Property Name="AlwaysOnTop" Value="True"/>
+            <Window Type="TLBB_ButtonCheck" Name="YuanbaoShop_querengoumaiBind">
+              <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,6.000000}}" />
+              <Property Name="AbsoluteSize" Value="w:12.000000 h:13.000000"/>
+              <Property Name="CheckMode" Value="0"/>
+              <Property Name="Tooltip" Value="#{YBSD_081225_053}"/>
+              <Event Name="MouseLButtonDown" Function="YuanbaoShop_querengoumai_Clicked();"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_querengoumaiBind_Text">
+              <Property Name="UnifiedPosition" Value="{{1.000000,-87.000000},{0.000000,4.000000}}"/>
+              <Property Name="UnifiedSize" Value="{{0.819000,0.000000},{0.000000,18.000000}}" />
+              <Property Name="HorzFormatting" Value="LeftAligned"/>
+              <Property Name="Text" Value="#{YBSD_081225_074}"/>
+            </Window>
+<!--			
+            <Window Type="TLBB_ButtonCheck" Name="YuanbaoShop_querenzhifuBind">
+              <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,26.000000}}" />
+              <Property Name="AbsoluteSize" Value="w:12.000000 h:13.000000"/>
+              <Property Name="CheckMode" Value="0"/>
+              <Property Name="Tooltip" Value="#{BDYB_XML_9}"/>
+              <Event Name="MouseLButtonDown" Function="YuanbaoShop_querenzhifu_Clicked();"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_querenzhifuBind_Text">
+              <Property Name="UnifiedPosition" Value="{{1.000000,-87.000000},{0.000000,24.000000}}"/>
+              <Property Name="UnifiedSize" Value="{{0.819000,0.000000},{0.000000,18.000000}}" />
+              <Property Name="HorzFormatting" Value="LeftAligned"/>
+              <Property Name="Text" Value="#{BDYB_XML_8}"/>
+            </Window>
+-->			
+          </Window>
+          <Window Type="TLBB_ScrollInfoFixedFrame" Name="YuanbaoShop_ScrollInfo">
+            <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,57.000000}}"/>
+            <Property Name="UnifiedSize" Value="{{1.000000,1.000000},{0.000000,25.000000}}"/>
+            <Property Name="MouseHollow" Value="True"/>
+            <Property Name="MouseMoveHollow" Value="True"/>
+            <Window Type="TLBB_ScrollInfoFixed" Name="YuanbaoShop_ScrollInfo_Frame">
+              <Property Name="UnifiedPosition" Value="{{0.000000,26.000000},{0.000000,6.000000}}"/>
+              <Property Name="UnifiedSize" Value="{{1.000000,-52.000000},{1.000000,-10.000000}}"/>
+              <Property Name="CoolDown" Value="1.5"/>
+              <Property Name="MouseHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="MoveSpeed" Value="32"/>
+              <Property Name="ScrollTime" Value="0"/>
+            </Window>
+          </Window>
+        </Window>
+		
+		<!-- 元宝列 -->
+        <Window Type="TLBB_Frame_Lace2" Name="YuanbaoShop_Bk2">
+          <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,107.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.000000,85.000000},{0.000000,225.000000}}"/>
+          <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button01">
+            <Property Name="UnifiedPosition" Value="{{0.50000,-37.000000},{0.040000,0.000000}}"/>
+            <Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}}"/>
+            <Property Name="CheckMode" Value="1"/>
+            <Property Name="Text" Value=""/>
+            <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateShop(1);"/>
+          </Window>
+          <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button02">
+            <Property Name="UnifiedPosition" Value="{{0.50000,-37.000000},{0.160000,0.000000}}"/>
+            <Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}}"/>
+            <Property Name="CheckMode" Value="1"/>
+            <Property Name="Text" Value=""/>
+            <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateShop(2);"/>
+          </Window>
+          <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button03">
+            <Property Name="UnifiedPosition" Value="{{0.50000,-37.000000},{0.280000,0.000000}}"/>
+            <Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}}"/>
+            <Property Name="CheckMode" Value="1"/>
+            <Property Name="Text" Value=""/>
+            <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateShop(3);"/>
+          </Window>
+          <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button04">
+            <Property Name="UnifiedPosition" Value="{{0.50000,-37.000000},{0.400000,0.000000}}"/>
+            <Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}}"/>
+            <Property Name="CheckMode" Value="1"/>
+            <Property Name="Text" Value=""/>
+            <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateShop(4);"/>
+          </Window>
+          <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button05">
+            <Property Name="UnifiedPosition" Value="{{0.50000,-37.000000},{0.520000,0.000000}}"/>
+            <Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}}"/>
+            <Property Name="CheckMode" Value="1"/>
+            <Property Name="Text" Value=""/>
+            <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateShop(5);"/>
+          </Window>
+          <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button06">
+            <Property Name="UnifiedPosition" Value="{{0.50000,-37.000000},{0.640000,0.000000}}"/>
+            <Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}}"/>
+            <Property Name="CheckMode" Value="1"/>
+            <Property Name="Text" Value=""/>
+            <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateShop(6);"/>
+          </Window>
+          <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button07">
+            <Property Name="UnifiedPosition" Value="{{0.50000,-37.000000},{0.760000,0.000000}}"/>
+            <Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}}"/>
+            <Property Name="CheckMode" Value="1"/>
+            <Property Name="Text" Value=""/>
+            <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateShop(7);"/>
+          </Window>
+          <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button08">
+            <Property Name="UnifiedPosition" Value="{{0.50000,-37.000000},{0.880000,0.000000}}"/>
+            <Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}}"/>
+            <Property Name="CheckMode" Value="1"/>
+            <Property Name="Text" Value=""/>
+            <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateShop(8);"/>
+          </Window>
+        </Window>
+		
+		<!-- 绑定 Bind 列-->
+        <Window Type="TLBB_Frame_Lace2" Name="YuanbaoShop_Bk2_Bind">
+          <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,107.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.000000,85.000000},{0.000000,225.000000}}"/>
+          <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button01_Bind">
+            <Property Name="UnifiedPosition" Value="{{0.50000,-37.000000},{0.040000,0.000000}}"/>
+            <Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}}"/>
+            <Property Name="CheckMode" Value="1"/>
+            <Property Name="Text" Value=""/>
+            <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateShop_Bind(1);"/>
+          </Window>
+          <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button02_Bind">
+            <Property Name="UnifiedPosition" Value="{{0.50000,-37.000000},{0.160000,0.000000}}"/>
+            <Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}}"/>
+            <Property Name="CheckMode" Value="1"/>
+            <Property Name="Text" Value=""/>
+            <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateShop_Bind(2);"/>
+          </Window>
+          <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button03_Bind">
+            <Property Name="UnifiedPosition" Value="{{0.50000,-37.000000},{0.280000,0.000000}}"/>
+            <Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}}"/>
+            <Property Name="CheckMode" Value="1"/>
+            <Property Name="Text" Value=""/>
+            <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateShop_Bind(3);"/>
+          </Window>
+          <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button04_Bind">
+            <Property Name="UnifiedPosition" Value="{{0.50000,-37.000000},{0.400000,0.000000}}"/>
+            <Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}}"/>
+            <Property Name="CheckMode" Value="1"/>
+            <Property Name="Text" Value=""/>
+            <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateShop_Bind(4);"/>
+          </Window>
+          <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button05_Bind">
+            <Property Name="UnifiedPosition" Value="{{0.50000,-37.000000},{0.520000,0.000000}}"/>
+            <Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}}"/>
+            <Property Name="CheckMode" Value="1"/>
+            <Property Name="Text" Value=""/>
+            <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateShop_Bind(5);"/>
+          </Window>
+          <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button06_Bind">
+            <Property Name="UnifiedPosition" Value="{{0.50000,-37.000000},{0.640000,0.000000}}"/>
+            <Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}}"/>
+            <Property Name="CheckMode" Value="1"/>
+            <Property Name="Text" Value=""/>
+            <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateShop_Bind(6);"/>
+          </Window>
+          <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button07_Bind">
+            <Property Name="UnifiedPosition" Value="{{0.50000,-37.000000},{0.760000,0.000000}}"/>
+            <Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}}"/>
+            <Property Name="CheckMode" Value="1"/>
+            <Property Name="Text" Value=""/>
+            <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateShop_Bind(7);"/>
+          </Window>
+          <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button08_Bind">
+            <Property Name="UnifiedPosition" Value="{{0.50000,-37.000000},{0.880000,0.000000}}"/>
+            <Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}}"/>
+            <Property Name="CheckMode" Value="1"/>
+            <Property Name="Text" Value=""/>
+            <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateShop_Bind(8);"/>
+          </Window>
+        </Window>
+		
+		<!-- vip用列 -->
+		 <Window Type="TLBB_Frame_Lace2" Name="YuanbaoShop_Bk3_VIP">
+          <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,107.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.000000,85.000000},{0.000000,225.000000}}"/>
+          <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button01_VIP">
+            <Property Name="UnifiedPosition" Value="{{0.50000,-37.000000},{0.040000,0.000000}}"/>
+            <Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}}"/>
+            <Property Name="CheckMode" Value="1"/>
+            <Property Name="Text" Value=""/>
+            <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateShop_VIP(1);"/>
+          </Window>
+          <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button02_VIP">
+            <Property Name="UnifiedPosition" Value="{{0.50000,-37.000000},{0.160000,0.000000}}"/>
+            <Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}}"/>
+            <Property Name="CheckMode" Value="1"/>
+            <Property Name="Text" Value=""/>
+            <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateShop_VIP(2);"/>
+          </Window>
+          <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button03_VIP">
+            <Property Name="UnifiedPosition" Value="{{0.50000,-37.000000},{0.280000,0.000000}}"/>
+            <Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}}"/>
+            <Property Name="CheckMode" Value="1"/>
+            <Property Name="Text" Value=""/>
+            <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateShop_VIP(3);"/>
+          </Window>
+          <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button04_VIP">
+            <Property Name="UnifiedPosition" Value="{{0.50000,-37.000000},{0.400000,0.000000}}"/>
+            <Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}}"/>
+            <Property Name="CheckMode" Value="1"/>
+            <Property Name="Text" Value=""/>
+            <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateShop_VIP(4);"/>
+          </Window>
+          <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button05_VIP">
+            <Property Name="UnifiedPosition" Value="{{0.50000,-37.000000},{0.520000,0.000000}}"/>
+            <Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}}"/>
+            <Property Name="CheckMode" Value="1"/>
+            <Property Name="Text" Value=""/>
+            <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateShop_VIP(5);"/>
+          </Window>
+          <Window Type="TLBB_ButtonCheckForRMBShop" Name="YuanbaoShop_Button06_VIP">
+            <Property Name="UnifiedPosition" Value="{{0.50000,-37.000000},{0.640000,0.000000}}"/>
+            <Property Name="UnifiedSize" Value="{{0.000000,75.000000},{0.000000,20.000000}}"/>
+            <Property Name="CheckMode" Value="1"/>
+            <Property Name="Text" Value=""/>
+            <Event Name="MouseLButtonDown" Function="YuanbaoShop_UpdateShop_VIP(6);"/>
+          </Window>
+		 </Window>
+		
+		
+		
+        <Window Type="DefaultWindow" Name="YuanbaoShop_Action_Set">
+          <Property Name="UnifiedPosition" Value="{{0.000000,88.000000},{0.000000,107.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.000000,540.000000},{0.000000,226.000000}}"/>
+          <Window Type="TLBB_ActionButton" Name="YuanbaoShop_Item1">
+            <Property Name="AbsolutePosition" Value="x:0.000000 y:1.000000"/>
+            <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000"/>
+            <Event Name="Clicked" Function="YuanbaoShop_GoodButton_Clicked(1);"/>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ItemIcon_1">
+              <Property Name="UnifiedSize" Value="{{0.000000,25.000000},{0.000000,25.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-25.000000},{0.000000,0.000000}}"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseHollow" Value="True"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_ActionButton" Name="YuanbaoShop_Item2">
+            <Property Name="AbsolutePosition" Value="x:0.000000 y:39.000000"/>
+            <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000"/>
+            <Event Name="Clicked" Function="YuanbaoShop_GoodButton_Clicked(2);"/>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ItemIcon_2">
+              <Property Name="UnifiedSize" Value="{{0.000000,25.000000},{0.000000,25.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-25.000000},{0.000000,0.000000}}"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseHollow" Value="True"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_ActionButton" Name="YuanbaoShop_Item3">
+            <Property Name="AbsolutePosition" Value="x:0.000000 y:77.000000"/>
+            <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000"/>
+            <Event Name="Clicked" Function="YuanbaoShop_GoodButton_Clicked(3);"/>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ItemIcon_3">
+              <Property Name="UnifiedSize" Value="{{0.000000,25.000000},{0.000000,25.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-25.000000},{0.000000,0.000000}}"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseHollow" Value="True"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_ActionButton" Name="YuanbaoShop_Item4">
+            <Property Name="AbsolutePosition" Value="x:0.000000 y:115.000000"/>
+            <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000"/>
+            <Event Name="Clicked" Function="YuanbaoShop_GoodButton_Clicked(4);"/>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ItemIcon_4">
+              <Property Name="UnifiedSize" Value="{{0.000000,25.000000},{0.000000,25.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-25.000000},{0.000000,0.000000}}"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseHollow" Value="True"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_ActionButton" Name="YuanbaoShop_Item5">
+            <Property Name="AbsolutePosition" Value="x:0.000000 y:153.000000"/>
+            <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000"/>
+            <Event Name="Clicked" Function="YuanbaoShop_GoodButton_Clicked(5);"/>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ItemIcon_5">
+              <Property Name="UnifiedSize" Value="{{0.000000,25.000000},{0.000000,25.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-25.000000},{0.000000,0.000000}}"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseHollow" Value="True"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_ActionButton" Name="YuanbaoShop_Item6">
+            <Property Name="AbsolutePosition" Value="x:0.000000 y:191.000000"/>
+            <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000"/>
+            <Event Name="Clicked" Function="YuanbaoShop_GoodButton_Clicked(6);"/>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ItemIcon_6">
+              <Property Name="UnifiedSize" Value="{{0.000000,25.000000},{0.000000,25.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-25.000000},{0.000000,0.000000}}"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseHollow" Value="True"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_ActionButton" Name="YuanbaoShop_Item7">
+            <Property Name="AbsolutePosition" Value="x:178.000000 y:1.000000"/>
+            <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000"/>
+            <Event Name="Clicked" Function="YuanbaoShop_GoodButton_Clicked(7);"/>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ItemIcon_7">
+              <Property Name="UnifiedSize" Value="{{0.000000,25.000000},{0.000000,25.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-25.000000},{0.000000,0.000000}}"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseHollow" Value="True"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_ActionButton" Name="YuanbaoShop_Item8">
+            <Property Name="AbsolutePosition" Value="x:178.000000 y:39.000000"/>
+            <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000"/>
+            <Event Name="Clicked" Function="YuanbaoShop_GoodButton_Clicked(8);"/>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ItemIcon_8">
+              <Property Name="UnifiedSize" Value="{{0.000000,25.000000},{0.000000,25.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-25.000000},{0.000000,0.000000}}"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseHollow" Value="True"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_ActionButton" Name="YuanbaoShop_Item9">
+            <Property Name="AbsolutePosition" Value="x:178.000000 y:77.000000"/>
+            <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000"/>
+            <Event Name="Clicked" Function="YuanbaoShop_GoodButton_Clicked(9);"/>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ItemIcon_9">
+              <Property Name="UnifiedSize" Value="{{0.000000,25.000000},{0.000000,25.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-25.000000},{0.000000,0.000000}}"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseHollow" Value="True"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_ActionButton" Name="YuanbaoShop_Item10">
+            <Property Name="AbsolutePosition" Value="x:178.000000 y:115.000000"/>
+            <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000"/>
+            <Event Name="Clicked" Function="YuanbaoShop_GoodButton_Clicked(10);"/>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ItemIcon_10">
+              <Property Name="UnifiedSize" Value="{{0.000000,25.000000},{0.000000,25.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-25.000000},{0.000000,0.000000}}"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseHollow" Value="True"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_ActionButton" Name="YuanbaoShop_Item11">
+            <Property Name="AbsolutePosition" Value="x:178.000000 y:153.000000"/>
+            <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000"/>
+            <Event Name="Clicked" Function="YuanbaoShop_GoodButton_Clicked(11);"/>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ItemIcon_11">
+              <Property Name="UnifiedSize" Value="{{0.000000,25.000000},{0.000000,25.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-25.000000},{0.000000,0.000000}}"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseHollow" Value="True"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_ActionButton" Name="YuanbaoShop_Item12">
+            <Property Name="AbsolutePosition" Value="x:178.000000 y:191.000000"/>
+            <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000"/>
+            <Event Name="Clicked" Function="YuanbaoShop_GoodButton_Clicked(12);"/>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ItemIcon_12">
+              <Property Name="UnifiedSize" Value="{{0.000000,25.000000},{0.000000,25.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-25.000000},{0.000000,0.000000}}"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseHollow" Value="True"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_ActionButton" Name="YuanbaoShop_Item13">
+            <Property Name="AbsolutePosition" Value="x:356.000000 y:1.000000"/>
+            <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000"/>
+            <Event Name="Clicked" Function="YuanbaoShop_GoodButton_Clicked(13);"/>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ItemIcon_13">
+              <Property Name="UnifiedSize" Value="{{0.000000,25.000000},{0.000000,25.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-25.000000},{0.000000,0.000000}}"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseHollow" Value="True"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_ActionButton" Name="YuanbaoShop_Item14">
+            <Property Name="AbsolutePosition" Value="x:356.000000 y:39.000000"/>
+            <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000"/>
+            <Event Name="Clicked" Function="YuanbaoShop_GoodButton_Clicked(14);"/>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ItemIcon_14">
+              <Property Name="UnifiedSize" Value="{{0.000000,25.000000},{0.000000,25.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-25.000000},{0.000000,0.000000}}"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseHollow" Value="True"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_ActionButton" Name="YuanbaoShop_Item15">
+            <Property Name="AbsolutePosition" Value="x:356.000000 y:77.000000"/>
+            <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000"/>
+            <Event Name="Clicked" Function="YuanbaoShop_GoodButton_Clicked(15);"/>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ItemIcon_15">
+              <Property Name="UnifiedSize" Value="{{0.000000,25.000000},{0.000000,25.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-25.000000},{0.000000,0.000000}}"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseHollow" Value="True"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_ActionButton" Name="YuanbaoShop_Item16">
+            <Property Name="AbsolutePosition" Value="x:356.000000 y:115.000000"/>
+            <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000"/>
+            <Event Name="Clicked" Function="YuanbaoShop_GoodButton_Clicked(16);"/>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ItemIcon_16">
+              <Property Name="UnifiedSize" Value="{{0.000000,25.000000},{0.000000,25.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-25.000000},{0.000000,0.000000}}"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseHollow" Value="True"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_ActionButton" Name="YuanbaoShop_Item17">
+            <Property Name="AbsolutePosition" Value="x:356.000000 y:153.000000"/>
+            <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000"/>
+            <Event Name="Clicked" Function="YuanbaoShop_GoodButton_Clicked(17);"/>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ItemIcon_17">
+              <Property Name="UnifiedSize" Value="{{0.000000,25.000000},{0.000000,25.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-25.000000},{0.000000,0.000000}}"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseHollow" Value="True"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_ActionButton" Name="YuanbaoShop_Item18">
+            <Property Name="AbsolutePosition" Value="x:356.000000 y:191.000000"/>
+            <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000"/>
+            <Event Name="Clicked" Function="YuanbaoShop_GoodButton_Clicked(18);"/>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ItemIcon_18">
+              <Property Name="UnifiedSize" Value="{{0.000000,25.000000},{0.000000,25.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-25.000000},{0.000000,0.000000}}"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseHollow" Value="True"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_ItemInfo1">
+            <Property Name="AbsolutePosition" Value="x:35.000000 y:0.000000"/>
+            <Property Name="AbsoluteSize" Value="w:142.000000 h:36.000000"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo1_Text">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000"/>
+              <Property Name="AbsoluteSize" Value="w:137.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo1_GB">
+              <Property Name="AbsolutePosition" Value="x:4.000000 y:18.000000"/>
+              <Property Name="AbsoluteSize" Value="w:135.000000 h:18.000000"/>
+              <Property Name="HorzFormatting" Value="RightAligned"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_ItemInfo2">
+            <Property Name="AbsolutePosition" Value="x:35.000000 y:38.000000"/>
+            <Property Name="AbsoluteSize" Value="w:142.000000 h:36.000000"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo2_Text">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000"/>
+              <Property Name="AbsoluteSize" Value="w:137.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo2_GB">
+              <Property Name="AbsolutePosition" Value="x:4.000000 y:18.000000"/>
+              <Property Name="AbsoluteSize" Value="w:135.000000 h:18.000000"/>
+              <Property Name="HorzFormatting" Value="RightAligned"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_ItemInfo3">
+            <Property Name="AbsolutePosition" Value="x:35.000000 y:76.000000"/>
+            <Property Name="AbsoluteSize" Value="w:142.000000 h:36.000000"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo3_Text">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000"/>
+              <Property Name="AbsoluteSize" Value="w:137.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo3_GB">
+              <Property Name="AbsolutePosition" Value="x:4.000000 y:18.000000"/>
+              <Property Name="AbsoluteSize" Value="w:135.000000 h:18.000000"/>
+              <Property Name="HorzFormatting" Value="RightAligned"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_ItemInfo4">
+            <Property Name="AbsolutePosition" Value="x:35.000000 y:114.000000"/>
+            <Property Name="AbsoluteSize" Value="w:142.000000 h:36.000000"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo4_Text">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000"/>
+              <Property Name="AbsoluteSize" Value="w:137.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo4_GB">
+              <Property Name="AbsolutePosition" Value="x:4.000000 y:18.000000"/>
+              <Property Name="AbsoluteSize" Value="w:135.000000 h:18.000000"/>
+              <Property Name="HorzFormatting" Value="RightAligned"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_ItemInfo5">
+            <Property Name="AbsolutePosition" Value="x:35.000000 y:152.000000"/>
+            <Property Name="AbsoluteSize" Value="w:142.000000 h:36.000000"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo5_Text">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000"/>
+              <Property Name="AbsoluteSize" Value="w:137.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo5_GB">
+              <Property Name="AbsolutePosition" Value="x:4.000000 y:18.000000"/>
+              <Property Name="AbsoluteSize" Value="w:135.000000 h:18.000000"/>
+              <Property Name="HorzFormatting" Value="RightAligned"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_ItemInfo6">
+            <Property Name="AbsolutePosition" Value="x:35.000000 y:190.000000"/>
+            <Property Name="AbsoluteSize" Value="w:142.000000 h:36.000000"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo6_Text">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000"/>
+              <Property Name="AbsoluteSize" Value="w:137.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo6_GB">
+              <Property Name="AbsolutePosition" Value="x:4.000000 y:18.000000"/>
+              <Property Name="AbsoluteSize" Value="w:135.000000 h:18.000000"/>
+              <Property Name="HorzFormatting" Value="RightAligned"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_ItemInfo7">
+            <Property Name="AbsolutePosition" Value="x:213.000000 y:0.000000"/>
+            <Property Name="AbsoluteSize" Value="w:142.000000 h:36.000000"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo7_Text">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000"/>
+              <Property Name="AbsoluteSize" Value="w:137.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo7_GB">
+              <Property Name="AbsolutePosition" Value="x:4.000000 y:18.000000"/>
+              <Property Name="AbsoluteSize" Value="w:135.000000 h:18.000000"/>
+              <Property Name="HorzFormatting" Value="RightAligned"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_ItemInfo8">
+            <Property Name="AbsolutePosition" Value="x:213.000000 y:38.000000"/>
+            <Property Name="AbsoluteSize" Value="w:142.000000 h:36.000000"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo8_Text">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000"/>
+              <Property Name="AbsoluteSize" Value="w:137.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo8_GB">
+              <Property Name="AbsolutePosition" Value="x:4.000000 y:18.000000"/>
+              <Property Name="AbsoluteSize" Value="w:135.000000 h:18.000000"/>
+              <Property Name="HorzFormatting" Value="RightAligned"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_ItemInfo9">
+            <Property Name="AbsolutePosition" Value="x:213.000000 y:76.000000"/>
+            <Property Name="AbsoluteSize" Value="w:142.000000 h:36.000000"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo9_Text">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000"/>
+              <Property Name="AbsoluteSize" Value="w:137.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo9_GB">
+              <Property Name="AbsolutePosition" Value="x:4.000000 y:18.000000"/>
+              <Property Name="AbsoluteSize" Value="w:135.000000 h:18.000000"/>
+              <Property Name="HorzFormatting" Value="RightAligned"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_ItemInfo10">
+            <Property Name="AbsolutePosition" Value="x:213.000000 y:114.000000"/>
+            <Property Name="AbsoluteSize" Value="w:142.000000 h:36.000000"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo10_Text">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000"/>
+              <Property Name="AbsoluteSize" Value="w:137.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo10_GB">
+              <Property Name="AbsolutePosition" Value="x:4.000000 y:18.000000"/>
+              <Property Name="AbsoluteSize" Value="w:135.000000 h:18.000000"/>
+              <Property Name="HorzFormatting" Value="RightAligned"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_ItemInfo11">
+            <Property Name="AbsolutePosition" Value="x:213.000000 y:152.000000"/>
+            <Property Name="AbsoluteSize" Value="w:142.000000 h:36.000000"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo11_Text">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000"/>
+              <Property Name="AbsoluteSize" Value="w:137.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo11_GB">
+              <Property Name="AbsolutePosition" Value="x:4.000000 y:18.000000"/>
+              <Property Name="AbsoluteSize" Value="w:135.000000 h:18.000000"/>
+              <Property Name="HorzFormatting" Value="RightAligned"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_ItemInfo12">
+            <Property Name="AbsolutePosition" Value="x:213.000000 y:190.000000"/>
+            <Property Name="AbsoluteSize" Value="w:142.000000 h:36.000000"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo12_Text">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000"/>
+              <Property Name="AbsoluteSize" Value="w:137.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo12_GB">
+              <Property Name="AbsolutePosition" Value="x:4.000000 y:18.000000"/>
+              <Property Name="AbsoluteSize" Value="w:135.000000 h:18.000000"/>
+              <Property Name="HorzFormatting" Value="RightAligned"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_ItemInfo13">
+            <Property Name="AbsolutePosition" Value="x:391.000000 y:0.000000"/>
+            <Property Name="AbsoluteSize" Value="w:142.000000 h:36.000000"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo13_Text">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000"/>
+              <Property Name="AbsoluteSize" Value="w:137.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo13_GB">
+              <Property Name="AbsolutePosition" Value="x:4.000000 y:18.000000"/>
+              <Property Name="AbsoluteSize" Value="w:135.000000 h:18.000000"/>
+              <Property Name="HorzFormatting" Value="RightAligned"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_ItemInfo14">
+            <Property Name="AbsolutePosition" Value="x:391.000000 y:38.000000"/>
+            <Property Name="AbsoluteSize" Value="w:142.000000 h:36.000000"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo14_Text">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000"/>
+              <Property Name="AbsoluteSize" Value="w:137.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo14_GB">
+              <Property Name="AbsolutePosition" Value="x:4.000000 y:18.000000"/>
+              <Property Name="AbsoluteSize" Value="w:135.000000 h:18.000000"/>
+              <Property Name="HorzFormatting" Value="RightAligned"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_ItemInfo15">
+            <Property Name="AbsolutePosition" Value="x:391.000000 y:76.000000"/>
+            <Property Name="AbsoluteSize" Value="w:142.000000 h:36.000000"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo15_Text">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000"/>
+              <Property Name="AbsoluteSize" Value="w:137.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo15_GB">
+              <Property Name="AbsolutePosition" Value="x:4.000000 y:18.000000"/>
+              <Property Name="AbsoluteSize" Value="w:135.000000 h:18.000000"/>
+              <Property Name="HorzFormatting" Value="RightAligned"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_ItemInfo16">
+            <Property Name="AbsolutePosition" Value="x:391.000000 y:114.000000"/>
+            <Property Name="AbsoluteSize" Value="w:142.000000 h:36.000000"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo16_Text">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000"/>
+              <Property Name="AbsoluteSize" Value="w:137.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo16_GB">
+              <Property Name="AbsolutePosition" Value="x:4.000000 y:18.000000"/>
+              <Property Name="AbsoluteSize" Value="w:135.000000 h:18.000000"/>
+              <Property Name="HorzFormatting" Value="RightAligned"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_ItemInfo17">
+            <Property Name="AbsolutePosition" Value="x:391.000000 y:152.000000"/>
+            <Property Name="AbsoluteSize" Value="w:142.000000 h:36.000000"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo17_Text">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000"/>
+              <Property Name="AbsoluteSize" Value="w:137.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo17_GB">
+              <Property Name="AbsolutePosition" Value="x:4.000000 y:18.000000"/>
+              <Property Name="AbsoluteSize" Value="w:135.000000 h:18.000000"/>
+              <Property Name="HorzFormatting" Value="RightAligned"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_ItemInfo18">
+            <Property Name="AbsolutePosition" Value="x:391.000000 y:190.000000"/>
+            <Property Name="AbsoluteSize" Value="w:142.000000 h:36.000000"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo18_Text">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000"/>
+              <Property Name="AbsoluteSize" Value="w:137.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ItemInfo18_GB">
+              <Property Name="AbsolutePosition" Value="x:4.000000 y:18.000000"/>
+              <Property Name="AbsoluteSize" Value="w:135.000000 h:18.000000"/>
+              <Property Name="HorzFormatting" Value="RightAligned"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+          </Window>
+        </Window>
+        <Window Type="DefaultWindow" Name="YuanbaoShop_Bk">
+          <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-123.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{1.000000,-1.000000},{0.000000,98.000000}}"/>
+          	<Window Type="TLBB_Frame_Lace2" Name="YuanbaoShop_BK_PS">
+						<Property Name="UnifiedSize" Value="{{0.000000,0.000000},{0.000000,0.000000}}"/>
+						<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}}"/>
+<!--					
+						<Window Type="TLBB_SimpleText" Name="YuanbaoShop_BK_PS_Text">
+							<Property Name="UnifiedSize" Value="{{1.000000,-8.000000},{1.000000,0.000000}}"/>
+							<Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{0.000000,0.000000}}"/>
+							<Property Name="HorzFormatting" Value="WordWrapLeftAligned"/>
+							<Property Name="Text" Value="#{FQSD_130809_01}"/>
+						</Window>
+-->							
+			</Window>
+          <Window Type="TLBB_Frame_Lace2" Name="YuanbaoShop_Lace2">
+            <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,31.000000}}"/>
+            <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,66.000000}}"/>
+          </Window>
+          <Window Type="TLBB_Frame_Lace2" Name="YuanbaoShop_Lace1">
+            <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,33.000000}}"/>
+          </Window>
+          <Window Type="TLBB_ButtonCommon2" Name="YuanbaoShop_Try">
+            <Property Name="UnifiedSize" Value="{{0.000000,40.000000},{0.000000,22.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,11.000000},{0.000000,6.000000}}"/>
+            <Property Name="Text" Value="#{FFSDGZ_120615_01}"/>
+            <Property Name="Tooltip" Value="#{FFSDGZ_120615_130}"/>
+			<Event Name="Clicked" Function="YuanbaoShop_OpenFitting();"/>
+          </Window>
+          <Window Type="TLBB_SimpleText" Name="YuanbaoShop_LastBuy_Text">
+            <Property Name="AbsolutePosition" Value="x:12.000000 y:36.000000"/>
+            <Property Name="AbsoluteSize" Value="w:95.000000 h:18.000000"/>
+            <Property Name="Text" Value="#{FFSDGZ_120615_88}"/>
+            <Property Name="TextColor" Value="FFFFF263"/>
+          </Window>
+          <Window Type="TLBB_ActionButton" Name="YuanbaoShop_LastItem1">
+            <Property Name="UnifiedSize" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,53.000000},{0.000000,56.000000}}"/>
+            <Event Name="Clicked" Function="YuanbaoShop_GoodRecent_Clicked(1);"/>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_LastItemInfo1">
+            <Property Name="UnifiedSize" Value="{{0.000000,69.000000},{0.000000,36.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,87.000000},{0.000000,55.000000}}"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_LastItemInfo1_Text">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000"/>
+              <Property Name="AbsoluteSize" Value="w:60.000000 h:18.000000"/>
+              <Property Name="Text" Value="#{FFSDGZ_120615_89}"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_LastItemInfo1_GB">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:18.000000"/>
+              <Property Name="AbsoluteSize" Value="w:60.000000 h:18.000000"/>
+              <Property Name="HorzFormatting" Value="RightAligned"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_ActionButton" Name="YuanbaoShop_LastItem2">
+            <Property Name="UnifiedSize" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,158.000000},{0.000000,56.000000}}"/>
+            <Event Name="Clicked" Function="YuanbaoShop_GoodRecent_Clicked(2);"/>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_LastItemInfo2">
+            <Property Name="UnifiedSize" Value="{{0.000000,69.000000},{0.000000,36.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,192.000000},{0.000000,55.000000}}"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_LastItemInfo2_Text">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000"/>
+              <Property Name="AbsoluteSize" Value="w:60.000000 h:18.000000"/>
+              <Property Name="Text" Value="#{FFSDGZ_120615_89}"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_LastItemInfo2_GB">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:18.000000"/>
+              <Property Name="AbsoluteSize" Value="w:60.000000 h:18.000000"/>
+              <Property Name="HorzFormatting" Value="RightAligned"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_ActionButton" Name="YuanbaoShop_LastItem3">
+            <Property Name="UnifiedSize" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,263.000000},{0.000000,56.000000}}"/>
+            <Event Name="Clicked" Function="YuanbaoShop_GoodRecent_Clicked(3);"/>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_LastItemInfo3">
+            <Property Name="UnifiedSize" Value="{{0.000000,69.000000},{0.000000,36.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,297.000000},{0.000000,55.000000}}"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_LastItemInfo3_Text">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000"/>
+              <Property Name="AbsoluteSize" Value="w:60.000000 h:18.000000"/>
+              <Property Name="Text" Value="#{FFSDGZ_120615_89}"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_LastItemInfo3_GB">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:18.000000"/>
+              <Property Name="AbsoluteSize" Value="w:60.000000 h:18.000000"/>
+              <Property Name="HorzFormatting" Value="RightAligned"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_ActionButton" Name="YuanbaoShop_LastItem4">
+            <Property Name="UnifiedSize" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,368.000000},{0.000000,56.000000}}"/>
+            <Event Name="Clicked" Function="YuanbaoShop_GoodRecent_Clicked(4);"/>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_LastItemInfo4">
+            <Property Name="UnifiedSize" Value="{{0.000000,69.000000},{0.000000,36.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,402.000000},{0.000000,55.000000}}"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_LastItemInfo4_Text">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000"/>
+              <Property Name="AbsoluteSize" Value="w:60.000000 h:18.000000"/>
+              <Property Name="Text" Value="#{FFSDGZ_120615_89}"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_LastItemInfo4_GB">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:18.000000"/>
+              <Property Name="AbsoluteSize" Value="w:60.000000 h:18.000000"/>
+              <Property Name="HorzFormatting" Value="RightAligned"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_ActionButton" Name="YuanbaoShop_LastItem5">
+            <Property Name="UnifiedSize" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,473.000000},{0.000000,56.000000}}"/>
+            <Event Name="Clicked" Function="YuanbaoShop_GoodRecent_Clicked(5);"/>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_LastItemInfo5">
+            <Property Name="UnifiedSize" Value="{{0.000000,69.000000},{0.000000,36.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,507.000000},{0.000000,55.000000}}"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_LastItemInfo5_Text">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000"/>
+              <Property Name="AbsoluteSize" Value="w:60.000000 h:18.000000"/>
+              <Property Name="Text" Value="#{FFSDGZ_120615_89}"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_LastItemInfo5_GB">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:18.000000"/>
+              <Property Name="AbsoluteSize" Value="w:60.000000 h:18.000000"/>
+              <Property Name="HorzFormatting" Value="RightAligned"/>
+            </Window>
+          </Window>
+        </Window>
+        <Window Type="DefaultWindow" Name="YuanbaoShop_Bk_New">
+          <Property Name="UnifiedPosition" Value="{{1.000000,-165.000000},{1.000000,-123.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.000000,164.000000},{0.000000,33.000000}}"/>
+          <Property Name="AlwaysOnTop" Value="True"/>
+          <Window Type="TLBB_ButtonCommon2" Name="YuanbaoShop_UpPage">
+            <Property Name="AbsolutePosition" Value="x:0.000000 y:6.000000"/>
+            <Property Name="UnifiedSize" Value="{{0.000000,50.000000},{0.000000,22.000000}}"/>
+            <Property Name="Text" Value="#{YBSD_081225_078}"/>
+            <Property Name="AlwaysOnTop" Value="True"/>
+            <Event Name="Clicked" Function="YuanbaoShop_PageUp(ZDPT_XML_10);"/>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_CurrentlyPage">
+            <Property Name="AbsolutePosition" Value="x:52.000000 y:6.000000"/>
+            <Property Name="UnifiedSize" Value="{{0.000000,59.000000},{0.000000,22.000000}}"/>
+            <Property Name="HorzFormatting" Value="HorzCentred"/>
+            <Property Name="RiseOnClick" Value="False"/>
+            <Property Name="Text" Value=""/>
+            <Property Name="AlwaysOnTop" Value="True"/>
+            <Property Name="TextColor" Value="FFFFF263"/>
+            <Property Name="VertFormatting" Value="VertCentred"/>
+          </Window>
+          <Window Type="TLBB_ButtonCommon2" Name="YuanbaoShop_DownPage">
+            <Property Name="AbsolutePosition" Value="x:113.000000 y:6.000000"/>
+            <Property Name="UnifiedSize" Value="{{0.000000,50.000000},{0.000000,22.000000}}"/>
+            <Property Name="Text" Value="#{YBSD_081225_079}"/>
+            <Property Name="AlwaysOnTop" Value="True"/>
+            <Event Name="Clicked" Function="YuanbaoShop_PageDown();"/>
+          </Window>
+        </Window>
+        <Window Type="TLBB_Frame_Lace3" Name="YuanbaoShop_Repair_SaleBack">
+          <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-25.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,25.000000}}"/>
+          <Window Type="TLBB_SimpleText" Name="YuanbaoShop_Text2">
+            <Property Name="AbsolutePosition" Value="x:12.000000 y:3.000000"/>
+            <Property Name="AbsoluteSize" Value="w:140.000000 h:17.000000"/>
+            <Property Name="HorzFormatting" Value="LeftAligned"/>
+            <Property Name="Text" Value=""/>
+            <Property Name="TextColor" Value="FFFFF263"/>
+            <Property Name="VertFormatting" Value="VertCentred"/>
+          </Window>
+          <Window Type="TLBB_SimpleText" Name="YuanbaoShop_Text2_Bind">
+            <Property Name="AbsolutePosition" Value="x:12.000000 y:3.000000"/>
+            <Property Name="AbsoluteSize" Value="w:250.000000 h:17.000000"/>
+            <Property Name="HorzFormatting" Value="LeftAligned"/>
+            <Property Name="Text" Value=""/>
+            <Property Name="TextColor" Value="FFFFF263"/>
+            <Property Name="VertFormatting" Value="VertCentred"/>
+          </Window>
+          <Window Type="TLBB_SimpleText" Name="YuanbaoShop_Text1">
+            <Property Name="AbsolutePosition" Value="x:174.000000 y:3.000000"/>
+            <Property Name="AbsoluteSize" Value="w:60.000000 h:17.000000"/>
+            <Property Name="HorzFormatting" Value="LeftAligned"/>
+            <Property Name="Text" Value="#{YBSD_081225_076}"/>
+            <Property Name="TextColor" Value="FFFFF263"/>
+            <Property Name="VertFormatting" Value="VertCentred"/>
+          </Window>
+          <Window Type="TLBB_ComboList" Name="YuanbaoShop_SearchMode">
+            <Property Name="AbsolutePosition" Value="x:235.000000 y:2.000000"/>
+            <Property Name="AbsoluteSize" Value="w:165.000000 h:20.000000"/>
+          </Window>
+          <Window Type="TLBB_ComboList" Name="YuanbaoShop_SearchMode_Bind">
+            <Property Name="AbsolutePosition" Value="x:235.000000 y:2.000000"/>
+            <Property Name="AbsoluteSize" Value="w:165.000000 h:20.000000"/>
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="YuanbaoShop_Begin">
+            <Property Name="AbsolutePosition" Value="x:411.000000 y:2.000000"/>
+            <Property Name="AbsoluteSize" Value="w:63.000000 h:20.000000"/>
+            <Property Name="Text" Value="#{YBSD_081225_077}"/>
+            <Event Name="Clicked" Function="YuanbaoShop_BeginSearch();"/>
+          </Window>
+          <Window Type="TLBB_ButtonCommon2" Name="YuanbaoShop_Duihuan">
+            <Property Name="UnifiedSize" Value="{{0.000000,90.000000},{0.000000,21.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{1.000000,-92.000000},{0.000000,2.000000}}"/>
+            <Property Name="Tooltip" Value="将充值点数兑换为元宝"/>
+            <Property Name="Text" Value="#G兑换元宝"/>
+            <Event Name="Clicked" Function="YuanbaoShop_DuiHuanClicked();"/>
+          </Window>
+        </Window>
+        <Window Type="TLBB_Frame_Lace2" Name="YuanbaoShop_Lijin_bK">
+          <Property Name="UnifiedSize" Value="{{1.000000,-1.000000},{0.000000,66.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{1.000000,-92.000000}}"/>
+        </Window>
+<!--	
+        <Window Type="TLBB_SimpleText" Name="YuanbaoShop_Lijin_Text1">
+          <Property Name="UnifiedSize" Value="{{1.000000,-10.000000},{0.000000,65.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,6.000000},{1.000000,-91.000000}}"/>
+          <Property Name="Text" Value="#{LJSD_120508_45}"/>
+          <Property Name="HorzFormatting" Value="WordWrapLeftAligned"/>
+        </Window>
+-->			
+        <Window Type="TLBB_SimpleText" Name="YuanbaoShop_Lijin_Text2">
+          <Property Name="UnifiedPosition" Value="{{0.000000,12.000000},{1.000000,-22.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.000000,200.000000},{0.000000,17.000000}}"/>
+          <Property Name="Tooltip" Value="#{LJSD_120508_07}"/>
+          <Property Name="TextColor" Value="FFFFF263"/>
+          <Property Name="Text" Value=""/>
+        </Window>
+      </Window>
+    </Window>
+    <Window Type="DefaultWindow" Name="YuanbaoShop_ExFrameClient">
+      <Property Name="UnifiedSize" Value="{{0.000000,167.000000},{1.000000,-69.000000}}"/>
+      <Property Name="UnifiedPosition" Value="{{1.000000,-167.000000},{0.000000,23.000000}}"/>
+      <Window Type="TLBB_MainFrame2" Name="YuanbaoShop_ExFrame">
+        <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,23.000000}}"/>
+        <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,-23.000000}}"/>
+        <Window Type="TLBB_ButtonNULL" Name="YuanbaoShop_Image">
+          <Property Name="UnifiedSize" Value="{{0.000000,150.000000},{0.000000,93.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,8.000000},{0.000000,30.000000}}"/>
+          <Property Name="NormalImage" Value="" />
+          <Property Name="HoverImage" Value="" />
+          <Property Name="DisabledImage" Value="" />
+          <Property Name="PushedImage" Value="" />
+          <Event Name="Clicked" Function="YuanbaoShop_ImageClicked();"/>
+        </Window>
+        <Window Type="DefaultWindow" Name="YuanbaoShop_ExButton">
+          <Property Name="UnifiedSize" Value="{{0.000000,77.000000},{0.000000,20.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{1.000000,-85.000000},{0.000000,105.000000}}"/>
+          <Property Name="AlwaysOnTop" Value="True"/>
+          <Window Type="TLBB_ButtonCheck" Name="YuanbaoShop_ExButton1">
+            <Property Name="UnifiedSize" Value="{{0.000000,12.000000},{0.000000,13.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,3.000000},{0.000000,3.000000}}"/>
+            <Property Name="AlwaysOnTop" Value="True"/>
+            <Property Name="CheckMode" Value="1"/>
+            <Event Name="Clicked" Function="YuanbaoShop_PlayCardChangePage(1);"/>
+          </Window>
+          <Window Type="TLBB_ButtonCheck" Name="YuanbaoShop_ExButton2">
+            <Property Name="UnifiedSize" Value="{{0.000000,12.000000},{0.000000,13.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,22.000000},{0.000000,3.000000}}"/>
+            <Property Name="AlwaysOnTop" Value="True"/>
+            <Property Name="CheckMode" Value="1"/>
+            <Event Name="Clicked" Function="YuanbaoShop_PlayCardChangePage(2);"/>
+          </Window>
+          <Window Type="TLBB_ButtonCheck" Name="YuanbaoShop_ExButton3">
+            <Property Name="UnifiedSize" Value="{{0.000000,12.000000},{0.000000,13.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,41.000000},{0.000000,3.000000}}"/>
+            <Property Name="AlwaysOnTop" Value="True"/>
+            <Property Name="CheckMode" Value="1"/>
+            <Event Name="Clicked" Function="YuanbaoShop_PlayCardChangePage(3);"/>
+          </Window>
+          <Window Type="TLBB_ButtonCheck" Name="YuanbaoShop_ExButton4">
+            <Property Name="UnifiedSize" Value="{{0.000000,12.000000},{0.000000,13.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,60.000000},{0.000000,3.000000}}"/>
+            <Property Name="AlwaysOnTop" Value="True"/>
+            <Property Name="CheckMode" Value="1"/>
+            <Event Name="Clicked" Function="YuanbaoShop_PlayCardChangePage(4);"/>
+          </Window>      
+        </Window>     
+        <Window Type="TLBB_Frame_Lace2" Name="YuanbaoShop_ExText">
+        <Property Name="UnifiedSize" Value="{{0.000000,152.000000},{0.000000,85.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,7.000000},{0.000000,124.000000}}"/>
+        <Window Type="TLBB_Frame_FangchenmiLace" Name="YuanbaoShop_ExText1Lace">
+          <Property Name="UnifiedSize" Value="{{1.000000,-1.000000},{0.000000,30.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,1.000000},{0.000000,2.000000}}"/>
+          <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ExText1">
+            <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,0.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}}"/>
+            <Property Name="Text" Value="#{FFSDGZ_120615_90}"/>
+            <Property Name="Font" Value="YouYuan9.75"/>
+            <Property Name="HorzFormatting" Value="HorzCentred"/>
+          </Window>
+        </Window>
+          <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ExText2">
+            <Property Name="UnifiedSize" Value="{{1.000000,-6.000000},{0.000000,45.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,3.000000},{0.000000,36.000000}}"/>
+            <Property Name="Text" Value="#{FFSDGZ_120615_29}"/>
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned"/>
+            <Property Name="RiseOnClick" Value="False"/>
+          </Window>
+        </Window>
+        <Window Type="DefaultWindow" Name="YuanbaoShop_ExAction_Set">
+          <Property Name="UnifiedSize" Value="{{0.000000,151.000000},{0.000000,225.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,8.000000},{1.000000,-232.000000}}"/>
+          <Window Type="TLBB_ActionButton" Name="YuanbaoShop_ExItem1">
+            <Property Name="AbsolutePosition" Value="x:0.000000 y:1.000000"/>
+            <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000"/>
+            <Event Name="Clicked" Function="YuanbaoShop_JiYuanGood_Clicked(1,0);"/>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ExItemIcon_1_Red">
+              <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,0.000000}}"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="Image" Value="set:Face_04 image:Remind_Bak"/>
+            </Window>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ExItemIcon_1">
+              <Property Name="UnifiedSize" Value="{{0.000000,25.000000},{0.000000,25.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-25.000000},{0.000000,0.000000}}"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseHollow" Value="True"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_ActionButton" Name="YuanbaoShop_ExItem2">
+            <Property Name="AbsolutePosition" Value="x:0.000000 y:39.000000"/>
+            <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000"/>
+            <Event Name="Clicked" Function="YuanbaoShop_JiYuanGood_Clicked(2,0);"/>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ExItemIcon_2_Red">
+              <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,0.000000}}"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="Image" Value="set:Face_04 image:Remind_Bak"/>
+            </Window>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ExItemIcon_2">
+              <Property Name="UnifiedSize" Value="{{0.000000,25.000000},{0.000000,25.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-25.000000},{0.000000,0.000000}}"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseHollow" Value="True"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_ActionButton" Name="YuanbaoShop_ExItem3">
+            <Property Name="AbsolutePosition" Value="x:0.000000 y:77.000000"/>
+            <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000"/>
+            <Event Name="Clicked" Function="YuanbaoShop_JiYuanGood_Clicked(3,0);"/>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ExItemIcon_3_Red">
+              <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,0.000000}}"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="Image" Value="set:Face_04 image:Remind_Bak"/>
+            </Window>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ExItemIcon_3">
+              <Property Name="UnifiedSize" Value="{{0.000000,25.000000},{0.000000,25.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-25.000000},{0.000000,0.000000}}"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseHollow" Value="True"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_ActionButton" Name="YuanbaoShop_ExItem4">
+            <Property Name="AbsolutePosition" Value="x:0.000000 y:115.000000"/>
+            <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000"/>
+            <Event Name="Clicked" Function="YuanbaoShop_JiYuanGood_Clicked(4,0);"/>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ExItemIcon_4_Red">
+              <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,0.000000}}"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="Image" Value="set:Face_04 image:Remind_Bak"/>
+            </Window>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ExItemIcon_4">
+              <Property Name="UnifiedSize" Value="{{0.000000,25.000000},{0.000000,25.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-25.000000},{0.000000,0.000000}}"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseHollow" Value="True"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_ActionButton" Name="YuanbaoShop_ExItem5">
+            <Property Name="AbsolutePosition" Value="x:0.000000 y:153.000000"/>
+            <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000"/>
+            <Event Name="Clicked" Function="YuanbaoShop_JiYuanGood_Clicked(5,0);"/>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ExItemIcon_5_Red">
+              <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,0.000000}}"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="Image" Value="set:Face_04 image:Remind_Bak"/>
+            </Window>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ExItemIcon_5">
+              <Property Name="UnifiedSize" Value="{{0.000000,25.000000},{0.000000,25.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-25.000000},{0.000000,0.000000}}"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseHollow" Value="True"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_ActionButton" Name="YuanbaoShop_ExItem6">
+            <Property Name="AbsolutePosition" Value="x:0.000000 y:191.000000"/>
+            <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000"/>
+            <Event Name="Clicked" Function="YuanbaoShop_JiYuanGood_Clicked(6,0);"/>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ExItemIcon_6_Red">
+              <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,0.000000}}"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="Image" Value="set:Face_04 image:Remind_Bak"/>
+            </Window>
+            <Window Type="TLBB_StaticImageNULL" Name="YuanbaoShop_ExItemIcon_6">
+              <Property Name="UnifiedSize" Value="{{0.000000,25.000000},{0.000000,25.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-25.000000},{0.000000,0.000000}}"/>
+              <Property Name="MouseRButtonHollow" Value="True"/>
+              <Property Name="MouseMoveHollow" Value="True"/>
+              <Property Name="MouseLButtonHollow" Value="True"/>
+              <Property Name="MouseHollow" Value="True"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_ExItemInfo1">
+            <Property Name="AbsolutePosition" Value="x:36.000000 y:0.000000"/>
+            <Property Name="AbsoluteSize" Value="w:116.000000 h:36.000000"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ExItemInfo1_Text">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000"/>
+              <Property Name="AbsoluteSize" Value="w:121.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ExItemInfo1_GB">
+              <Property Name="AbsolutePosition" Value="x:4.000000 y:18.000000"/>
+              <Property Name="AbsoluteSize" Value="w:70.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="YuanbaoShop_ExItemInfo1_Buy">
+              <Property Name="UnifiedSize" Value="{{0.000000,40.000000},{0.000000,20.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-42.000000},{0.000000,14.000000}}"/>
+              <Property Name="Text" Value="#{FFSDGZ_120615_03}"/>
+              <Event Name="Clicked" Function="YuanbaoShop_JiYuanGood_Clicked(1,1);"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_ExItemInfo2">
+            <Property Name="AbsolutePosition" Value="x:36.000000 y:38.000000"/>
+            <Property Name="AbsoluteSize" Value="w:116.000000 h:36.000000"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ExItemInfo2_Text">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000"/>
+              <Property Name="AbsoluteSize" Value="w:121.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ExItemInfo2_GB">
+              <Property Name="AbsolutePosition" Value="x:4.000000 y:18.000000"/>
+              <Property Name="AbsoluteSize" Value="w:70.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="YuanbaoShop_ExItemInfo2_Buy">
+              <Property Name="UnifiedSize" Value="{{0.000000,40.000000},{0.000000,20.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-42.000000},{0.000000,14.000000}}"/>
+              <Property Name="Text" Value="#{FFSDGZ_120615_03}"/>
+              <Event Name="Clicked" Function="YuanbaoShop_JiYuanGood_Clicked(2,1);"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_ExItemInfo3">
+            <Property Name="AbsolutePosition" Value="x:36.000000 y:76.000000"/>
+            <Property Name="AbsoluteSize" Value="w:116.000000 h:36.000000"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ExItemInfo3_Text">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000"/>
+              <Property Name="AbsoluteSize" Value="w:121.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ExItemInfo3_GB">
+              <Property Name="AbsolutePosition" Value="x:4.000000 y:18.000000"/>
+              <Property Name="AbsoluteSize" Value="w:70.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="YuanbaoShop_ExItemInfo3_Buy">
+              <Property Name="UnifiedSize" Value="{{0.000000,40.000000},{0.000000,20.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-42.000000},{0.000000,14.000000}}"/>
+              <Property Name="Text" Value="#{FFSDGZ_120615_03}"/>
+              <Event Name="Clicked" Function="YuanbaoShop_JiYuanGood_Clicked(3,1);"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_ExItemInfo4">
+            <Property Name="AbsolutePosition" Value="x:36.000000 y:114.000000"/>
+            <Property Name="AbsoluteSize" Value="w:116.000000 h:36.000000"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ExItemInfo4_Text">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000"/>
+              <Property Name="AbsoluteSize" Value="w:121.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ExItemInfo4_GB">
+              <Property Name="AbsolutePosition" Value="x:4.000000 y:18.000000"/>
+              <Property Name="AbsoluteSize" Value="w:70.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="YuanbaoShop_ExItemInfo4_Buy">
+              <Property Name="UnifiedSize" Value="{{0.000000,40.000000},{0.000000,20.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-42.000000},{0.000000,14.000000}}"/>
+              <Property Name="Text" Value="#{FFSDGZ_120615_03}"/>
+              <Event Name="Clicked" Function="YuanbaoShop_JiYuanGood_Clicked(4,1);"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_ExItemInfo5">
+            <Property Name="AbsolutePosition" Value="x:36.000000 y:152.000000"/>
+            <Property Name="AbsoluteSize" Value="w:116.000000 h:36.000000"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ExItemInfo5_Text">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000"/>
+              <Property Name="AbsoluteSize" Value="w:121.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ExItemInfo5_GB">
+              <Property Name="AbsolutePosition" Value="x:4.000000 y:18.000000"/>
+              <Property Name="AbsoluteSize" Value="w:70.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="YuanbaoShop_ExItemInfo5_Buy">
+              <Property Name="UnifiedSize" Value="{{0.000000,40.000000},{0.000000,20.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-42.000000},{0.000000,14.000000}}"/>
+              <Property Name="Text" Value="#{FFSDGZ_120615_03}"/>
+              <Event Name="Clicked" Function="YuanbaoShop_JiYuanGood_Clicked(5,1);"/>
+            </Window>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="YuanbaoShop_ExItemInfo6">
+            <Property Name="AbsolutePosition" Value="x:36.000000 y:190.000000"/>
+            <Property Name="AbsoluteSize" Value="w:116.000000 h:36.000000"/>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ExItemInfo6_Text">
+              <Property Name="AbsolutePosition" Value="x:5.000000 y:0.000000"/>
+              <Property Name="AbsoluteSize" Value="w:121.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="YuanbaoShop_ExItemInfo6_GB">
+              <Property Name="AbsolutePosition" Value="x:4.000000 y:18.000000"/>
+              <Property Name="AbsoluteSize" Value="w:70.000000 h:18.000000"/>
+              <Property Name="TextColor" Value="FFFFF263"/>
+            </Window>
+            <Window Type="TLBB_ButtonCommon" Name="YuanbaoShop_ExItemInfo6_Buy">
+              <Property Name="UnifiedSize" Value="{{0.000000,40.000000},{0.000000,20.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{1.000000,-42.000000},{0.000000,14.000000}}"/>
+              <Property Name="Text" Value="#{FFSDGZ_120615_03}"/>
+              <Event Name="Clicked" Function="YuanbaoShop_JiYuanGood_Clicked(6,1);"/>
+            </Window>
+          </Window>
+        </Window>
+      </Window>
+    </Window>
+    <Window Type="TLBB_ButtonNULL" Name="YuanbaoShop_ExPay" >
+      <Property Name="UnifiedPosition" Value="{{1.000000,-167.000000},{1.000000,-46.000000}}"/>
+      <Property Name="UnifiedSize" Value="{{0.0,100},{0,45}}" />
+      <Property Name="NormalImage" Value="set:Button13 image:PayBtn_Normal" />
+      <Property Name="HoverImage" Value="set:Button13 image:PayBtn_Hover" />
+      <Property Name="DisabledImage" Value="set:Button13 image:PayBtn_Disable" />
+      <Property Name="PushedImage" Value="set:Button13 image:PayBtn_Pushed" />
+      <Event Name="Clicked" Function="YuanbaoShop_web_Clicked();"/>
+    </Window>
+    <Window Type="TLBB_ButtonNULL" Name="YuanbaoShop_ExHelp" >
+      <Property Name="UnifiedPosition" Value="{{1.0,-67},{1.0,-46.000000}" />
+      <Property Name="UnifiedSize" Value="{{0.0,67},{0,45}}" />
+      <Property Name="NormalImage" Value="set:Button13 image:HelpBtn_Normal" />
+      <Property Name="HoverImage" Value="set:Button13 image:HelpBtn_Hover" />
+      <Property Name="DisabledImage" Value="set:Button13 image:HelpBtn_Disable" />
+      <Property Name="PushedImage" Value="set:Button13 image:HelpBtn_Pushed" />
+      <Event Name="Clicked" Function="YuanbaoShop_HelpBtn_Clicked();"/>
+    </Window>
+  </Window>
+</GUILayout>

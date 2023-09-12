@@ -1,0 +1,1835 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+  <Window Type="TLBB_MainFrameNULL" Name="SelfEquip_Frame">
+    <Property Name="UnifiedPosition" Value="{{0.0,0},{0.12,0}}" />
+    <Property Name="UnifiedSize" Value="{{0.000000,666.000000},{0.000000,429.000000}}"/>
+    <Property Name="AttachEnabled" Value="False"/>
+    <Event Name="Hidden" Function="SelfEquip_CloseUI();"/>
+    <Event Name="Moved" Function="SelfEquip_OnMoved();"/>
+    <Event Name="Shown" Function="SelfEquip_OnShown();"/>
+    <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_Icon">
+      <Property Name="UnifiedSize" Value="{{0.000000,64.000000},{0.000000,64.000000}}"/>
+      <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}}"/>
+      <Property Name="Image" Value="set:MainFrame2 image:MainFrame2_12" />
+      <Property Name="MouseHollow" Value="true" />
+      <Property Name="MouseMoveHollow" Value="true" />
+      <Property Name="MouseLButtonHollow" Value="true" />
+      <Property Name="MouseRButtonHollow" Value="true" />
+      <Property Name="AlwaysOnTop" Value="True" />
+    </Window>
+    <Window Type="TLBB_MainMenuFrame" Name="SelfEquip_MainFrame">
+      <Property Name="UnifiedSize" Value="{{1.000000,-14.000000},{1.000000,-28.000000}}"/>
+      <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,10.000000}}"/>
+      <Property Name="AttachEnabled" Value="True"/>
+      <Window Type="TLBB_DragTitle" Name="SelfEquip_DragTitle">
+        <Property Name="UnifiedPosition" Value="{{0.000000,90.000000},{0.000000,26.000000}}"/>
+        <Property Name="UnifiedSize" Value="{{1.000000,-133.000000},{0.000000,20.000000}}"/>
+        <Property Name="DragTarget" Value="SelfEquip_Frame" />
+        <Window Type="TLBB_SimpleText" Name="SelfEquip_PageHeader">
+          <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,0.000000}}"/>
+          <Property Name="Font" Value="YouYuan11.25"/>
+          <Property Name="HorzFormatting" Value="HorzCentred"/>
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="RiseOnClick" Value="False"/>
+          <Property Name="Text" Value="" />
+        </Window>
+      </Window>
+      <Window Type="TLBB_ButtonHelp" Name="SelfEquip_Help">
+        <Property Name="UnifiedSize" Value="{{0.000000,14.000000},{0.000000,14.000000}}"/>
+        <Property Name="UnifiedPosition" Value="{{0.000000,76.000000},{0.000000,29.000000}" />
+        <Event Name="Clicked" Function="Helper:GotoHelper('*SelfEquip');"/>
+      </Window>
+      <Window Type="TLBB_ButtonClose" Name="SelfEquip_Close">
+        <Property Name="UnifiedSize" Value="{{0.000000,14.000000},{0.000000,14.000000}}"/>
+        <Property Name="UnifiedPosition" Value="{{1.000000,-43.000000},{0.000000,29.000000}" />
+        <Event Name="Clicked" Function="SelfEquip_CloseFunction();"/>
+      </Window>
+      <Window Type="DefaultWindow" Name="SelfEquip_Frame_Client">
+        <Property Name="UnifiedSize" Value="{{1.000000,-30.000000},{1.000000,-61.000000}}"/>
+        <Property Name="UnifiedPosition" Value="{{0.000000,22.000000},{0.000000,54.000000}}"/>
+        <Window Type="TLBB_ActionButton" Name="SelfEquip_1">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+          <Property Name="Empty" Value="True" />
+          <Property Name="BackImage" Value="set:UIIcons image:Equip_Cap" />
+          <Property Name="DragAcceptName" Value="Z1" />
+          <Property Name="DraggingEnabled" Value="True" />
+          <Event Name="Clicked" Function="SelfEquip_Equip_Click( 1,1 );" />
+          <Event Name="MouseRClick" Function="SelfEquip_Equip_Click( 1,0 );" />
+          <Property Name="Tooltip" Value="#{INTERFACE_XML_701}" />
+          <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_1_Mask">
+            <Property Name="Position" Value="x:0 y:0" />
+            <Property Name="Size" Value="w:1 h:1" />
+            <Property Name="MouseLButtonHollow" Value="true" />
+            <Property Name="MouseRButtonHollow" Value="true" />
+            <Property Name="MouseMoveHollow" Value="true" />
+            <Property Name="Image" Value="set:Face_04 image:Remind_Bak" />
+          </Window>
+        </Window>
+        <Window Type="TLBB_Animate" Name="SelfEquip_1_Animate">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:0.000000" />
+          <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+          <Property Name="Animate" Value="JunXian_Flash3"/>
+          <Property Name="AlwaysOnTop" Value="True"/>
+          <Property Name="MouseRButtonHollow" Value="True"/>
+          <Property Name="MouseMoveHollow" Value="True"/>
+          <Property Name="MouseLButtonHollow" Value="True"/>
+          <Property Name="MouseHollow" Value="True"/>
+        </Window>
+        <Window Type="TLBB_ActionButton" Name="SelfEquip_2">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:34.000000" />
+          <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+          <Property Name="Empty" Value="True" />
+          <Property Name="BackImage" Value="set:UIIcons image:Equip_Shoulder" />
+          <Property Name="DragAcceptName" Value="Z2" />
+          <Property Name="DraggingEnabled" Value="True" />
+          <Event Name="Clicked" Function="SelfEquip_Equip_Click( 2,1 );" />
+          <Event Name="MouseRClick" Function="SelfEquip_Equip_Click( 2,0 );" />
+          <Property Name="Tooltip" Value="#{INTERFACE_XML_328}" />
+          <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_2_Mask">
+            <Property Name="Position" Value="x:0 y:0" />
+            <Property Name="Size" Value="w:1 h:1" />
+            <Property Name="MouseLButtonHollow" Value="true" />
+            <Property Name="MouseRButtonHollow" Value="true" />
+            <Property Name="MouseMoveHollow" Value="true" />
+            <Property Name="Image" Value="set:Face_04 image:Remind_Bak" />
+          </Window>
+        </Window>
+        <Window Type="TLBB_Animate" Name="SelfEquip_2_Animate">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:34.000000" />
+          <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+          <Property Name="Animate" Value="JunXian_Flash3"/>
+          <Property Name="AlwaysOnTop" Value="True"/>
+          <Property Name="MouseRButtonHollow" Value="True"/>
+          <Property Name="MouseMoveHollow" Value="True"/>
+          <Property Name="MouseLButtonHollow" Value="True"/>
+          <Property Name="MouseHollow" Value="True"/>
+        </Window>
+        <Window Type="TLBB_ActionButton" Name="SelfEquip_3">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:68.000000" />
+          <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+          <Property Name="Empty" Value="True" />
+          <Property Name="BackImage" Value="set:UIIcons image:Equip_Wrist" />
+          <Property Name="DragAcceptName" Value="Z3" />
+          <Property Name="DraggingEnabled" Value="True" />
+          <Event Name="Clicked" Function="SelfEquip_Equip_Click( 3,1 );" />
+          <Event Name="MouseRClick" Function="SelfEquip_Equip_Click( 3, 0 );" />
+          <Property Name="Tooltip" Value="#{INTERFACE_XML_329}" />
+          <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_3_Mask">
+            <Property Name="Position" Value="x:0 y:0" />
+            <Property Name="Size" Value="w:1 h:1" />
+            <Property Name="MouseLButtonHollow" Value="true" />
+            <Property Name="MouseRButtonHollow" Value="true" />
+            <Property Name="MouseMoveHollow" Value="true" />
+            <Property Name="Image" Value="set:Face_04 image:Remind_Bak" />
+          </Window>
+        </Window>
+        <Window Type="TLBB_Animate" Name="SelfEquip_3_Animate">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:68.000000" />
+          <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+          <Property Name="Animate" Value="JunXian_Flash3"/>
+          <Property Name="AlwaysOnTop" Value="True"/>
+          <Property Name="MouseRButtonHollow" Value="True"/>
+          <Property Name="MouseMoveHollow" Value="True"/>
+          <Property Name="MouseLButtonHollow" Value="True"/>
+          <Property Name="MouseHollow" Value="True"/>
+        </Window>
+        <Window Type="TLBB_ActionButton" Name="SelfEquip_4">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:102.000000" />
+          <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+          <Property Name="BackImage" Value="set:UIIcons image:Equip_Hand" />
+          <Property Name="Empty" Value="True" />
+          <Property Name="DragAcceptName" Value="Z4" />
+          <Property Name="DraggingEnabled" Value="True" />
+          <Event Name="Clicked" Function="SelfEquip_Equip_Click( 4,1 );" />
+          <Event Name="MouseRClick" Function="SelfEquip_Equip_Click( 4,0 );" />
+          <Property Name="Tooltip" Value="#{INTERFACE_XML_652}" />
+          <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_4_Mask">
+            <Property Name="Position" Value="x:0 y:0" />
+            <Property Name="Size" Value="w:1 h:1" />
+            <Property Name="MouseLButtonHollow" Value="true" />
+            <Property Name="MouseRButtonHollow" Value="true" />
+            <Property Name="MouseMoveHollow" Value="true" />
+            <Property Name="Image" Value="set:Face_04 image:Remind_Bak" />
+          </Window>
+        </Window>
+        <Window Type="TLBB_Animate" Name="SelfEquip_4_Animate">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:102.000000" />
+          <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+          <Property Name="Animate" Value="JunXian_Flash3"/>
+          <Property Name="AlwaysOnTop" Value="True"/>
+          <Property Name="MouseRButtonHollow" Value="True"/>
+          <Property Name="MouseMoveHollow" Value="True"/>
+          <Property Name="MouseLButtonHollow" Value="True"/>
+          <Property Name="MouseHollow" Value="True"/>
+        </Window>
+        <Window Type="TLBB_ActionButton" Name="SelfEquip_5">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:136.000000" />
+          <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+          <Property Name="BackImage" Value="set:UIIcons image:Equip_Sash" />
+          <Property Name="Empty" Value="True" />
+          <Property Name="DragAcceptName" Value="Z5" />
+          <Property Name="DraggingEnabled" Value="True" />
+          <Event Name="Clicked" Function="SelfEquip_Equip_Click( 5,1 );" />
+          <Event Name="MouseRClick" Function="SelfEquip_Equip_Click( 5,0 );" />
+          <Property Name="Tooltip" Value="#{INTERFACE_XML_813}" />
+          <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_5_Mask">
+            <Property Name="Position" Value="x:0 y:0" />
+            <Property Name="Size" Value="w:1 h:1" />
+            <Property Name="MouseLButtonHollow" Value="true" />
+            <Property Name="MouseRButtonHollow" Value="true" />
+            <Property Name="MouseMoveHollow" Value="true" />
+            <Property Name="Image" Value="set:Face_04 image:Remind_Bak" />
+          </Window>
+        </Window>
+        <Window Type="TLBB_Animate" Name="SelfEquip_5_Animate">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:136.000000" />
+          <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+          <Property Name="Animate" Value="JunXian_Flash3"/>
+          <Property Name="AlwaysOnTop" Value="True"/>
+          <Property Name="MouseRButtonHollow" Value="True"/>
+          <Property Name="MouseMoveHollow" Value="True"/>
+          <Property Name="MouseLButtonHollow" Value="True"/>
+          <Property Name="MouseHollow" Value="True"/>
+        </Window>
+        <Window Type="TLBB_ActionButton" Name="SelfEquip_6">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:170.000000" />
+          <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+          <Property Name="BackImage" Value="set:UIIcons image:Equip_Shot" />
+          <Property Name="Empty" Value="True" />
+          <Property Name="DragAcceptName" Value="Z6" />
+          <Property Name="DraggingEnabled" Value="True" />
+          <Event Name="Clicked" Function="SelfEquip_Equip_Click( 6,1 );" />
+          <Event Name="MouseRClick" Function="SelfEquip_Equip_Click( 6,0 );" />
+          <Property Name="Tooltip" Value="#{INTERFACE_XML_762}" />
+          <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_6_Mask">
+            <Property Name="Position" Value="x:0 y:0" />
+            <Property Name="Size" Value="w:1 h:1" />
+            <Property Name="MouseLButtonHollow" Value="true" />
+            <Property Name="MouseRButtonHollow" Value="true" />
+            <Property Name="MouseMoveHollow" Value="true" />
+            <Property Name="Image" Value="set:Face_04 image:Remind_Bak" />
+          </Window>
+        </Window>
+        <Window Type="TLBB_Animate" Name="SelfEquip_6_Animate">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:170.000000" />
+          <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+          <Property Name="Animate" Value="JunXian_Flash3"/>
+          <Property Name="AlwaysOnTop" Value="True"/>
+          <Property Name="MouseRButtonHollow" Value="True"/>
+          <Property Name="MouseMoveHollow" Value="True"/>
+          <Property Name="MouseLButtonHollow" Value="True"/>
+          <Property Name="MouseHollow" Value="True"/>
+        </Window>
+        <Window Type="TLBB_ActionButton" Name="SelfEquip_7">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:204.000000" />
+          <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+          <Property Name="BackImage" Value="set:UIIcons image:Equip_Ring" />
+          <Property Name="Empty" Value="True" />
+          <Property Name="DragAcceptName" Value="Z7" />
+          <Property Name="DraggingEnabled" Value="True" />
+          <Event Name="Clicked" Function="SelfEquip_Equip_Click( 7,1 );" />
+          <Event Name="MouseRClick" Function="SelfEquip_Equip_Click( 7,0 );" />
+          <Property Name="Tooltip" Value="#{INTERFACE_XML_378}" />
+          <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_7_Mask">
+            <Property Name="Position" Value="x:0 y:0" />
+            <Property Name="Size" Value="w:1 h:1" />
+            <Property Name="MouseLButtonHollow" Value="true" />
+            <Property Name="MouseRButtonHollow" Value="true" />
+            <Property Name="MouseMoveHollow" Value="true" />
+            <Property Name="Image" Value="set:Face_04 image:Remind_Bak" />
+          </Window>
+        </Window>
+        <Window Type="TLBB_Animate" Name="SelfEquip_7_Animate">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:204.000000" />
+          <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+          <Property Name="Animate" Value="JunXian_Flash3"/>
+          <Property Name="AlwaysOnTop" Value="True"/>
+          <Property Name="MouseRButtonHollow" Value="True"/>
+          <Property Name="MouseMoveHollow" Value="True"/>
+          <Property Name="MouseLButtonHollow" Value="True"/>
+          <Property Name="MouseHollow" Value="True"/>
+        </Window>
+        <Window Type="TLBB_ActionButton" Name="SelfEquip_8">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:238.000000" />
+          <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+          <Property Name="BackImage" Value="set:UIIcons image:Equip_Ring" />
+          <Property Name="Empty" Value="True" />
+          <Property Name="DragAcceptName" Value="Z8" />
+          <Property Name="DraggingEnabled" Value="True" />
+          <Event Name="Clicked" Function="SelfEquip_Equip_Click( 8,1 );" />
+          <Event Name="MouseRClick" Function="SelfEquip_Equip_Click( 8,0 );" />
+          <Property Name="Tooltip" Value="#{INTERFACE_XML_378}" />
+          <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_8_Mask">
+            <Property Name="Position" Value="x:0 y:0" />
+            <Property Name="Size" Value="w:1 h:1" />
+            <Property Name="MouseLButtonHollow" Value="true" />
+            <Property Name="MouseRButtonHollow" Value="true" />
+            <Property Name="MouseMoveHollow" Value="true" />
+            <Property Name="Image" Value="set:Face_04 image:Remind_Bak" />
+          </Window>
+        </Window>
+        <Window Type="TLBB_Animate" Name="SelfEquip_8_Animate">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:238.000000" />
+          <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+          <Property Name="Animate" Value="JunXian_Flash3"/>
+          <Property Name="AlwaysOnTop" Value="True"/>
+          <Property Name="MouseRButtonHollow" Value="True"/>
+          <Property Name="MouseMoveHollow" Value="True"/>
+          <Property Name="MouseLButtonHollow" Value="True"/>
+          <Property Name="MouseHollow" Value="True"/>
+        </Window>
+        <Window Type="TLBB_ActionButton" Name="SelfEquip_9">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:272.000000" />
+          <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+          <Property Name="BackImage" Value="set:UIIcons image:Equip_Pifeng" />
+          <Property Name="Empty" Value="True" />
+          <Property Name="DragAcceptName" Value="Z9" />
+          <Property Name="DraggingEnabled" Value="True" />
+          <Event Name="Clicked" Function="SelfEquip_Equip_Click( 9,1 );" />
+          <Event Name="MouseRClick" Function="SelfEquip_Equip_Click( 9,0 );" />
+          <Property Name="Tooltip" Value="#{INTERFACE_XML_326}" />
+          <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_9_Mask">
+            <Property Name="Position" Value="x:0 y:0" />
+            <Property Name="Size" Value="w:1 h:1" />
+            <Property Name="MouseLButtonHollow" Value="true" />
+            <Property Name="MouseRButtonHollow" Value="true" />
+            <Property Name="MouseMoveHollow" Value="true" />
+            <Property Name="Image" Value="set:Face_04 image:Remind_Bak" />
+          </Window>
+        </Window>
+        <Window Type="TLBB_Animate" Name="SelfEquip_9_Animate">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:272.000000" />
+          <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+          <Property Name="Animate" Value="JunXian_Flash3"/>
+          <Property Name="AlwaysOnTop" Value="True"/>
+          <Property Name="MouseRButtonHollow" Value="True"/>
+          <Property Name="MouseMoveHollow" Value="True"/>
+          <Property Name="MouseLButtonHollow" Value="True"/>
+          <Property Name="MouseHollow" Value="True"/>
+        </Window>
+        <Window Type="TLBB_ActionButton" Name="SelfEquip_10">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:306.000000" />
+          <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+          <Property Name="BackImage" Value="set:UIIcons image:Equip_Pifeng" />
+          <Property Name="Empty" Value="True" />
+          <Property Name="DragAcceptName" Value="Z10" />
+          <Property Name="DraggingEnabled" Value="True" />
+          <Event Name="Clicked" Function="SelfEquip_Equip_Click( 10,1 );" />
+          <Event Name="MouseRClick" Function="SelfEquip_Equip_Click( 10,0 );" />
+          <Property Name="Tooltip" Value="#{INTERFACE_XML_326}" />
+          <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_10_Mask">
+            <Property Name="Position" Value="x:0 y:0" />
+            <Property Name="Size" Value="w:1 h:1" />
+            <Property Name="MouseLButtonHollow" Value="true" />
+            <Property Name="MouseRButtonHollow" Value="true" />
+            <Property Name="MouseMoveHollow" Value="true" />
+            <Property Name="Image" Value="set:Face_04 image:Remind_Bak" />
+          </Window>
+        </Window>
+        <Window Type="TLBB_Animate" Name="SelfEquip_10_Animate">
+          <Property Name="AbsolutePosition" Value="x:0.000000 y:306.000000" />
+          <Property Name="AbsoluteSize" Value="w:34.000000 h:34.000000" />
+          <Property Name="Animate" Value="JunXian_Flash3"/>
+          <Property Name="AlwaysOnTop" Value="True"/>
+          <Property Name="MouseRButtonHollow" Value="True"/>
+          <Property Name="MouseMoveHollow" Value="True"/>
+          <Property Name="MouseLButtonHollow" Value="True"/>
+          <Property Name="MouseHollow" Value="True"/>
+        </Window>
+        <Window Type="TLBB_ActionButton" Name="SelfEquip_11">
+          <Property Name="UnifiedSize" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,43.000000},{0.000000,0.000000}}"/>
+          <Property Name="BackImage" Value="set:UIIcons image:Equip_Weapon" />
+          <Property Name="DragAcceptName" Value="Z11"/>
+          <Property Name="DraggingEnabled" Value="True"/>
+          <Event Name="Clicked" Function="SelfEquip_Equip_Click( 11,1 );"/>
+          <Event Name="MouseRClick" Function="SelfEquip_Equip_Click( 11,0 );"/>
+          <Property Name="Tooltip" Value="#{INTERFACE_XML_722}"/>
+          <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_11_Mask">
+            <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,0.000000}}"/>
+            <Property Name="MouseLButtonHollow" Value="True"/>
+            <Property Name="MouseRButtonHollow" Value="True"/>
+            <Property Name="MouseMoveHollow" Value="True"/>
+            <Property Name="Image" Value="set:Face_04 image:Remind_Bak"/>
+          </Window>
+        </Window>
+        <Window Type="TLBB_Animate" Name="SelfEquip_11_Animate">
+          <Property Name="UnifiedSize" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,43.000000},{0.000000,0.000000}}"/>
+          <Property Name="Animate" Value="JunXian_Flash3"/>
+          <Property Name="AlwaysOnTop" Value="True"/>
+          <Property Name="MouseRButtonHollow" Value="True"/>
+          <Property Name="MouseMoveHollow" Value="True"/>
+          <Property Name="MouseLButtonHollow" Value="True"/>
+          <Property Name="MouseHollow" Value="True"/>
+        </Window>
+        <Window Type="TLBB_ActionButton" Name="SelfEquip_12">
+          <Property Name="UnifiedSize" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,86.000000},{0.000000,0.000000}}"/>
+          <Property Name="BackImage" Value="set:UIIcons image:Equip_Armo" />
+          <Property Name="DragAcceptName" Value="Z12"/>
+          <Property Name="DraggingEnabled" Value="True"/>
+          <Event Name="Clicked" Function="SelfEquip_Equip_Click( 12,1 );"/>
+          <Event Name="MouseRClick" Function="SelfEquip_Equip_Click( 12,0 );"/>
+          <Property Name="Tooltip" Value="#{INTERFACE_XML_327}"/>
+          <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_12_Mask">
+            <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,0.000000}}"/>
+            <Property Name="MouseLButtonHollow" Value="True"/>
+            <Property Name="MouseRButtonHollow" Value="True"/>
+            <Property Name="MouseMoveHollow" Value="True"/>
+            <Property Name="Image" Value="set:Face_04 image:Remind_Bak"/>
+          </Window>
+        </Window>
+        <Window Type="TLBB_Animate" Name="SelfEquip_12_Animate">
+          <Property Name="UnifiedSize" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,86.000000},{0.000000,0.000000}}"/>
+          <Property Name="Animate" Value="JunXian_Flash3"/>
+          <Property Name="AlwaysOnTop" Value="True"/>
+          <Property Name="MouseRButtonHollow" Value="True"/>
+          <Property Name="MouseMoveHollow" Value="True"/>
+          <Property Name="MouseLButtonHollow" Value="True"/>
+          <Property Name="MouseHollow" Value="True"/>
+        </Window>
+        <Window Type="TLBB_ActionButton" Name="SelfEquip_13">
+          <Property Name="UnifiedSize" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,129.000000},{0.000000,0.000000}}"/>
+          <Property Name="BackImage" Value="set:UIIcons image:Equip_Nacket" />
+          <Property Name="DragAcceptName" Value="Z13"/>
+          <Property Name="DraggingEnabled" Value="True"/>
+          <Event Name="Clicked" Function="SelfEquip_Equip_Click( 13,1 );"/>
+          <Event Name="MouseRClick" Function="SelfEquip_Equip_Click( 13,0 );"/>
+          <Property Name="Tooltip" Value="#{INTERFACE_XML_756}"/>
+          <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_13_Mask">
+            <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,0.000000}}"/>
+            <Property Name="MouseLButtonHollow" Value="True"/>
+            <Property Name="MouseRButtonHollow" Value="True"/>
+            <Property Name="MouseMoveHollow" Value="True"/>
+            <Property Name="Image" Value="set:Face_04 image:Remind_Bak"/>
+          </Window>
+        </Window>
+        <Window Type="TLBB_Animate" Name="SelfEquip_13_Animate">
+          <Property Name="UnifiedSize" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,129.000000},{0.000000,0.000000}}"/>
+          <Property Name="Animate" Value="JunXian_Flash3"/>
+          <Property Name="AlwaysOnTop" Value="True"/>
+          <Property Name="MouseRButtonHollow" Value="True"/>
+          <Property Name="MouseMoveHollow" Value="True"/>
+          <Property Name="MouseLButtonHollow" Value="True"/>
+          <Property Name="MouseHollow" Value="True"/>
+        </Window>
+        <Window Type="TLBB_ActionButton" Name="SelfEquip_14">
+          <Property Name="UnifiedSize" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,172.000000},{0.000000,0.000000}}"/>
+          <Property Name="BackImage" Value="set:UIIcons image:Equip_Anqi" />
+          <Property Name="DragAcceptName" Value="Z14"/>
+          <Property Name="DraggingEnabled" Value="True"/>
+          <Event Name="Clicked" Function="SelfEquip_Equip_Click( 14,1 );"/>
+          <Event Name="MouseRClick" Function="SelfEquip_Equip_Click( 14,0 );"/>
+          <Property Name="Tooltip" Value="#{FBSJ_081209_77}"/>
+          <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_14_Mask">
+            <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,0.000000}}"/>
+            <Property Name="MouseLButtonHollow" Value="True"/>
+            <Property Name="MouseRButtonHollow" Value="True"/>
+            <Property Name="MouseMoveHollow" Value="True"/>
+            <Property Name="Image" Value="set:Face_04 image:Remind_Bak"/>
+          </Window>
+        </Window>
+
+
+        <Window Type="TLBB_ActionButton" Name="SelfEquip_16">
+          <Property Name="UnifiedSize" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,258.000000},{0.000000,0.000000}}"/>
+          <Property Name="BackImage" Value="set:UIIcons image:Equip_LingPai" />
+          <Property Name="DragAcceptName" Value="Z28"/>
+          <Property Name="DraggingEnabled" Value="True"/>
+          <Event Name="Clicked" Function="SelfEquip_Equip_Click( 16,1 );"/>
+          <Event Name="MouseRClick" Function="SelfEquip_Equip_Click( 16,0 );"/>
+          <Property Name="Tooltip" Value="#{BHZB_140521_1}"/>
+          <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_16_Mask">
+            <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,0.000000}}"/>
+            <Property Name="MouseLButtonHollow" Value="True"/>
+            <Property Name="MouseRButtonHollow" Value="True"/>
+            <Property Name="MouseMoveHollow" Value="True"/>
+            <Property Name="Image" Value="set:Face_04 image:Remind_Bak"/>
+          </Window>
+        </Window>
+
+        <Window Type="TLBB_ActionButton" Name="SelfEquip_25">
+          <Property Name="UnifiedSize" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,215.000000},{0.000000,0.000000}}"/>
+          <Property Name="BackImage" Value="set:MiniMap image:LongWen" />
+          <Property Name="DragAcceptName" Value="Z25"/>
+          <Property Name="DraggingEnabled" Value="True"/>
+          <Event Name="Clicked" Function="SelfEquip_Equip_Click( 25,1 );"/>
+          <Event Name="MouseRClick" Function="SelfEquip_Equip_Click( 25,0 );"/>
+          <Property Name="Tooltip" Value="#{LW_KVK_XML_34}"/>
+          <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_25_Mask">
+            <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,0.000000}}"/>
+            <Property Name="MouseLButtonHollow" Value="True"/>
+            <Property Name="MouseRButtonHollow" Value="True"/>
+            <Property Name="MouseMoveHollow" Value="True"/>
+            <Property Name="Image" Value="set:Face_04 image:Remind_Bak"/>
+          </Window>
+        </Window>
+
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_01red">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,0.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_red_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_red_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_red_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_red_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(8);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_01green">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,0.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_green_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_green_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_green_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_green_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(8);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_02red">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_red_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_red_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_red_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_red_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(9);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_02green">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_green_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_green_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_green_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_green_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(9);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_03red">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,68.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_red_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_red_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_red_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_red_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(2);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_03green">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,68.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_green_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_green_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_green_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_green_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(2);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_04red">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,102.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_red_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_red_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_red_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_red_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(10);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_04green">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,102.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_green_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_green_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_green_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_green_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(10);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_05red">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,136.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_red_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_red_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_red_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_red_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(11);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_05green">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,136.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_green_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_green_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_green_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_green_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(11);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_06red">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,170.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_red_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_red_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_red_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_red_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(12);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_06green">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,170.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_green_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_green_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_green_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_green_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(12);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_07red">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,204.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_red_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_red_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_red_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_red_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(3);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_07green">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,204.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_green_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_green_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_green_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_green_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(3);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_08red">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,238.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_red_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_red_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_red_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_red_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(4);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_08green">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,238.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_green_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_green_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_green_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_green_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(4);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_09red">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,272.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_red_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_red_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_red_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_red_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(5);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_09green">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,272.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_green_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_green_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_green_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_green_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(5);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_10red">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,306.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_red_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_red_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_red_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_red_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(6);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_10green">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,306.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_green_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_green_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_green_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_green_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(6);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_11red">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,77.000000},{0.000000,0.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_red_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_red_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_red_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_red_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(1);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_11green">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,77.000000},{0.000000,0.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_green_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_green_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_green_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_green_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(1);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_12red">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,120.000000},{0.000000,0.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_red_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_red_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_red_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_red_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(7);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_12green">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,120.000000},{0.000000,0.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_green_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_green_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_green_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_green_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(7);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_13red">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,163.000000},{0.000000,0.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_red_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_red_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_red_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_red_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(13);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_13green">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,163.000000},{0.000000,0.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_green_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_green_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_green_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_green_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(13);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_14red">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,206.000000},{0.000000,0.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_red_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_red_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_red_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_red_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(14);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_14green">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,206.000000},{0.000000,0.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_green_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_green_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_green_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_green_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(14);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_15red">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,249.000000},{0.000000,0.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_red_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_red_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_red_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_red_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(15);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_15green">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,249.000000},{0.000000,0.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_green_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_green_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_green_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_green_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(15);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_16red">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,293.000000},{0.000000,0.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_red_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_red_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_red_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_red_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(17);"/>
+        </Window>
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BaoShiCheck_16green">
+          <Property Name="UnifiedSize" Value="{{0.000000,9.000000},{0.000000,33.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,293.000000},{0.000000,0.000000}}"/>
+          <Property Name="NormalImage" Value="set:Button11 image:BaoShiCheck_green_Normal" />
+          <Property Name="HoverImage" Value="set:Button11 image:BaoShiCheck_green_Hover" />
+          <Property Name="DisabledImage" Value="set:Button11 image:BaoShiCheck_green_Disabled" />
+          <Property Name="PushedImage" Value="set:Button11 image:BaoShiCheck_green_Pushed" />
+          <Event Name="Clicked" Function="SelfEquip_BaoShiCheck_Clicked(17);"/>
+        </Window>
+        <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_BaoShiCheckBK1">
+          <Property Name="UnifiedSize" Value="{{0.000000,8.000000},{0.000000,34.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,0.000000}}"/>
+          <Property Name="Image" Value="set:Button11 image:BaoShiCheckBK"/>
+        </Window>
+        <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_BaoShiCheckBK2">
+          <Property Name="UnifiedSize" Value="{{0.000000,8.000000},{0.000000,34.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+          <Property Name="Image" Value="set:Button11 image:BaoShiCheckBK"/>
+        </Window>
+        <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_BaoShiCheckBK3">
+          <Property Name="UnifiedSize" Value="{{0.000000,8.000000},{0.000000,34.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,68.000000}}"/>
+          <Property Name="Image" Value="set:Button11 image:BaoShiCheckBK"/>
+        </Window>
+        <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_BaoShiCheckBK4">
+          <Property Name="UnifiedSize" Value="{{0.000000,8.000000},{0.000000,34.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,102.000000}}"/>
+          <Property Name="Image" Value="set:Button11 image:BaoShiCheckBK"/>
+        </Window>
+        <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_BaoShiCheckBK5">
+          <Property Name="UnifiedSize" Value="{{0.000000,8.000000},{0.000000,34.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,136.000000}}"/>
+          <Property Name="Image" Value="set:Button11 image:BaoShiCheckBK"/>
+        </Window>
+        <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_BaoShiCheckBK6">
+          <Property Name="UnifiedSize" Value="{{0.000000,8.000000},{0.000000,34.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,170.000000}}"/>
+          <Property Name="Image" Value="set:Button11 image:BaoShiCheckBK"/>
+        </Window>
+        <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_BaoShiCheckBK7">
+          <Property Name="UnifiedSize" Value="{{0.000000,8.000000},{0.000000,34.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,204.000000}}"/>
+          <Property Name="Image" Value="set:Button11 image:BaoShiCheckBK"/>
+        </Window>
+        <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_BaoShiCheckBK8">
+          <Property Name="UnifiedSize" Value="{{0.000000,8.000000},{0.000000,34.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,238.000000}}"/>
+          <Property Name="Image" Value="set:Button11 image:BaoShiCheckBK"/>
+        </Window>
+        <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_BaoShiCheckBK9">
+          <Property Name="UnifiedSize" Value="{{0.000000,8.000000},{0.000000,34.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,272.000000}}"/>
+          <Property Name="Image" Value="set:Button11 image:BaoShiCheckBK"/>
+        </Window>
+        <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_BaoShiCheckBK10">
+          <Property Name="UnifiedSize" Value="{{0.000000,8.000000},{0.000000,34.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,34.000000},{0.000000,306.000000}}"/>
+          <Property Name="Image" Value="set:Button11 image:BaoShiCheckBK"/>
+        </Window>
+        <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_BaoShiCheckBK11">
+          <Property Name="UnifiedSize" Value="{{0.000000,8.000000},{0.000000,34.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,77.000000},{0.000000,0.000000}}"/>
+          <Property Name="Image" Value="set:Button11 image:BaoShiCheckBK"/>
+        </Window>
+        <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_BaoShiCheckBK12">
+          <Property Name="UnifiedSize" Value="{{0.000000,8.000000},{0.000000,34.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,120.000000},{0.000000,0.000000}}"/>
+          <Property Name="Image" Value="set:Button11 image:BaoShiCheckBK"/>
+        </Window>
+        <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_BaoShiCheckBK13">
+          <Property Name="UnifiedSize" Value="{{0.000000,8.000000},{0.000000,34.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,163.000000},{0.000000,0.000000}}"/>
+          <Property Name="Image" Value="set:Button11 image:BaoShiCheckBK"/>
+        </Window>
+        <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_BaoShiCheckBK14">
+          <Property Name="UnifiedSize" Value="{{0.000000,8.000000},{0.000000,34.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,206.000000},{0.000000,0.000000}}"/>
+          <Property Name="Image" Value="set:Button11 image:BaoShiCheckBK"/>
+        </Window>
+        <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_BaoShiCheckBK15">
+          <Property Name="UnifiedSize" Value="{{0.000000,8.000000},{0.000000,34.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,249.000000},{0.000000,0.000000}}"/>
+          <Property Name="Image" Value="set:Button11 image:BaoShiCheckBK"/>
+        </Window>
+        <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_BaoShiCheckBK16">
+          <Property Name="UnifiedSize" Value="{{0.000000,8.000000},{0.000000,34.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,293.000000},{0.000000,0.000000}}"/>
+          <Property Name="Image" Value="set:Button11 image:BaoShiCheckBK"/>
+        </Window>
+
+
+
+
+
+
+
+        <Window Type="TLBB_ButtonNULL" Name="SelfEquip_Yirong_Icon">
+          <Property Name="UnifiedSize" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,304.000000},{0.000000,0.000000}}"/> 
+          <Property Name="Tooltip" Value="#{DECOW_160126_73}"/>
+          <Property Name="PushedImage" Value="set:CommonFrame28 image:YiRong_Pushed"/>
+          <Property Name="NormalImage" Value="set:CommonFrame28 image:YiRong_Normal"/>
+          <Property Name="HoverImage" Value="set:CommonFrame28 image:YiRong_Hover"/>
+          <Property Name="DisabledImage" Value="set:CommonFrame28 image:YiRong_Disabled"/>
+          <Event Name="Clicked" Function="SelfEquip_OnYirong();"/>
+        </Window>
+
+
+
+
+
+
+        <Window Type="TLBB_FramePlayer" Name="SelfEquip_FakeObject_Frame">
+          <Property Name="UnifiedSize" Value="{{0.000000,296.000000},{0.000000,305.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,43.000000},{0.000000,34.000000}}"/>
+          <Window Type="TLBB_MeshWindowRole" Name="SelfEquip_FakeObject">
+            <Property Name="Position" Value="x:0.05 y:0.05" />
+            <Property Name="UnifiedSize" Value="{{0.900000,0.000000},{0.950000,-20.000000}" />
+            <Property Name="MouseHollow" Value="True" />
+            <Property Name="ShowControl" Value="SelfEquip_Frame" />
+          </Window>
+           <Window Type="TLBB_SimpleText" Name="SelfEquip_FightScore_Text">
+            <Property Name="Position" Value="x:0.07 y:0.05" />
+            <Property Name="UnifiedSize" Value="{{0.500000,0.000000},{0.000000,20.000000}" />
+            <Property Name="TextColor" Value="FFFFFF00" />
+            <Property Name="HorzFormatting" Value="LeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="AlwaysOnTop" Value="true" />
+            <Property Name="Text" Value="装备评分:" />
+            <Property Name="Tooltip" Value="装备评分受到全身装备属性、宝石、雕纹、强化、刻铭、资质、真元、附体、精通属性、子女、神木王鼎以及玩家等级影响。#r历史最高装备评分：0" />
+          </Window>
+          <Window Type="TLBB_ButtonNULL" Name="SelfEquip_FightScore">
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.00000},{0.050000,3.00000}}"/>
+            <Property Name="UnifiedSize" Value="{{0.000000,13.000000},{0.000000,13.000000}" />
+            <Property Name="PushedImage" Value="set:CreateRole2 image:ZBPF_Btn_Pushed"/>
+            <Property Name="NormalImage" Value="set:CreateRole2 image:ZBPF_Btn_Normal"/>
+            <Property Name="HoverImage" Value="set:CreateRole2 image:ZBPF_Btn_Hover"/>
+            <Property Name="AlwaysOnTop" Value="true" />
+            <Property Name="Tooltip" Value="点击查看装备评分提升指引" />
+            <Event Name="Clicked" Function="SelfEquip_FightScore_Clicked();"/>
+          </Window>
+          <Window Type="TLBB_SimpleText" Name="SelfEquip_Level">
+            <Property Name="UnifiedPosition" Value="{{0.050000,8.500000},{0.050000,20.000000}}"/>
+            <Property Name="UnifiedSize" Value="{{0.300000,0.000000},{0.000000,20.000000}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="LeftAligned"/>
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="AlwaysOnTop" Value="true" />
+            <Property Name="Text" Value="#{INTERFACE_XML_114}" />
+          </Window>
+          <Window Type="TLBB_SimpleText" Name="SelfEquip_Level2">
+            <Property Name="UnifiedPosition" Value="{{0.050000,7.000000},{0.12000,20.000000}}"/>
+            <Property Name="UnifiedSize" Value="{{0.300000,0.000000},{0.000000,20.000000}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="LeftAligned"/>
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="AlwaysOnTop" Value="true" />
+            <Property Name="Text" Value="" />
+          </Window>
+          <Window Type="TLBB_SimpleText" Name="SelfEquip_MenPai">
+            <Property Name="UnifiedPosition" Value="{{0.640000,0.000000},{0.050000,0.000000}}"/>
+            <Property Name="UnifiedSize" Value="{{0.300000,0.000000},{0.000000,20.000000}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="RightAligned"/>
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="AlwaysOnTop" Value="true" />
+            <Property Name="Text" Value="#{INTERFACE_XML_689}" />
+          </Window>
+		            <Window Type="DefaultWindow" Name="SelfEquip_BW_Match1">
+            <Property Name="UnifiedSize" Value="{{0.000000,44.000000},{0.000000,60.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{1.000000,-50.000000},{0.000000,40.000000}}"/>
+            <Property Name="AlwaysOnTop" Value="True"/>
+            <Window Type="TLBB_ButtonNULL" Name="SelfEquip_BW_Match1_Button">
+              <Property Name="UnifiedSize" Value="{{0.000000,44.000000},{0.000000,40.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.500000,-22.000000},{0.000000,0.000000}}"/>
+              <Property Name="Tooltip" Value="#{BWDH_180804_143}"/>
+              <Property Name="PushedImage" Value="set:BW_Match1 image:Dragon01_Pushed"/>
+              <Property Name="NormalImage" Value="set:BW_Match1 image:Dragon01_Normal"/>
+              <Property Name="HoverImage" Value="set:BW_Match1 image:Dragon01_Hover"/>
+              <Property Name="AlwaysOnTop" Value="True"/>
+              <Event Name="Clicked" Function="SelfEquip_DuanWei();" />
+            </Window>
+            <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_BW_Match1_Star">
+              <Property Name="UnifiedSize" Value="{{0.000000,18.000000},{0.000000,18.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,6.000000},{0.000000,36.000000}}"/>
+              <Property Name="Image" Value="set:BW_Match1 image:Bright_Stars"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="SelfEquip_BW_Match1_Text">
+              <Property Name="UnifiedSize" Value="{{1.000000,-24.000000},{0.000000,18.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,23.000000},{0.000000,37.000000}}"/>
+              <Property Name="AlwaysOnTop" Value="true" />
+              <Property Name="Text" Value="#{BWDH_180804_170}" />
+              <Property Name="HorzFormatting" Value="HorzCentred"/>
+            </Window>
+          </Window> 
+          <Window Type="TLBB_ButtonTurnLeft" Name="SelfEquip_Model_TurnLeft">
+            <Property Name="UnifiedPosition" Value="{{0.150000,0.000000},{0.900000,-20.000000}}"/>
+            <Property Name="AbsoluteSize" Value="w:25.000000 h:25.000000" />
+            <Event Name="MouseButtonDown" Function="SelfEquip_Modle_TurnLeft(1);" />
+            <Event Name="MouseButtonUp" Function="SelfEquip_Modle_TurnLeft(0);" />
+            <Event Name="CaptureLost" Function="SelfEquip_Modle_TurnLeft(0);" />
+          </Window>
+          <Window Type="TLBB_ButtonTurnRight" Name="SelfEquip_Model_TurnRight">
+            <Property Name="UnifiedPosition" Value="{{0.850000,-25.000000},{0.900000,-20.000000}}"/>
+            <Property Name="AbsoluteSize" Value="w:25.000000 h:25.000000" />
+            <Event Name="MouseButtonDown" Function="SelfEquip_Modle_TurnRight(1);" />
+            <Event Name="MouseButtonUp" Function="SelfEquip_Modle_TurnRight(0);" />
+            <Event Name="CaptureLost" Function="SelfEquip_Modle_TurnRight(0);" />
+          </Window>
+          <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_IceFastness">
+            <Property Name="UnifiedPosition" Value="{{0.22,-8.000000},{1.0,-17.000000}" />
+            <Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+            <Property Name="Image" Value="set:UIIcons image:Ice_Repellency_Normal" />
+            <Property Name="RiseOnClick" Value="False" />
+          </Window>
+          <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_FireFastness">
+            <Property Name="UnifiedPosition" Value="{{0.32,-8.000000},{1.0,-17.000000}" />
+            <Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+            <Property Name="Image" Value="set:UIIcons image:Fire_Repellency_Normal" />
+            <Property Name="RiseOnClick" Value="False" />
+          </Window>
+          <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_ThunderFastness">
+            <Property Name="UnifiedPosition" Value="{{0.42,-8.000000},{1.0,-17.000000}" />
+            <Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+            <Property Name="Image" Value="set:UIIcons image:Thunder_Repellency_Normal" />
+            <Property Name="RiseOnClick" Value="False" />
+          </Window>
+          <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_PoisonFastness">
+            <Property Name="UnifiedPosition" Value="{{0.52,-8.000000},{1.0,-17.000000}" />
+            <Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+            <Property Name="Image" Value="set:UIIcons image:Poison_Repellency_Normal" />
+            <Property Name="RiseOnClick" Value="False" />
+          </Window>
+          <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_HurtFastness">
+            <Property Name="UnifiedPosition" Value="{{0.680000,-13.000000},{1.000000,-17.000000}}"/>
+            <Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+            <Property Name="Image" Value="set:UIIcons image:Hurt_Repellency_Normal" />
+            <Property Name="Tooltip" Value="1"/>
+            <Property Name="RiseOnClick" Value="False" />
+          </Window>
+          <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_DefenceFastness">
+            <Property Name="UnifiedPosition" Value="{{0.780000,-19.000000},{1.000000,-17.000000}}"/>
+            <Property Name="AbsoluteSize" Value="w:16.000000 h:16.000000" />
+            <Property Name="Image" Value="set:UIIcons image:Defence_Repellency_Normal" />
+            <Property Name="RiseOnClick" Value="False" />
+            <Property Name="Tooltip" Value="1"/>
+          </Window>
+            <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_Effect">
+            <Property Name="UnifiedSize" Value="{{0.000000,16.000000},{0.000000,16.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.780000,6.000000},{1.000000,-17.000000}}"/>
+            <Property Name="Image" Value="set:UIIcons1 image:Equip_qianghua1" />
+            <Property Name="RiseOnClick" Value="False" />
+            <Event Name="MouseLeave" Function="SelfEquip_EnchanceSetAttr_MouseLeave()"/>
+            <Event Name="MouseEnter" Function="SelfEquip_EnchanceSetAttr_MouseEnter()"/>
+          </Window>
+          <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_Bar">
+            <Property Name="UnifiedPosition" Value="{{0.6,-1.000000},{1.0,-19.000000}" />
+            <Property Name="AbsoluteSize" Value="w:4.000000 h:19.000000" />
+            <Property Name="Image" Value="set:Button6 image:Set_Bar" />
+            <Property Name="RiseOnClick" Value="False" />
+          </Window>
+          <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_ShenDing_Icon">
+            <Property Name="UnifiedSize" Value="{{0.000000,28.000000},{0.000000,34.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{1.000000,-34.000000},{1.000000,-36.000000}}"/>
+            <Property Name="Image" Value="set:SMWD_1 image:SMWD_ShenDing"/>
+            <Property Name="RiseOnClick" Value="False" />
+            <Event Name="MouseButtonUp" Function="Other_ShenDing_Page_Switch();" />
+          </Window>
+          <Window Type="TLBB_StaticImageNULL" Name="SelfEquip_ZhiZun_Icon">
+            <Property Name="UnifiedSize" Value="{{0.000000,28.000000},{0.000000,30.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,5.000000},{1.000000,-34.000000}}"/>
+            <Property Name="Image" Value="set:BaoJianUI1 image:BaoJian_Anniu"/>
+            <Property Name="RiseOnClick" Value="False" />
+            <Event Name="MouseButtonUp" Function="SelfEquip_OpenBaoJian();" />
+          </Window>
+        </Window>
+        <Window Type="TLBB_SimpleMulitiTextFrame" Name="SelfEquip_Energy1_Text">
+          <Property Name="UnifiedPosition" Value="{{0.000000,340.000000},{1.000000,-40.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.165000,0.000000},{0.000000,20.000000}}"/>
+          <Property Name="Text" Value="#{INTERFACE_XML_342}"/>
+          <Property Name="TextColor" Value="FFFFF263"/>
+          <Property Name="HorzFormatting" Value="LeftAligned" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="RiseOnClick" Value="False"/>
+          <Window Type="TLBB_SimpleText" Name="SelfEquip_Vigor">
+            <Property Name="UnifiedPosition" Value="{{1.0,-65.000000},{0.000000,0.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.0,60.000000},{1.000000,0.000000}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="RightAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+            <Property Name="Text" Value="9999/9999" />
+          </Window>
+        </Window>
+        <Window Type="TLBB_SimpleMulitiTextFrame" Name="SelfEquip_Energy2_Text">
+          <Property Name="UnifiedPosition" Value="{{0.000000,340.000000},{1.000000,-20.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.165000,0.000000},{0.000000,20.000000}}"/>
+          <Property Name="Text" Value="#{INTERFACE_XML_384}"/>
+          <Property Name="TextColor" Value="FFFFF263"/>
+          <Property Name="HorzFormatting" Value="LeftAligned" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="RiseOnClick" Value="False"/>
+          <Window Type="TLBB_SimpleText" Name="SelfEquip_Energy">
+            <Property Name="UnifiedPosition" Value="{{1.0,-65.000000},{0.000000,0.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.0,60.000000},{1.000000,0.000000}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="RightAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+            <Property Name="Text" Value="9999/9999" />
+          </Window>
+        </Window>
+        <Window Type="TLBB_SimpleMulitiTextFrame" Name="SelfEquip_Exp1_Text">
+          <Property Name="UnifiedPosition" Value="{{0.704000,4.000000},{1.000000,-40.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.240000,0.000000},{0.000000,20.000000}}"/>
+          <Property Name="Text" Value="#{INTERFACE_XML_634}"/>
+          <Property Name="TextColor" Value="FFFFF263"/>
+          <Property Name="HorzFormatting" Value="LeftAligned" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Window Type="TLBB_SimpleText" Name="SelfEquip_Exp1">
+            <Property Name="UnifiedPosition" Value="{{1.0,-105.000000},{0.000000,0.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.0,100.000000},{1.000000,0.000000}" />
+            <Property Name="HorzFormatting" Value="RightAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="Text" Value="1234567890123" />
+            <Property Name="TextColor" Value="FFFFF263" />
+          </Window>
+        </Window>
+        <Window Type="TLBB_SimpleMulitiTextFrame" Name="SelfEquip_Exp2_Text">
+          <Property Name="UnifiedPosition" Value="{{0.704000,4.000000},{1.000000,-20.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.240000,0.000000},{0.000000,20.000000}}"/>
+          <Property Name="Text" Value="#{INTERFACE_XML_835}"/>
+          <Property Name="TextColor" Value="FFFFF263"/>
+          <Property Name="HorzFormatting" Value="LeftAligned" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Window Type="TLBB_SimpleText" Name="SelfEquip_Exp2">
+            <Property Name="UnifiedPosition" Value="{{1.0,-105.000000},{0.000000,0.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.0,100.000000},{1.000000,0.000000}" />
+            <Property Name="HorzFormatting" Value="RightAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="Text" Value="123456789" />
+            <Property Name="TextColor" Value="FFFFF263" />
+          </Window>
+        </Window>
+        <Window Type="TLBB_SimpleMulitiTextFrame" Name="SelfEquip_HP_Text">
+          <Property Name="UnifiedPosition" Value="{{0,340.000000},{0.000000,0.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{1,-340.000000},{0.000000,20.000000}}"/>
+          <Property Name="Text" Value="#{INTERFACE_XML_805}"/>
+          <Property Name="TextColor" Value="FFFAFFA4"/>
+          <Property Name="HorzFormatting" Value="LeftAligned" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="RiseOnClick" Value="False"/>
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="SelfEquip_HP">
+          <Property Name="UnifiedPosition" Value="{{1,-105.000000},{0.000000,0.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0,100.000000},{0.000000,20.000000}}"/>
+          <Property Name="Text" Value="0/0" />
+          <Property Name="HorzFormatting" Value="RightAligned" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="RiseOnClick" Value="False" />
+        </Window>
+        <Window Type="TLBB_SimpleMulitiTextFrame" Name="SelfEquip_MP_Text">
+          <Property Name="UnifiedPosition" Value="{{0,340.000000},{0.000000,20.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{1,-340.000000},{0.000000,20.000000}}"/>
+          <Property Name="Text" Value="#{INTERFACE_XML_498}"/>
+          <Property Name="TextColor" Value="FFFAFFA4"/>
+          <Property Name="HorzFormatting" Value="LeftAligned" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="RiseOnClick" Value="False"/>
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="SelfEquip_MP">
+          <Property Name="UnifiedPosition" Value="{{1,-105.000000},{0.000000,20.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0,100.000000},{0.000000,20.000000}}"/>
+          <Property Name="HorzFormatting" Value="RightAligned" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="RiseOnClick" Value="False" />
+        </Window>
+        <Window Type="TLBB_SimpleMulitiTextFrame" Name="SelfEquip_SP_Text">
+          <Property Name="UnifiedPosition" Value="{{0,340.000000},{0.000000,40.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{1,-340.000000},{0.000000,20.000000}}"/>
+          <Property Name="Text" Value="#{INTERFACE_XML_481}"/>
+          <Property Name="TextColor" Value="FFFAFFA4"/>
+          <Property Name="HorzFormatting" Value="LeftAligned" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="RiseOnClick" Value="False"/>
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="SelfEquip_SP">
+          <Property Name="UnifiedPosition" Value="{{1,-105.000000},{0.000000,40.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0,100.000000},{0.000000,20.000000}}"/>
+          <Property Name="HorzFormatting" Value="RightAligned" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="RiseOnClick" Value="False" />
+        </Window>
+        <Window Type="TLBB_Frame_Lace2" Name="SelfEquip_Bk2">
+          <Property Name="UnifiedSize" Value="{{0.000000,33.000000},{0.000000,91.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{1.000000,-34.000000},{0.000000,59.000000}}"/>
+          <Property Name="RiseOnClick" Value="False"/>
+        </Window>
+        <Window Type="TLBB_SimpleMulitiTextFrame" Name="SelfEquip_Str_Text">
+          <Property Name="UnifiedPosition" Value="{{0,340.000000},{0.000000,60.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{1,-374.000000},{0.000000,18.000000}}"/>
+          <Property Name="Text" Value="#{INTERFACE_XML_429}"/>
+          <Property Name="HorzFormatting" Value="LeftAligned" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="RiseOnClick" Value="False"/>
+          <Property Name="TextColor" Value="FFFFF263"/>
+          <Property Name="Tooltip" Value="#{INTERFACE_XML_430}"/>
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="SelfEquip_Str">
+          <Property Name="UnifiedPosition" Value="{{1,-118.000000},{0.000000,60.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0,40.000000},{0.000000,18.000000}}"/>
+          <Property Name="HorzFormatting" Value="RightAligned" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="RiseOnClick" Value="False"/>
+          <Property Name="TextColor" Value="FFFFF263"/>
+          <Property Name="Text" Value="99999"/>
+          <Property Name="Tooltip" Value="#{INTERFACE_XML_430}"/>
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="SelfEquip_Str_Plus">
+          <Property Name="UnifiedPosition" Value="{{1,-78.000000},{0.000000,60.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0,40.000000},{0.000000,18.000000}}"/>
+          <Property Name="HorzFormatting" Value="HorzCentred"/>
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="RiseOnClick" Value="False"/>
+          <Property Name="Text" Value="" />
+          <Event Name="MouseEnter" Function="SelfEquip_ShowTooltip(1);"/>
+        </Window>
+        <Window Type="TLBB_SimpleMulitiTextFrame" Name="SelfEquip_Nimbus_Text">
+          <Property Name="UnifiedPosition" Value="{{0,340.000000},{0.000000,78.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{1,-374.000000},{0.000000,18.000000}}"/>
+          <Property Name="Text" Value="#{INTERFACE_XML_437}"/>
+          <Property Name="HorzFormatting" Value="LeftAligned" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="RiseOnClick" Value="False"/>
+          <Property Name="TextColor" Value="FFFFF263"/>
+          <Property Name="Tooltip" Value="#{INTERFACE_XML_438}"/>
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="SelfEquip_Nimbus">
+          <Property Name="UnifiedPosition" Value="{{1,-118.000000},{0.000000,78.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0,40.000000},{0.000000,18.000000}}"/>
+          <Property Name="HorzFormatting" Value="RightAligned" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="RiseOnClick" Value="False" />
+          <Property Name="TextColor" Value="FFFFF263" />
+          <Property Name="Tooltip" Value="#{INTERFACE_XML_438}" />
+          <Property Name="Text" Value="99999" />
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="SelfEquip_Nimbus_Plus">
+          <Property Name="UnifiedPosition" Value="{{1,-78.000000},{0.000000,78.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0,40.000000},{0.000000,18.000000}}"/>
+          <Property Name="HorzFormatting" Value="HorzCentred" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="RiseOnClick" Value="False" />
+          <Property Name="Text" Value="" />
+          <Event Name="MouseEnter" Function="SelfEquip_ShowTooltip(2);" />
+        </Window>
+        <Window Type="TLBB_SimpleMulitiTextFrame" Name="SelfEquip_PhysicalStrength_Text">
+          <Property Name="UnifiedPosition" Value="{{0,340.000000},{0.000000,96.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{1,-374.000000},{0.000000,18.000000}}"/>
+          <Property Name="Text" Value="#{INTERFACE_XML_685}" />
+          <Property Name="HorzFormatting" Value="LeftAligned" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="RiseOnClick" Value="False" />
+          <Property Name="TextColor" Value="FFFFF263" />
+          <Property Name="Tooltip" Value="#{INTERFACE_XML_688}" />
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="SelfEquip_PhysicalStrength">
+          <Property Name="UnifiedPosition" Value="{{1,-118.000000},{0.000000,96.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0,40.000000},{0.000000,18.000000}}"/>
+          <Property Name="HorzFormatting" Value="RightAligned" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="RiseOnClick" Value="False" />
+          <Property Name="TextColor" Value="FFFFF263" />
+          <Property Name="Tooltip" Value="#{INTERFACE_XML_688}" />
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="SelfEquip_PhysicalStrength_Plus">
+          <Property Name="UnifiedPosition" Value="{{1,-78.000000},{0.000000,96.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0,40.000000},{0.000000,18.000000}}"/>
+          <Property Name="HorzFormatting" Value="HorzCentred" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="RiseOnClick" Value="False" />
+          <Event Name="MouseEnter" Function="SelfEquip_ShowTooltip(3);" />
+        </Window>
+        <Window Type="TLBB_SimpleMulitiTextFrame" Name="SelfEquip_Stability_Text">
+          <Property Name="UnifiedPosition" Value="{{0,340.000000},{0.000000,114.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{1,-374.000000},{0.000000,18.000000}}"/>
+          <Property Name="Text" Value="#{INTERFACE_XML_250}" />
+          <Property Name="HorzFormatting" Value="LeftAligned" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="RiseOnClick" Value="False" />
+          <Property Name="TextColor" Value="FFFFF263" />
+          <Property Name="Tooltip" Value="#{INTERFACE_XML_252}" />
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="SelfEquip_Stability">
+          <Property Name="UnifiedPosition" Value="{{1,-118.000000},{0.000000,114.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0,40.000000},{0.000000,18.000000}}"/>
+          <Property Name="HorzFormatting" Value="RightAligned" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="RiseOnClick" Value="False" />
+          <Property Name="TextColor" Value="FFFFF263" />
+          <Property Name="Tooltip" Value="#{INTERFACE_XML_252}" />
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="SelfEquip_Stability_Plus">
+          <Property Name="UnifiedPosition" Value="{{1,-78.000000},{0.000000,114.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0,40.000000},{0.000000,18.000000}}"/>
+          <Property Name="HorzFormatting" Value="HorzCentred" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="RiseOnClick" Value="False" />
+          <Event Name="MouseEnter" Function="SelfEquip_ShowTooltip(4);" />
+        </Window>
+        <Window Type="TLBB_SimpleMulitiTextFrame" Name="SelfEquip_Footwork_Text">
+          <Property Name="UnifiedPosition" Value="{{0,340.000000},{0.000000,132.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{1,-374.000000},{0.000000,18.000000}}"/>
+          <Property Name="Text" Value="#{INTERFACE_XML_628}" />
+          <Property Name="HorzFormatting" Value="LeftAligned" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="RiseOnClick" Value="False" />
+          <Property Name="TextColor" Value="FFFFF263" />
+          <Property Name="Tooltip" Value="#{INTERFACE_XML_629}" />
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="SelfEquip_Footwork">
+          <Property Name="UnifiedPosition" Value="{{1,-118.000000},{0.000000,132.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0,40.000000},{0.000000,18.000000}}"/>
+          <Property Name="HorzFormatting" Value="RightAligned" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="RiseOnClick" Value="False" />
+          <Property Name="TextColor" Value="FFFFF263" />
+          <Property Name="Tooltip" Value="#{INTERFACE_XML_629}" />
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="SelfEquip_Footwork_Plus">
+          <Property Name="UnifiedPosition" Value="{{1,-78.000000},{0.000000,132.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0,40.000000},{0.000000,18.000000}}"/>
+          <Property Name="HorzFormatting" Value="HorzCentred" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="RiseOnClick" Value="False" />
+          <Event Name="MouseEnter" Function="SelfEquip_ShowTooltip(5);" />
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="SelfEquip_Potential_Text">
+          <Property Name="UnifiedPosition" Value="{{0,342.000000},{1.000000,-189.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0,40.000000},{0.000000,18.000000}}"/>
+          <Property Name="Text" Value="#{INTERFACE_XML_500}" />
+          <Property Name="TextColor" Value="FFFAFFA4" />
+          <Property Name="HorzFormatting" Value="LeftAligned" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="RiseOnClick" Value="False" />
+        </Window>
+        <Window Type="TLBB_SimpleText" Name="SelfEquip_Potential">
+          <Property Name="UnifiedPosition" Value="{{1,-86.000000},{1.000000,-189.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.000000,40.000000},{0.000000,18.000000}}"/>
+          <Property Name="HorzFormatting" Value="RightAligned" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="TextColor" Value="FFFAFFA4" />
+          <Property Name="RiseOnClick" Value="False" />
+          <Property Name="Text" Value="9999" />
+        </Window>
+        <Window Type="TLBB_ButtonCommon" Name="SelfEquip_Accept">
+          <Property Name="UnifiedSize" Value="{{0.000000,40.000000},{0.000000,18.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{1,-40.000000},{1.000000,-189.000000}}"/>
+          <Property Name="Text" Value="#{INTERFACE_XML_557}" />
+          <Event Name="Clicked" Function="SelfEquip_Accept_Click();" />
+        </Window>
+        <Window Type="TLBB_Frame_Lace2" Name="SelfEquip_Bk3">
+          <Property Name="UnifiedSize" Value="{{1.000000,-340.000000},{0.000000,131.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,340.000000},{1.000000,-171.000000}}"/>
+          <Property Name="RiseOnClick" Value="False" />
+          <Window Type="TLBB_SimpleText" Name="SelfEquip_PerportyText_1">
+            <Property Name="UnifiedPosition" Value="{{0.0,6.000000},{0.000000,2.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,16.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_707}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="LeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="SelfEquip_Perporty1">
+            <Property Name="UnifiedPosition" Value="{{0.0,67.000000},{0.000000,2.000000}" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-68.000000},{0.000000,16.000000}}"/>
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="LeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+            <Property Name="Text" Value="" />
+          </Window>
+          <Window Type="TLBB_SimpleText" Name="SelfEquip_Perporty1_Plus">
+            <Property Name="UnifiedPosition" Value="{{0.5,33.000000},{0.000000,2.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.5,-40.000000},{0.000000,16.000000}" />
+            <Property Name="HorzFormatting" Value="RightAligned" />
+            <Property Name="VertFormatting" Value="BottomAligned" />
+            <Property Name="RiseOnClick" Value="False" />
+            <Property Name="Text" Value="" />
+            <Event Name="MouseEnter" Function="SelfEquip_ShowTooltip(6);" />
+          </Window>
+          <Window Type="TLBB_SimpleText" Name="SelfEquip_PerportyText_2">
+            <Property Name="UnifiedPosition" Value="{{0.0,6.000000},{0.000000,18.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,16.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_471}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="LeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="SelfEquip_Perporty2">
+            <Property Name="UnifiedPosition" Value="{{0.0,67.000000},{0.000000,18.000000}" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-68.000000},{0.000000,16.000000}}"/>
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="LeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+            <Property Name="Text" Value="" />
+          </Window>
+          <Window Type="TLBB_SimpleText" Name="SelfEquip_Perporty2_Plus">
+            <Property Name="UnifiedPosition" Value="{{0.5,33.000000},{0.000000,18.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.5,-40.000000},{0.000000,16.000000}" />
+            <Property Name="HorzFormatting" Value="RightAligned" />
+            <Property Name="VertFormatting" Value="BottomAligned" />
+            <Property Name="RiseOnClick" Value="False" />
+            <Property Name="Text" Value="" />
+            <Event Name="MouseEnter" Function="SelfEquip_ShowTooltip(7);" />
+          </Window>
+          <Window Type="TLBB_SimpleText" Name="SelfEquip_PerportyText_3">
+            <Property Name="UnifiedPosition" Value="{{0.0,6.000000},{0.000000,34.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,16.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_706}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="LeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="SelfEquip_Perporty3">
+            <Property Name="UnifiedPosition" Value="{{0.0,67.000000},{0.000000,34.000000}" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-68.000000},{0.000000,16.000000}}"/>
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="LeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+            <Property Name="Text" Value="" />
+          </Window>
+          <Window Type="TLBB_SimpleText" Name="SelfEquip_Perporty3_Plus">
+            <Property Name="UnifiedPosition" Value="{{0.5,33.000000},{0.000000,34.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.5,-40.000000},{0.000000,16.000000}" />
+            <Property Name="HorzFormatting" Value="RightAligned" />
+            <Property Name="VertFormatting" Value="BottomAligned" />
+            <Property Name="RiseOnClick" Value="False" />
+            <Property Name="Text" Value="" />
+            <Event Name="MouseEnter" Function="SelfEquip_ShowTooltip(8);" />
+          </Window>
+          <Window Type="TLBB_SimpleText" Name="SelfEquip_PerportyText_4">
+            <Property Name="UnifiedPosition" Value="{{0.0,6.000000},{0.000000,50.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.000000,60.000000},{0.000000,16.000000}}"/>
+            <Property Name="Text" Value="#{INTERFACE_XML_470}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="LeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="SelfEquip_Perporty4">
+            <Property Name="UnifiedPosition" Value="{{0.0,67.000000},{0.000000,50.000000}" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-68.000000},{0.000000,16.000000}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="LeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+            <Property Name="Text" Value="" />
+          </Window>
+          <Window Type="TLBB_SimpleText" Name="SelfEquip_Perporty4_Plus">
+            <Property Name="UnifiedPosition" Value="{{0.5,33.000000},{0.000000,50.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.5,-40.000000},{0.000000,16.000000}" />
+            <Property Name="HorzFormatting" Value="RightAligned" />
+            <Property Name="VertFormatting" Value="BottomAligned" />
+            <Property Name="RiseOnClick" Value="False" />
+            <Property Name="Text" Value="" />
+            <Event Name="MouseEnter" Function="SelfEquip_ShowTooltip(9);" />
+          </Window>
+          <Window Type="TLBB_SimpleText" Name="SelfEquip_PerportyText_7">
+            <Property Name="UnifiedPosition" Value="{{0.0,6.000000},{0.000000,66.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,16.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_468}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="LeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="SelfEquip_Perporty7">
+            <Property Name="UnifiedPosition" Value="{{0.0,67.000000},{0.000000,66.000000}" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-68.000000},{0.000000,16.000000}}"/>
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="LeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+            <Property Name="Text" Value="" />
+          </Window>
+          <Window Type="TLBB_SimpleText" Name="SelfEquip_Perporty7_Plus">
+            <Property Name="UnifiedPosition" Value="{{0.5,33.000000},{0.000000,66.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.5,-40.000000},{0.000000,16.000000}" />
+            <Property Name="HorzFormatting" Value="RightAligned" />
+            <Property Name="VertFormatting" Value="BottomAligned" />
+            <Property Name="RiseOnClick" Value="False" />
+            <Property Name="Text" Value="" />
+            <Event Name="MouseEnter" Function="SelfEquip_ShowTooltip(10);" />
+          </Window>
+          <Window Type="TLBB_SimpleText" Name="SelfEquip_PerportyText_6">
+            <Property Name="UnifiedPosition" Value="{{0.0,6.000000},{0.000000,82.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,16.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_586}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="LeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="SelfEquip_Perporty6">
+            <Property Name="UnifiedPosition" Value="{{0.0,67.000000},{0.000000,82.000000}" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-68.000000},{0.000000,16.000000}}"/>
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="LeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+            <Property Name="Text" Value="" />
+          </Window>
+          <Window Type="TLBB_SimpleText" Name="SelfEquip_Perporty6_Plus">
+            <Property Name="UnifiedPosition" Value="{{0.5,33.000000},{0.000000,82.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.5,-40.000000},{0.000000,16.000000}" />
+            <Property Name="HorzFormatting" Value="RightAligned" />
+            <Property Name="VertFormatting" Value="BottomAligned" />
+            <Property Name="RiseOnClick" Value="False" />
+            <Property Name="Text" Value="" />
+            <Event Name="MouseEnter" Function="SelfEquip_ShowTooltip(11);" />
+          </Window>
+          <Window Type="TLBB_SimpleText" Name="SelfEquip_PerportyText_5">
+            <Property Name="UnifiedPosition" Value="{{0.0,6.000000},{0.000000,98.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.0,60.000000},{0.000000,16.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_338}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="LeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="SelfEquip_Perporty5">
+            <Property Name="UnifiedPosition" Value="{{0.0,67.000000},{0.000000,98.000000}" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-68.000000},{0.000000,16.000000}}"/>
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="LeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+            <Property Name="Text" Value="" />
+          </Window>
+          <Window Type="TLBB_SimpleText" Name="SelfEquip_Perporty5_Plus">
+            <Property Name="UnifiedPosition" Value="{{0.5,33.000000},{0.000000,98.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.5,-40.000000},{0.000000,16.000000}" />
+            <Property Name="HorzFormatting" Value="RightAligned" />
+            <Property Name="VertFormatting" Value="BottomAligned" />
+            <Property Name="RiseOnClick" Value="False" />
+            <Property Name="Text" Value="" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="SelfEquip_Perporty8">
+            <Property Name="UnifiedPosition" Value="{{0.0,67.000000},{0.000000,98.000000}" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-68.000000},{0.000000,16.000000}}"/>
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="LeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+            <Property Name="Text" Value="" />
+          </Window>
+          <Window Type="TLBB_SimpleText" Name="SelfEquip_Perporty8_Plus">
+            <Property Name="UnifiedPosition" Value="{{0.5,33.000000},{0.000000,98.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.5,-40.000000},{0.000000,16.000000}" />
+            <Property Name="HorzFormatting" Value="RightAligned" />
+            <Property Name="VertFormatting" Value="BottomAligned" />
+            <Property Name="RiseOnClick" Value="False" />
+            <Property Name="Text" Value="" />
+          </Window>
+          <Window Type="TLBB_SimpleText" Name="SelfEquip_PerportyText_9">
+            <Property Name="UnifiedPosition" Value="{{0.0,6.000000},{0.000000,114.000000}" />
+            <Property Name="UnifiedSize" Value="{{0,60.000000},{0.000000,16.000000}" />
+            <Property Name="Text" Value="#{INTERFACE_XML_337}" />
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="LeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="SelfEquip_Perporty9">
+            <Property Name="UnifiedPosition" Value="{{0.0,67.000000},{0.000000,114.000000}" />
+            <Property Name="UnifiedSize" Value="{{1.000000,-68.000000},{0.000000,16.000000}}"/>
+            <Property Name="TextColor" Value="FFFFF263" />
+            <Property Name="HorzFormatting" Value="LeftAligned" />
+            <Property Name="VertFormatting" Value="VertCentred" />
+            <Property Name="RiseOnClick" Value="False" />
+            <Property Name="Text" Value="" />
+          </Window>
+          <Window Type="TLBB_SimpleText" Name="SelfEquip_Perporty9_Plus">
+            <Property Name="UnifiedPosition" Value="{{0.5,33.000000},{0.000000,114.000000}" />
+            <Property Name="UnifiedSize" Value="{{0.5,-40.000000},{0.000000,16.000000}" />
+            <Property Name="HorzFormatting" Value="RightAligned" />
+            <Property Name="VertFormatting" Value="BottomAligned" />
+            <Property Name="RiseOnClick" Value="False" />
+            <Property Name="Text" Value="" />
+          </Window>
+        </Window>
+        <Window Type="TLBB_ButtonAdd" Name="Equip_Addition_Button1">
+          <Property Name="UnifiedPosition" Value="{{1.000000,-32.000000},{0.000000,62.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.000000,14.000000},{0.000000,14.000000}}"/>
+          <Event Name="Clicked" Function="SelfEquip_AutoClick_LButtonUp(1);" />
+          <Event Name="MouseEnter" Function="SelfEquip_AutoClick_Clear(1)" />
+          <Event Name="MouseLeave" Function="SelfEquip_AutoClick_Clear(1)" />
+          <Event Name="MouseLButtonDown"  Function="SelfEquip_AutoClick_SetTimer(1)" />
+        </Window>
+        <Window Type="TLBB_ButtonAdd" Name="Equip_Addition_Button2">
+          <Property Name="UnifiedPosition" Value="{{1.000000,-32.000000},{0.000000,80.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.000000,14.000000},{0.000000,14.000000}}"/>
+          <Event Name="Clicked" Function="SelfEquip_AutoClick_LButtonUp(2);" />
+          <Event Name="MouseEnter" Function="SelfEquip_AutoClick_Clear(2)" />
+          <Event Name="MouseLeave" Function="SelfEquip_AutoClick_Clear(2)" />
+          <Event Name="MouseLButtonDown"  Function="SelfEquip_AutoClick_SetTimer(2)" />
+        </Window>
+        <Window Type="TLBB_ButtonAdd" Name="Equip_Addition_Button3">
+          <Property Name="UnifiedPosition" Value="{{1.000000,-32.000000},{0.000000,98.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.000000,14.000000},{0.000000,14.000000}}"/>
+          <Event Name="Clicked" Function="SelfEquip_AutoClick_LButtonUp(3);" />
+          <Event Name="MouseEnter" Function="SelfEquip_AutoClick_Clear(3)" />
+          <Event Name="MouseLeave" Function="SelfEquip_AutoClick_Clear(3)" />
+          <Event Name="MouseLButtonDown"  Function="SelfEquip_AutoClick_SetTimer(3)" />
+        </Window>
+        <Window Type="TLBB_ButtonAdd" Name="Equip_Addition_Button4">
+          <Property Name="UnifiedPosition" Value="{{1.000000,-32.000000},{0.000000,116.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.000000,14.000000},{0.000000,14.000000}}"/>
+          <Event Name="Clicked" Function="SelfEquip_AutoClick_LButtonUp(4);" />
+          <Event Name="MouseEnter" Function="SelfEquip_AutoClick_Clear(4)" />
+          <Event Name="MouseLeave" Function="SelfEquip_AutoClick_Clear(4)" />
+          <Event Name="MouseLButtonDown"  Function="SelfEquip_AutoClick_SetTimer(4)" />
+        </Window>
+        <Window Type="TLBB_ButtonAdd" Name="Equip_Addition_Button5">
+          <Property Name="UnifiedPosition" Value="{{1.000000,-32.000000},{0.000000,134.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.000000,14.000000},{0.000000,14.000000}}"/>
+          <Event Name="Clicked" Function="SelfEquip_AutoClick_LButtonUp(5);" />
+          <Event Name="MouseEnter" Function="SelfEquip_AutoClick_Clear(5)" />
+          <Event Name="MouseLeave" Function="SelfEquip_AutoClick_Clear(5)" />
+          <Event Name="MouseLButtonDown"  Function="SelfEquip_AutoClick_SetTimer(5)" />
+        </Window>
+        <Window Type="TLBB_ButtonSub" Name="Equip_Decrease_Button1">
+          <Property Name="UnifiedPosition" Value="{{1.000000,-17.000000},{0.000000,62.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.000000,14.000000},{0.000000,14.000000}}"/>
+          <Event Name="Clicked" Function="SelfEquip_AutoClick_LButtonUp(6);" />
+          <Event Name="MouseEnter" Function="SelfEquip_AutoClick_Clear(6)" />
+          <Event Name="MouseLeave" Function="SelfEquip_AutoClick_Clear(6)" />
+          <Event Name="MouseLButtonDown"  Function="SelfEquip_AutoClick_SetTimer(6)" />
+        </Window>
+        <Window Type="TLBB_ButtonSub" Name="Equip_Decrease_Button2">
+          <Property Name="UnifiedPosition" Value="{{1.000000,-17.000000},{0.000000,80.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.000000,14.000000},{0.000000,14.000000}}"/>
+          <Event Name="Clicked" Function="SelfEquip_AutoClick_LButtonUp(7);" />
+          <Event Name="MouseEnter" Function="SelfEquip_AutoClick_Clear(7)" />
+          <Event Name="MouseLeave" Function="SelfEquip_AutoClick_Clear(7)" />
+          <Event Name="MouseLButtonDown"  Function="SelfEquip_AutoClick_SetTimer(7)" />
+        </Window>
+        <Window Type="TLBB_ButtonSub" Name="Equip_Decrease_Button3">
+          <Property Name="UnifiedPosition" Value="{{1.000000,-17.000000},{0.000000,98.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.000000,14.000000},{0.000000,14.000000}}"/>
+          <Event Name="Clicked" Function="SelfEquip_AutoClick_LButtonUp(8);" />
+          <Event Name="MouseEnter" Function="SelfEquip_AutoClick_Clear(8)" />
+          <Event Name="MouseLeave" Function="SelfEquip_AutoClick_Clear(8)" />
+          <Event Name="MouseLButtonDown"  Function="SelfEquip_AutoClick_SetTimer(8)" />
+        </Window>
+        <Window Type="TLBB_ButtonSub" Name="Equip_Decrease_Button4">
+          <Property Name="UnifiedPosition" Value="{{1.000000,-17.000000},{0.000000,116.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.000000,14.000000},{0.000000,14.000000}}"/>
+          <Event Name="Clicked" Function="SelfEquip_AutoClick_LButtonUp(9);" />
+          <Event Name="MouseEnter" Function="SelfEquip_AutoClick_Clear(9)" />
+          <Event Name="MouseLeave" Function="SelfEquip_AutoClick_Clear(9)" />
+          <Event Name="MouseLButtonDown"  Function="SelfEquip_AutoClick_SetTimer(9)" />
+        </Window>
+        <Window Type="TLBB_ButtonSub" Name="Equip_Decrease_Button5">
+          <Property Name="UnifiedPosition" Value="{{1.000000,-17.000000},{0.000000,134.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.000000,14.000000},{0.000000,14.000000}}"/>
+          <Event Name="Clicked" Function="SelfEquip_AutoClick_LButtonUp(10);" />
+          <Event Name="MouseEnter" Function="SelfEquip_AutoClick_Clear(10)" />
+          <Event Name="MouseLeave" Function="SelfEquip_AutoClick_Clear(10)" />
+          <Event Name="MouseLButtonDown"  Function="SelfEquip_AutoClick_SetTimer(10)" />
+        </Window>
+      </Window>
+    </Window>
+    <Window Type="TLBB_Animate" Name="SelfEquip_Levelup_Mask">
+      <Property Name="UnifiedSize" Value="{{0.000000,23.000000},{0.000000,57.000000}}"/>
+      <Property Name="UnifiedPosition" Value="{{1.000000,-43.000000},{1.000000,-60.000000}}"/>
+      <Property Name="Animate" Value="Levelup" />
+      <Property Name="MouseHollow" Value="True"/>
+      <Property Name="MouseMoveHollow" Value="True"/>
+      <Property Name="MouseLButtonHollow" Value="True"/>
+      <Property Name="MouseRButtonHollow" Value="True"/>
+      <Property Name="AlwaysOnTop" Value="True"/>
+    </Window>
+    <Window Type="TLBB_ButtonNULL" Name="SelfEquip_UpLevel">
+      <Property Name="UnifiedSize" Value="{{0.000000,60.000000},{0.000000,71.000000}}"/>
+      <Property Name="UnifiedPosition" Value="{{1.000000,-61.000000},{1.000000,-74.000000}}"/>
+      <Event Name="Clicked" Function="SelfEquip_AskLevelup();"/>
+      <Property Name="NormalImage" Value="set:Button5 image:BtnLevelup_Normal"/>
+      <Property Name="HoverImage" Value="set:Button5 image:BtnLevelup_Hover"/>
+      <Property Name="PushedImage" Value="set:Button5 image:BtnLevelup_Pushed"/>
+      <Property Name="DisabledImage" Value="set:Button5 image:BtnLevelup_Disabled"/>
+      <Property Name="AlwaysOnTop" Value="True"/>
+    </Window>
+    <Window Type="DefaultWindow" Name="SelfEquip_Checkbox_Frame">
+      <Property Name="UnifiedSize" Value="{{1.000000,-10.000000},{0.000000,18.000000}}"/>
+      <Property Name="UnifiedPosition" Value="{{0.000000,14.000000},{1.000000,-18}}"/>
+      <Window Type="TLBB_ButtonPageDown" Name="SelfEquip_SelfEquip">
+        <Property Name="AbsolutePosition" Value="x:0.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:42.000000 h:18.000000" />
+        <Property Name="CheckMode" Value="1" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Property Name="Text" Value="#{INTERFACE_XML_877}" />
+      </Window>
+      <Window Type="TLBB_ButtonPageDown" Name="SelfEquip_SelfData">
+        <Property Name="AbsolutePosition" Value="x:36 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="CheckMode" Value="1" />
+        <Property Name="Text" Value="#{INTERFACE_XML_882}" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Event Name="MouseButtonUp" Function="Pet_Page_SelfData();" />
+      </Window>
+      <Window Type="TLBB_ButtonPageDown" Name="SelfEquip_Pet">
+        <Property Name="AbsolutePosition" Value="x:72 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="CheckMode" Value="1" />
+        <Property Name="Text" Value="#{INTERFACE_XML_854}" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Event Name="MouseButtonUp" Function="Pet_Page_Switch();" />
+      </Window>
+      <Window Type="TLBB_ButtonPageDown" Name="SelfEquip_Infant">
+        <Property Name="AbsolutePosition" Value="x:108 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="CheckMode" Value="1" />
+        <Property Name="Text" Value="子女"/>
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Event Name="MouseButtonUp" Function="SelfEquip_Infant_Switch();" />
+      </Window>
+      <Window Type="TLBB_ButtonPageDown" Name="SelfEquip_Wuhun">
+        <Property Name="AbsolutePosition" Value="x:144 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Text" Value="武魂" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Event Name="MouseButtonUp" Function="SelfEquip_Wuhun_Switch();" />
+      </Window>
+      <Window Type="TLBB_SimpleText" Name="SelfEquip_Wuhun_tips">
+        <Property Name="AbsolutePosition" Value="x:144 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Tooltip" Value="#cfff263等级达到#G65级#cfff263后可开启此界面"/>
+      </Window>
+      <Window Type="TLBB_ButtonPageDown" Name="SelfEquip_Xiulian">
+        <Property Name="AbsolutePosition" Value="x:180.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Text" Value="修炼" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Event Name="MouseButtonUp" Function="XiuLian_Page_Switchh();" />
+      </Window>
+      <Window Type="TLBB_SimpleText" Name="SelfEquip_Xiulian_tips">
+        <Property Name="AbsolutePosition" Value="x:180.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Tooltip" Value="#cfff263等级达到#G70级#cfff263后可打开此界面"/>
+      </Window>
+      <Window Type="TLBB_ButtonPageDown" Name="SelfEquip_Miji">
+        <Property Name="AbsolutePosition" Value="x:216.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="CheckMode" Value="1" />
+        <Property Name="Text" Value="秘籍" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Event Name="MouseButtonUp" Function="SelfEquip_Miji_Page_Switch();" />
+      </Window>
+      <Window Type="TLBB_SimpleText" Name="SelfEquip_Miji_tips">
+        <Property Name="AbsolutePosition" Value="x:216.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Tooltip" Value="#cfff263等级达到#G75级#cfff263且完成#G任务：虚空使节探虚空#cfff263后，可开启此界面"/>
+      </Window>
+      <Window Type="TLBB_ButtonPageDown" Name="SelfEquip_ZhenYuan">
+        <Property Name="AbsolutePosition" Value="x:252 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Text" Value="真元" />
+        <Property Name="CheckMode" Value="1" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Event Name="MouseButtonUp" Function="SelfEquip_ZhenYuan_Page_Switch();" />
+      </Window>
+      <Window Type="TLBB_SimpleText" Name="SelfEquip_ZhenYuan_tips">
+        <Property Name="AbsolutePosition" Value="x:252 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Tooltip" Value="#cfff263等级达到#G80级#cfff263且完成#G苏州（350，229）张士心#cfff263处的#G真元相关任务#cfff263后，可开启此界面"/>
+      </Window>
+      <Window Type="TLBB_ButtonPageDown" Name="SelfEquip_JingMai">
+        <Property Name="AbsolutePosition" Value="x:288 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Text" Value="经脉" />
+        <Property Name="CheckMode" Value="1" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Event Name="MouseButtonUp" Function="Other_JingMai_Page_Switch();" />
+      </Window>
+      <Window Type="TLBB_SimpleText" Name="SelfEquip_JingMai_tips">
+        <Property Name="AbsolutePosition" Value="x:288 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Tooltip" Value="#cfff263等级达到#G90级#cfff263且完成#G门派进阶任务#cfff263后，可打开启界面"/>
+      </Window>
+      <Window Type="TLBB_ButtonPageDown" Name="SelfEquip_ShenDing">
+        <Property Name="AbsolutePosition" Value="x:324 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Text" Value="神鼎" />
+        <Property Name="CheckMode" Value="1" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Property Name="Tooltip" Value=""/>
+        <Event Name="MouseButtonUp" Function="Other_ShenDing_Page_Switch();" />
+      </Window>
+      <Window Type="TLBB_SimpleText" Name="SelfEquip_ShenDing_tips">
+        <Property Name="AbsolutePosition" Value="x:324 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Tooltip" Value="#cfff263等级达到#G15级#cfff263的玩家方可开启此界面。"/>
+      </Window>
+      <Window Type="TLBB_ButtonPageDown" Name="SelfEquip_JunXian">
+        <Property Name="AbsolutePosition" Value="x:360 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Text" Value="侠印" />
+        <Property Name="CheckMode" Value="1" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Event Name="MouseButtonUp" Function="Other_JunXian_Page_Switch();" />
+      </Window>
+      <Window Type="TLBB_SimpleText" Name="SelfEquip_JunXian_tips">
+        <Property Name="AbsolutePosition" Value="x:360 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Tooltip" Value="#cfff263等级达到#G85级#cfff263的玩家方可开启此界面"/>
+      </Window>
+      <Window Type="TLBB_ButtonPageDown" Name="SelfEquip_BaoJian">
+        <Property Name="AbsolutePosition" Value="x:396.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Text" Value="宝鉴" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Property Name="CheckMode" Value="1" />
+        <Event Name="MouseButtonUp" Function="SelfEquip_OpenBaoJian();" />
+      </Window>
+      <Window Type="TLBB_SimpleText" Name="SelfEquip_BaoJian_tips">
+        <Property Name="AbsolutePosition" Value="x:396.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Tooltip" Value="您的等级尚未达到85级，无法激活五行宝鉴！"/>
+      </Window>
+      <Window Type="TLBB_ButtonPageDown" Name="SelfEquip_WuYi">
+        <Property Name="AbsolutePosition" Value="x:432.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Text" Value="武意" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Property Name="CheckMode" Value="1" />
+        <Event Name="MouseButtonUp" Function="SelfEquip_OpenWuYi();" />
+      </Window>
+      <!--<Window Type="TLBB_SimpleText" Name="SelfEquip_WuYi_tips">
+        <Property Name="AbsolutePosition" Value="x:432.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Tooltip" Value="#Y等级达到#G85级#Y且完成任务：#G天现北斗意生武#Y后，可开启此界面。"/>
+      </Window>-->
+      <Window Type="TLBB_ButtonPageDown" Name="SelfEquip_ShenQi">
+        <Property Name="AbsolutePosition" Value="x:468.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Text" Value="神器" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Property Name="CheckMode" Value="1" />
+	<Event Name="MouseButtonUp" Function="SelfEquip_OpenShenQi();" />
+      </Window>
+      <!--<Window Type="TLBB_SimpleText" Name="SelfEquip_ShenQi_tips">
+        <Property Name="AbsolutePosition" Value="x:468.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Tooltip" Value="#Y拥有#G102级#Y上古神器且完成任务：#G奇缘勘破神器秘#Y后，方可开启此界面。"/>
+      </Window>-->
+      <Window Type="TLBB_ButtonPageDown" Name="SelfEquip_Ride">
+        <Property Name="AbsolutePosition" Value="x:504 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Text" Value="骑乘" />
+        <Property Name="CheckMode" Value="1" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Event Name="MouseButtonUp" Function="Ride_Page_Switch();" />
+      </Window>
+      <Window Type="TLBB_ButtonPageDown" Name="SelfEquip_OtherInfo">
+        <Property Name="AbsolutePosition" Value="x:540 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Text" Value="其他" />
+        <Property Name="CheckMode" Value="1" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Event Name="MouseButtonUp" Function="Other_Info_Page_Switch();" />
+      </Window>
+    </Window>
+  </Window>
+</GUILayout>
