@@ -238,16 +238,25 @@ function x770003_OnKillObject( sceneId, selfId, objdataId ,objId)
 				local misIndex = GetMissionIndexByID(sceneId,humanObjId,x770003_g_MissionId)
 				local nNum = GetMissionParam(sceneId,humanObjId,misIndex,1)
 				if nNum < x770003_g_DemandTrueKill[1].num then
+					-- if nNum == x770003_g_DemandTrueKill[1].num - 1 then
+					-- 	SetMissionByIndex(sceneId,humanObjId,misIndex,0,1)
+					-- end
 					if nNum == x770003_g_DemandTrueKill[1].num - 1 then
-						SetMissionByIndex(sceneId,humanObjId,misIndex,0,1)
+						SetMissionByIndex(sceneId,humanObjId,misIndex,1,0)
+						BeginEvent(sceneId)
+						strText = "Í»ÆÆÆ¿¾±£¡"
+						AddText(sceneId,strText);
+						EndEvent(sceneId)
+						DispatchMissionTips(sceneId,humanObjId)
+						addSomeBuff(sceneId, selfId, x770003_g_addofBuff[my_level])
+					else
+						SetMissionByIndex(sceneId,humanObjId,misIndex,1,nNum+1)
+						BeginEvent(sceneId)
+						strText = format("ÒÑÉ±ËÀ¹ÖÎï%d/20", GetMissionParam(sceneId,humanObjId,misIndex,1) )
+						AddText(sceneId,strText);
+						EndEvent(sceneId)
+						DispatchMissionTips(sceneId,humanObjId)
 					end
-					
-				SetMissionByIndex(sceneId,humanObjId,misIndex,1,nNum+1)
-				BeginEvent(sceneId)
-					strText = format("ÒÑÉ±ËÀ¹ÖÎï%d/20", GetMissionParam(sceneId,humanObjId,misIndex,1) )
-					AddText(sceneId,strText);
-				EndEvent(sceneId)
-				DispatchMissionTips(sceneId,humanObjId)
 				end
 			end
 		end

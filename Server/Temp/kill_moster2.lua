@@ -234,15 +234,21 @@ function x770004_OnKillObject( sceneId, selfId, objdataId ,objId)
 				local nNum = GetMissionParam(sceneId,humanObjId,misIndex,1)
 				if nNum < x770004_g_DemandTrueKill[1].num then
 					if nNum == x770004_g_DemandTrueKill[1].num - 1 then
-						SetMissionByIndex(sceneId,humanObjId,misIndex,0,1)
+						x770004_addSomeBuff(sceneId, humanObjId, x770004_g_addofBuff[humanLevel])
+						SetMissionByIndex(sceneId,humanObjId,misIndex,1,0)
+						BeginEvent(sceneId)
+						strText = "Í»ÆÆÆ¿¾±£¡"
+						AddText(sceneId,strText);
+						EndEvent(sceneId)
+						DispatchMissionTips(sceneId,humanObjId)
+					else
+						SetMissionByIndex(sceneId,humanObjId,misIndex,1,nNum+1)
+						BeginEvent(sceneId)
+						strText = format("ÒÑÉ±ËÀ¹ÖÎï%d/20", GetMissionParam(sceneId,humanObjId,misIndex,1) )
+						AddText(sceneId,strText);
+						EndEvent(sceneId)
+						DispatchMissionTips(sceneId,humanObjId)
 					end
-					
-				SetMissionByIndex(sceneId,humanObjId,misIndex,1,nNum+1)
-				BeginEvent(sceneId)
-					strText = format("ÒÑÉ±ËÀ¹ÖÎï%d/20", GetMissionParam(sceneId,humanObjId,misIndex,1) )
-					AddText(sceneId,strText);
-				EndEvent(sceneId)
-				DispatchMissionTips(sceneId,humanObjId)
 				end
 			end
 		end

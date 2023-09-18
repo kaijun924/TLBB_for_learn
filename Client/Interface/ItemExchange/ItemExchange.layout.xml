@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+	<Window Type="TLBB_MainFrame0" Name="ItemExchange_Frame">
+		<Property Name="UnifiedPosition" Value="{{0.5,-230},{0.5,-200}}" />
+		<Property Name="AbsoluteSize" Value="w:250 h:290" />
+		<Window Type="TLBB_DragTitle" Name="ItemExchange_DragTitle">
+			<Property Name="AbsolutePosition" Value="x:40.000000 y:3.000000" />
+			<Property Name="UnifiedSize" Value="{{1.000000,-80.000000},{0.000000,20.000000}" />
+			<Property Name="DragTarget" Value="ItemExchange_Frame" />
+			<Window Type="TLBB_SimpleText" Name="ItemExchange_Title">
+			<Property Name="Position" Value="x:0.0 y:0.0" />
+			<Property Name="Size" Value="w:1.0 h:1.0" />
+		    <Property Name="Font" Value="YouYuan11.25" />
+            <Property Name="HorzFormatting" Value="HorzCentred"/>
+  			<Property Name="Text" Value="#gFF0FA0在线GM工具" />
+			</Window>
+		</Window>
+		<Window Type="TLBB_ButtonHelp" Name="ItemExchange_Help">
+			<Property Name="UnifiedPosition" Value="{{0.000000,25.000000},{0.000000,7.000000}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Event Name="Clicked" Function='Helper:GotoHelper(&quot;*ItemExchange&quot;);' />
+		</Window>
+		<Window Type="TLBB_ButtonClose" Name="ItemExchange_Close">
+			<Property Name="UnifiedPosition" Value="{{1.000000,-39.000000},{0.000000,7.000000}" />
+			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+			<Event Name="Clicked" Function="this:Hide();" />
+		</Window>
+		<!-- 增加或减少元宝 -->
+		<Window Type="TLBB_SimpleMulitiTextFrame" Name="ItemExchange_yuanbao">
+			<Property Name="UnifiedPosition" Value="{{0.000000,30.000000},{0.000000,60.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.000000,170.000000},{0.000000,24.000000}" />
+			<Property Name="Text" Value="元宝" />
+			<Property Name="Font" Value="YouYuan11.25" />
+			<Property Name="TextColor" Value="FFFFF263" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+	   <Window Type="TLBB_EditBoxNormal" Name="ItemExchange_yuanbaoEdix">
+         <Property Name="UnifiedSize" Value="{{0.000000,70.000000},{0.000000,18.000000}}"/>
+         <Property Name="UnifiedPosition" Value="{{0.000000,50.000000},{0.0000000,3.000000}}"/>
+         <Property Name="MaxTextLength" Value="20" />
+         <Property Name="ValidationString" Value="[0-9]*" /> 
+		 <Property Name="Text" Value="1" />		 
+        <Property Name="Tooltip" Value="输入元宝数量"/>	 
+      </Window>
+        <Window Type="TLBB_ButtonAdd" Name="ItemExchange_Addition1">
+          <Property Name="UnifiedPosition" Value="{{0.000000,130.000000},{0.000000,3.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.000000,18.000000},{0.000000,18.000000}}"/>
+          <Event Name="Clicked" Function="ItemExchange_yuanbao(1);" />
+        <Property Name="Tooltip" Value="增加"/>	 		  
+        </Window>	  
+        <Window Type="TLBB_ButtonSub" Name="ItemExchange_Decrease1">
+          <Property Name="UnifiedPosition" Value="{{0.000000,150.000000},{0.000000,3.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.000000,18.000000},{0.000000,18.000000}}"/>
+          <Event Name="Clicked" Function="ItemExchange_yuanbao(2);" />
+        <Property Name="Tooltip" Value="减少"/>	 		  
+        </Window>	  
+		</Window>
+		<!-- 添加或删除道具 -->
+		<Window Type="TLBB_SimpleMulitiTextFrame" Name="ItemExchange_item">
+			<Property Name="UnifiedPosition" Value="{{0.000000,30.000000},{0.000000,100.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.000000,170.000000},{0.000000,24.000000}" />
+			<Property Name="Text" Value="道具" />
+			<Property Name="Font" Value="YouYuan11.25" />
+			<Property Name="TextColor" Value="FFFFF263" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+	   <Window Type="TLBB_EditBoxNormal" Name="ItemExchange_itemEdix">
+         <Property Name="UnifiedSize" Value="{{0.000000,70.000000},{0.000000,18.000000}}"/>
+         <Property Name="UnifiedPosition" Value="{{0.000000,50.000000},{0.0000000,3.000000}}"/>
+         <Property Name="MaxTextLength" Value="20" />
+         <Property Name="ValidationString" Value="[0-9]*" /> 
+		 <Property Name="Text" Value="1" />		 
+        <Property Name="Tooltip" Value="输入物品或者装备资源ID号"/>	 		 
+      </Window>
+        <Window Type="TLBB_ButtonAdd" Name="ItemExchange_Addition2">
+          <Property Name="UnifiedPosition" Value="{{0.000000,130.000000},{0.000000,3.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.000000,18.000000},{0.000000,18.000000}}"/>
+          <Event Name="Clicked" Function="ItemExchange_item(1);" />
+        <Property Name="Tooltip" Value="增加"/>		  
+        </Window>	  
+        <Window Type="TLBB_ButtonSub" Name="ItemExchange_Decrease2">
+          <Property Name="UnifiedPosition" Value="{{0.000000,150.000000},{0.000000,3.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.000000,18.000000},{0.000000,18.000000}}"/>
+          <Event Name="Clicked" Function="ItemExchange_item(2);" />
+        <Property Name="Tooltip" Value="减少"/>	 		  
+        </Window>	
+		</Window>
+	   <Window Type="TLBB_EditBoxNormal" Name="ItemExchange_itemEdixnum">
+         <Property Name="UnifiedSize" Value="{{0.000000,35.000000},{0.000000,20.000000}}"/>
+		<Property Name="UnifiedPosition" Value="{{0.000000,200.000000},{0.000000,101.000000}" />
+         <Property Name="MaxTextLength" Value="20" />
+         <Property Name="ValidationString" Value="[0-9]*" /> 
+		 <Property Name="Text" Value="1" />
+        <Property Name="Tooltip" Value="输入数量"/>	 		 
+      </Window>			
+		<!-- 增加或减少金币 -->
+		<Window Type="TLBB_SimpleMulitiTextFrame" Name="ItemExchange_money">
+			<Property Name="UnifiedPosition" Value="{{0.000000,30.000000},{0.000000,140.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.000000,170.000000},{0.000000,24.000000}" />
+			<Property Name="Text" Value="金币" />
+			<Property Name="Font" Value="YouYuan11.25" />
+			<Property Name="TextColor" Value="FFFFF263" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+	   <Window Type="TLBB_EditBoxNormal" Name="ItemExchange_moneyEdix">
+         <Property Name="UnifiedSize" Value="{{0.000000,70.000000},{0.000000,18.000000}}"/>
+         <Property Name="UnifiedPosition" Value="{{0.000000,50.000000},{0.0000000,3.000000}}"/>
+         <Property Name="MaxTextLength" Value="20" />
+         <Property Name="ValidationString" Value="[0-9]*" /> 
+		 <Property Name="Text" Value="1" />		 
+        <Property Name="Tooltip" Value="输入金币数量"/>	 		 
+      </Window>
+        <Window Type="TLBB_ButtonAdd" Name="ItemExchange_Addition3">
+          <Property Name="UnifiedPosition" Value="{{0.000000,130.000000},{0.000000,3.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.000000,18.000000},{0.000000,18.000000}}"/>
+          <Event Name="Clicked" Function="ItemExchange_money(1);" />
+        <Property Name="Tooltip" Value="增加"/>	 		  
+        </Window>	  
+        <Window Type="TLBB_ButtonSub" Name="ItemExchange_Decrease3">
+          <Property Name="UnifiedPosition" Value="{{0.000000,150.000000},{0.000000,3.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.000000,18.000000},{0.000000,18.000000}}"/>
+          <Event Name="Clicked" Function="ItemExchange_money(2);" />
+        <Property Name="Tooltip" Value="减少"/>	 			  
+        </Window>	  
+		</Window>
+        <!-- 增加绑定元宝	 -->
+		<Window Type="TLBB_SimpleMulitiTextFrame" Name="ItemExchange_bindyuanbao">
+			<Property Name="UnifiedPosition" Value="{{0.000000,30.000000},{0.000000,180.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.000000,170.000000},{0.000000,24.000000}" />
+			<Property Name="Text" Value="赠点" />
+			<Property Name="Font" Value="YouYuan11.25" />
+			<Property Name="TextColor" Value="FFFFF263" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+	   <Window Type="TLBB_EditBoxNormal" Name="ItemExchange_bindyuanbaoEdix">
+         <Property Name="UnifiedSize" Value="{{0.000000,70.000000},{0.000000,18.000000}}"/>
+         <Property Name="UnifiedPosition" Value="{{0.000000,50.000000},{0.0000000,3.000000}}"/>
+         <Property Name="MaxTextLength" Value="20" />
+         <Property Name="ValidationString" Value="[0-9]*" /> 
+		 <Property Name="Text" Value="1" />		 
+        <Property Name="Tooltip" Value="输入赠点数量"/>	 		 
+      </Window>
+        <Window Type="TLBB_ButtonAdd" Name="ItemExchange_Addition4">
+          <Property Name="UnifiedPosition" Value="{{0.000000,130.000000},{0.000000,3.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.000000,18.000000},{0.000000,18.000000}}"/>
+          <Event Name="Clicked" Function="ItemExchange_bindyuanbao(1);" />
+        <Property Name="Tooltip" Value="增加"/>		  
+        </Window>	  
+        <Window Type="TLBB_ButtonSub" Name="ItemExchange_Decrease4">
+          <Property Name="UnifiedPosition" Value="{{0.000000,150.000000},{0.000000,3.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.000000,18.000000},{0.000000,18.000000}}"/>
+          <Event Name="Clicked" Function="ItemExchange_bindyuanbao(2);" />
+        <Property Name="Tooltip" Value="减少"/>	 		  
+        </Window>	  
+		</Window>							
+        <!-- 玩家等级调整		 -->
+		<Window Type="TLBB_SimpleMulitiTextFrame" Name="ItemExchange_level">
+			<Property Name="UnifiedPosition" Value="{{0.000000,30.000000},{0.000000,220.000000}" />
+			<Property Name="UnifiedSize" Value="{{0.000000,170.000000},{0.000000,24.000000}" />
+			<Property Name="Text" Value="等级" />
+			<Property Name="Font" Value="YouYuan11.25" />
+			<Property Name="TextColor" Value="FFFFF263" />
+			<Property Name="VertFormatting" Value="VertCentred" />
+	   <Window Type="TLBB_EditBoxNormal" Name="ItemExchange_levelEdix">
+         <Property Name="UnifiedSize" Value="{{0.000000,70.000000},{0.000000,18.000000}}"/>
+         <Property Name="UnifiedPosition" Value="{{0.000000,50.000000},{0.0000000,3.000000}}"/>
+         <Property Name="MaxTextLength" Value="20" />
+         <Property Name="ValidationString" Value="[0-9]*" /> 
+		 <Property Name="Text" Value="1" />		 
+        <Property Name="Tooltip" Value="输入等级数"/>	 			 
+      </Window>
+        <Window Type="TLBB_ButtonAdd" Name="ItemExchange_Addition5">
+          <Property Name="UnifiedPosition" Value="{{0.000000,130.000000},{0.000000,3.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.000000,18.000000},{0.000000,18.000000}}"/>
+          <Event Name="Clicked" Function="ItemExchange_level(1);" />
+        <Property Name="Tooltip" Value="增加"/>				  
+        </Window>	  
+        <Window Type="TLBB_ButtonSub" Name="ItemExchange_Decrease5">
+          <Property Name="UnifiedPosition" Value="{{0.000000,150.000000},{0.000000,3.000000}}"/>
+          <Property Name="UnifiedSize" Value="{{0.000000,18.000000},{0.000000,18.000000}}"/>
+          <Event Name="Clicked" Function="ItemExchange_level(2);" />
+        <Property Name="Tooltip" Value="减少"/>	 		  
+        </Window>	  
+		</Window>		
+	</Window>
+</GUILayout>
