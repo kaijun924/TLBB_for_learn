@@ -1,0 +1,390 @@
+INT	STRING	STRING	STRING	INT	STRING	INT	INT	STRING
+ID	相关	界面	脚本	不懂	缩写之类的	不懂	不懂	备注
+0	ActionSkill	ActionSkill/ActionSkill.layout.xml	ActionSkill/ActionSkill.lua	2	wgjn	32	33	
+1	ActionSkillsStudy	ActionSkillsStudy/ActionSkillsStudy.layout.xml	ActionSkillsStudy/ActionSkillsStudy.lua	3	wgzs	19	20	
+2	Agname	Agname/Agname.layout.xml	Agname/Agname.lua	1	jbsx	19	20	
+3	ChangeMinorPassword	ChangeMinorPassword/ChangeMinorPassword.layout.xml	ChangeMinorPassword/ChangeMinorPassword.lua	0	yxaq	19	20	
+4	ChatFrame	ChatFrame/ChatFrame.layout.xml	ChatFrame/ChatFrame.lua	0	ltzs	0	0	
+5	ChatInfo	ChatInfo/ChatInfo.layout.xml	ChatInfo/ChatInfo.lua	1	jbsx	19	20	
+6	CommonSkill	CommonSkill/CommonSkill.layout.xml	CommonSkill/CommonSkill.lua	2	tyjn	32	33	
+7	LoginCreateRole	CreateRole/CreateRole.layout.xml	CreateRole/CreateRole.lua	1	#N/A	0	0	
+8	Exchange	Exchange/Exchange.layout.xml	Exchange/Exchange.lua	1	jy	19	20	
+9	FriendInfo	FriendInfo/FriendInfo.layout.xml	FriendInfo/FriendInfo.lua	1	hy	19	20	
+10	GameSetup	GameSetup/GameSetup.layout.xml	GameSetup/GameSetup.lua	1	yxpz	19	20	
+11	HistoryCorrespondence	HistoryCorrespondence/HistoryCorrespondence.layout.xml	HistoryCorrespondence/HistoryCorrespondence.lua	1	hy	19	20	
+12	InfoBrowser	InfoBrowser/InfoBrowser.layout.xml	InfoBrowser/InfoBrowser.lua	1	hy	0	20	
+13	InfoEdit	InfoEdit/InfoEdit.layout.xml	InfoEdit/InfoEdit.lua	1	hy	0	20	
+14	InputMoney	InputMoney/InputMoney.layout.xml	InputMoney/InputMoney.lua	1	yhjs	0	0	
+15	InputMood	InputMood/InputMood.layout.xml	InputMood/InputMood.lua	1	jbsx	0	0	
+16	LoginLogOn	LogOn/LogOn.layout.xml	LogOn/LogOn.lua	1	yxzcdl	0	0	
+17	MainMenuBar	MainMenuBar/MainMenuBar.layout.xml	MainMenuBar/MainMenuBar.lua	0	kjl	0	0	
+18	MessageBox_Other	MessageBox_Other/MessageBox_Other.layout.xml	MessageBox_Other/MessageBox_Other.lua	1	#N/A	19	20	
+19	MessageBox_Self	MessageBox_Self/MessageBox_Self.layout.xml	MessageBox_Self/MessageBox_Self.lua	1	helpindex	19	20	
+20	MissionReply	MissionReply/MissionReply.layout.xml	MissionReply/MissionReply.lua	3	rwzs	19	20	
+21	Operation	Operation/Operation.layout.xml	Operation/Operation.lua	1	xtjmjs	25	26	
+22	OtherInfo	OtherInfo/OtherInfo.layout.xml	OtherInfo/OtherInfo.lua	2	qtxx	19	20	
+23	Pet	Pet/Pet.layout.xml	Pet/Pet.lua	2	cwsx	19	20	
+24	PetList	PetList/PetList.layout.xml	PetList/PetList.lua	1	cwlb	0	0	
+25	QuitRelative	QuitRelative\QuitRelative.layout.xml	QuitRelative\QuitRelative.lua	1	#N/A	0	0	
+26	Relive	Relive/Relive.layout.xml	Relive/Relive.lua	6	wjswjs	0	0	
+27	Ride	Ride/Ride.layout.xml	Ride/Ride.lua	2	zqzs	19	20	
+28	LoginSelectRole	SelectRole/SelectRole.layout.xml	SelectRole/SelectRole.lua	1	#N/A	0	0	
+29	LoginSelectServer	SelectServer/SelectServer.layout.xml	SelectServer/SelectServer.lua	1	#N/A	0	0	
+30	LoginSelectServerQuest	SelectServerQuest/SelectServerQuest.layout.xml	SelectServerQuest/SelectServerQuest.lua	0	yxaq	0	0	
+31	SelfData	SelfData/SelfData.layout.xml	SelfData/SelfData.lua	2	jbsx	19	20	
+32	SelfEquip	SelfEquip/SelfEquip.layout.xml	SelfEquip/SelfEquip.lua	2	wjsx	34	20	
+33	SetMinorPassword	SetMinorPassword/SetMinorPassword.layout.xml	SetMinorPassword/SetMinorPassword.lua	0	yxaq	19	20	
+34	SplitItem	SplitItem/SplitItem.layout.xml	SplitItem/SplitItem.lua	1	cfwp	0	0	
+35	UnlockMinorPassword	UnlockMinorPassword/UnlockMinorPassword.layout.xml	UnlockMinorPassword/UnlockMinorPassword.lua	0	yxaq	19	20	
+36	MiniMap	MiniMap/MiniMap.layout.xml	MiniMap/MiniMap.lua	0	xdtjs	0	0	
+37	SceneMap	SceneMap/SceneMap.layout.xml	SceneMap/SceneMap.lua	1	#N/A	30	31	
+38	Quest	Quest/Quest.layout.xml	Quest/Quest.lua	2	helpindex	30	31	
+39	LifeSkill	LifeSkill/LifeSkill.layout.xml	LifeSkill/LifeSkill.lua	2	shzs	32	33	
+40	LootPacket	LootPacket/LootPacket.layout.xml	LootPacket/LootPacket.lua	1	sqb	28	29	
+41	PetFrame	PetFrame/PetFrame.layout.xml	PetFrame/PetFrame.lua	0	cwsx	19	20	
+42	PlayerFrame	PlayerFrame/PlayerFrame.layout.xml	PlayerFrame/PlayerFrame.lua	0	jnsx	0	0	
+43	TargetFrame	TargetFrame/TargetFrame.layout.xml	TargetFrame/TargetFrame.lua	0	jbsx	0	0	
+44	CityShop	CityShop/CityShop.layout.xml	CityShop/CityShop.lua	1	cssd	19	20	
+45	Bank	Bank/Bank.layout.xml	Bank/Bank.lua	2	yhjs	19	20	
+46	Carriage	Carriage/Carriage.layout.xml	Carriage/Carriage.lua	2	cy	19	20	
+47	CityTrendGraph	CityTrendGraph/CityTrendGraph.layout.xml	CityTrendGraph/CityTrendGraph.lua	1	bhzs	19	20	
+48	ConfraternityAddress	ConfraternityAddress/ConfraternityAddress.layout.xml	ConfraternityAddress/ConfraternityAddress.lua	1	bpjj	19	20	
+49	ConfraternityApplyManor	ConfraternityApplyManor/ConfraternityApplyManor.layout.xml	ConfraternityApplyManor/ConfraternityApplyManor.lua	2	bhzs	19	20	
+50	ConfraternityInfo	ConfraternityInfo/ConfraternityInfo.layout.xml	ConfraternityInfo/ConfraternityInfo.lua	1	bhzs	19	20	
+51	ConfraternityList	ConfraternityList/ConfraternityList.layout.xml	ConfraternityList/ConfraternityList.lua	1	bhzs	19	20	
+52	ConfraternityManage	ConfraternityManage/ConfraternityManage.layout.xml	ConfraternityManage/ConfraternityManage.lua	1	bhzw	19	20	
+53	ConfraternityPosition	ConfraternityPosition/ConfraternityPosition.layout.xml	ConfraternityPosition/ConfraternityPosition.lua	1	bhzw	19	20	
+54	ConfraternitySkillsStudy	ConfraternitySkillsStudy/ConfraternitySkillsStudy.layout.xml	ConfraternitySkillsStudy/ConfraternitySkillsStudy.lua	1	bhjn	19	20	
+55	CreateCommerceNet	CreateCommerceNet/CreateCommerceNet.layout.xml	CreateCommerceNet/CreateCommerceNet.lua	1	bhjj	19	20	
+56	CreateConfraternity	CreateConfraternity/CreateConfraternity.layout.xml	CreateConfraternity/CreateConfraternity.lua	1	bhzs	19	20	
+57	EquipBind	EquipBind/EquipBind.layout.xml	EquipBind/EquipBind.lua	3	#N/A	0	0	
+58	EquipEnchange	EquipEnchange/EquipEnchange.layout.xml	EquipEnchange/EquipEnchange.lua	3	djjs	19	20	
+59	Examination	Examination/Examination.layout.xml	Examination/Examination.lua	2	#N/A	19	20	
+60	Friend	Friend/friend.layout.xml	Friend/friend.lua	1	bhjjbhzw	19	20	
+61	FunctionBarRight	FunctionBarRight/FunctionBarRight.layout.xml	FunctionBarRight/FunctionBarRight.lua	0	#N/A	0	0	
+62	Identify	Identify/Identify.layout.xml	Identify/Identify.lua	3	#N/A	19	20	
+63	Interior	Interior/Interior.layout.xml	Interior/Interior.lua	1	bhzs	19	20	
+64	LifeSkillsStudy	LifeSkillsStudy/LifeSkillsStudy.layout.xml	LifeSkillsStudy/LifeSkillsStudy.lua	3	shzs	19	20	
+65	MainMenuBar_2	MainMenuBar_2/MainMenuBar_2.layout.xml	MainMenuBar_2/MainMenuBar_2.lua	0	#N/A	0	0	
+66	MaterialCompound	Materalcompose/Materalcompose.layout.xml	Materalcompose/MaterialCompound.lua	3	bshc	19	20	
+67	PartyFrame	PartyFrame/PartyFrame.layout.xml	PartyFrame/PartyFrame.lua	0	bhzwbqfh	0	0	
+68	PetInviteFriend	PetInviteFriend/PetInviteFriend.layout.xml	PetInviteFriend/PetInviteFriend.lua	3	bgjmbshc	19	20	
+69	PetProcreate	PetProcreate/PetProcreate.layout.xml	PetProcreate/PetProcreate.lua	3	bgjmbhzw	19	20	
+70	PetSavvy	PetSavvy\PetSavvy.layout.xml	PetSavvy\PetSavvy.lua	3	cwwx	19	20	
+71	PetSkillStudy	PetSkillStudy/PetSkillStudy.layout.xml	PetSkillStudy/PetSkillStudy.lua	3	bhjj0	19	20	
+72	PlayerImpactFrame	PlayerImpactFrame/PlayerImpactFrame.layout.xml	PlayerImpactFrame/PlayerImpactFrame.lua	0	jnsx	0	0	
+73	PS_CreateShop	PS_CreateShop/PS_CreateShop.layout.xml	PS_CreateShop/PS_CreateShop.lua	3	bhzwbshc	19	20	
+74	PS_Message	PS_Message/PS_Message.layout.xml	PS_Message/PS_Message.lua	1	bhzwbshc	19	20	
+75	PS_Shop	PS_Shop/PS_Shop.layout.xml	PS_Shop/PS_Shop.lua	1	bhzwbshc	19	20	
+76	PS_ShopMag	PS_ShopMag/PS_ShopMag.layout.xml	PS_ShopMag/PS_ShopMag.lua	1	bhzwbshc	19	20	
+77	Quiz	Quiz/Quiz.layout.xml	Quiz/Quiz.lua	2	bhzsbshc	19	20	
+78	Research	Research/Research.layout.xml	Research/Research.lua	1	bhjj	19	20	
+79	Revenge	Revenge/Revenge.layout.xml	Revenge/Revenge.lua	1	bhjnbhzs	19	20	
+80	SceneTrans	SceneTrans/SceneTrans.layout.xml	SceneTrans/SceneTrans.lua	0	#N/A	0	0	
+81	ScreenList	ScreenList/ScreenList.layout.xml	ScreenList/ScreenList.lua	7	bhjnbhjn	19	20	
+82	ScrollInfo	ScrollInfo/ScrollInfo.layout.xml	ScrollInfo/ScrollInfo.lua	0	#N/A	0	0	
+83	SetCommerceNet	SetCommerceNet/SetCommerceNet.layout.xml	SetCommerceNet/SetCommerceNet.lua	1	bhjj	19	20	
+84	Shop_BulkBuying	Shop_BulkBuying/Shop_BulkBuying.layout.xml	Shop_BulkBuying/Shop_BulkBuying.lua	1	cssd	0	0	
+85	SplitGem	SplitGem/SplitGem.layout.xml	SplitGem/SplitGem.lua	3	bsfl	19	20	
+86	StallBuy	StallBuy/StallBuy.layout.xml	StallBuy/StallBuy.lua	1	bt	19	20	
+87	StallMessage	StallMessage/StallMessage.layout.xml	StallMessage/StallMessage.lua	1	bt	19	20	
+88	StallSale	StallSale/StallSale.layout.xml	StallSale/StallSale.lua	2	bt	19	20	
+89	Stiletto	Stiletto/Stiletto.layout.xml	Stiletto/Stiletto.lua	3	bhzwbhzw	19	20	
+90	TargetBuff	TargetBuff/TargetBuff.layout.xml	TargetBuff/TargetBuff.lua	0	#N/A	0	0	
+91	TargetData	TargetData/TargetData.layout.xml	TargetData/TargetData.lua	3	bgjmbhjj	19	20	
+92	TargetEquip	TargetEquip/TargetEquip.layout.xml	TargetEquip/TargetEquip.lua	3	bhzsbqfh	19	20	
+93	Team_Frame	TeamFrame/TeamFrame.layout.xml	TeamFrame/TeamFrame.lua	1	bhjjbhjj	19	20	
+94	TeamMessageBox1	TeamMessageBox1/TeamMessageBox1.layout.xml	TeamMessageBox1/TeamMessageBox1.lua	1	bhzwbqfh	0	0	
+95	WorldReference	WorldReference\WorldReference.layout.xml	WorldReference\WorldReference.lua	1	bhjjbsfl	19	20	
+96	LogonList	LogOnList/LogonList.layout.xml	LogOnList/LogonList.lua	1	helpindex	0	0	
+97	QuestLog	QuestLog/QuestLog.layout.xml	QuestLog/QuestLog.lua	2	bhjnbqfh	30	31	
+98	SuperTooltip	SuperTooltip/SuperTooltip.layout.xml	SuperTooltip/SuperTooltip.lua	1	helpindex	0	0	
+99	Action	Action/Action.layout.xml	Action/Action.lua	7	bhjnbhjn	0	0	
+100	Byname	Byname/Byname.layout.xml	Byname/Byname.lua	1	bhjjbpjj	0	0	
+101	Challenge	Challenge/Challenge.layout.xml	Challenge/Challenge.lua	1	bhzsbhjn	0	0	
+102	ChannelCustomization	ChannelCustomization/ChannelCustomization.layout.xml	ChannelCustomization/ChannelCustomization.lua	1	bhjnbhjn	19	20	
+103	Enchase	Enchase/Enchase.layout.xml	Enchase/Enchase.lua	3	#N/A	19	20	
+104	ExpAssign	ExpAssign/ExpAssign.layout.xml	ExpAssign/ExpAssign.lua	1	#N/A	19	20	
+105	FriendSearch	FriendSearch/FriendSearch.layout.xml	FriendSearch/FriendSearch.lua	1	bhjjbhzw	19	20	
+106	ItemCoffer	ItemCoffer/ItemCoffer.layout.xml	ItemCoffer/ItemCoffer.lua	1	yxaq	19	20	
+107	MissionObjDel	MissionObjDel/MissionObjDel.layout.xml	MissionObjDel/MissionObjDel.lua	2	bhjnbpjj	0	0	
+108	PetSynthesize	PetSynthesize/PetSynthesize.layout.xml	PetSynthesize/PetSynthesize.lua	3	helpindex	19	20	
+109	PK_message	PK_message/PK_message.layout.xml	PK_message/PK_message.lua	1	bhjnbhzs	19	20	
+110	PS_Input	PS_Input/PS_Input.layout.xml	PS_Input/PS_Input.lua	3	bgjmbhjn	19	20	
+111	PS_Search	PS_Search/PS_Search.layout.xml	PS_Search/PS_Search.lua	1	bhjnbsfl	0	0	
+112	PS_ShopList	PS_ShopList/PS_ShopList.layout.xml	PS_ShopList/PS_ShopList.lua	3	bhzwbshc	19	20	
+113	PS_Transfer	PS_Transfer/PS_Transfer.layout.xml	PS_Transfer/PS_Transfer.lua	3	bhzwbshc	19	20	
+114	Reputation	Reputation\Reputation.layout.xml	Reputation\Reputation.lua	3	#N/A	19	20	
+115	SelectHairColor	SelectHairColor/SelectHairColor.layout.xml	SelectHairColor/SelectHairColor.lua	3	bhjjbhjn	19	20	
+116	SelectHairstyle	SelectHairstyle/SelectHairstyle.layout.xml	SelectHairstyle/SelectHairstyle.lua	3	bhjjbhjn	19	20	
+117	Service	Service/Service.layout.xml	Service/Service.lua	2	bhzwbpjj	19	20	
+118	Shop	Shop/Shop.layout.xml	Shop/Shop.lua	3	cssd	19	20	
+119	SuperTooltip2	SuperTooltip2/SuperTooltip2.layout.xml	SuperTooltip2/SuperTooltip2.lua	1	helpindex	0	0	
+120	Synthesize	Synthesize/Synthesize.layout.xml	Synthesize/Synthesize.lua	3	helpindex	19	20	
+121	ContexMenu	ContexMenu/ContexMenu.layout.xml	ContexMenu/ContexMenu.lua	1	#N/A	19	20	
+122	Packet	Packet/Packet.layout.xml	Packet/Packet.lua	1	bgjm	28	29	
+123	ProgressBar	ProgressBar/ProgressBar.layout.xml	ProgressBar/ProgressBar.lua	0	#N/A	19	20	
+124	AcceptBox	AcceptBox\AcceptBox.layout.xml	AcceptBox\AcceptBox.lua	1	helpindex	0	0	
+125	ChatFaceFrame	ChatFaceFrame/ChatFaceFrame.layout.xml	ChatFaceFrame/ChatFaceFrame.lua	7	bqfh	0	0	
+126	ChatTextColorFrame	ChatTextColorFrame/ChatTextColorFrame.layout.xml	ChatTextColorFrame/ChatTextColorFrame.lua	7	bhjnbhjj	0	0	
+127	LargeMap	LargeMap/LargeMap.layout.xml	LargeMap/LargeMap.lua	4	#N/A	30	31	
+128	TargetPet	TargetPet/TargetPet.layout.xml	TargetPet/TargetPet.lua	1	cwsx	19	20	
+129	Blog	Blog\Blog.layout.xml	Blog\Blog.lua	2	#N/A	19	20	
+130	TargetBlog	TargetBlog\TargetBlog.layout.xml	TargetBlog\TargetBlog.lua	3	#N/A	0	0	
+131	bg_info	bg_info\bg_info.layout.xml	bg_info\bg_info.lua	1	helpindex	0	0	
+132	SystemNotice	SystemNotice\SystemNotice.layout.xml	SystemNotice\SystemNotice.lua	1	#N/A	0	0	
+133	ViewSetup	ViewSetup/ViewSetup.layout.xml	ViewSetup/ViewSetup.lua	1	bhzw0	19	20	
+134	SoundSetup	SoundSetup/SoundSetup.layout.xml	SoundSetup/SoundSetup.lua	1	bhzsbgjm	19	20	
+135	DebugListBox	DebugListBox/DebugListBox.layout.xml	DebugListBox/DebugListBox.lua	0	#N/A	0	0	
+136	EquipChange	EquipChange/EquipChange.layout.xml	EquipChange/EquipChange.lua	3		19	20	
+137	EquipRepair	EquipRepair\EquipRepair.layout.xml	EquipRepair\EquipRepair.lua	3		19	20	
+138	YuanbaoExchange	YuanbaoExchange\YuanbaoExchange.layout.xml	YuanbaoExchange\YuanbaoExchange.lua	3		19	20	
+139	ConfraternityMessage	ConfraternityMessage\ConfraternityMessage.layout.xml	ConfraternityMessage\ConfraternityMessage.lua	1		19	20	
+140	OtherPet	OtherPet\OtherPet.layout.xml	OtherPet\OtherPet.lua	3		19	20	
+141	YuanbaopiaoExchange	YuanbaopiaoExchange\YuanbaopiaoExchange.layout.xml	YuanbaopiaoExchange\YuanbaopiaoExchange.lua	3		19	20	
+142	NewbieCardActivation	NewbieCardActivation\NewbieCardActivation.layout.xml	NewbieCardActivation\NewbieCardActivation.lua	3		19	20	
+143	Relation	Relation\Relation.layout.xml	Relation\Relation.lua	3	bqfhbhjj	19	20	
+144	AntiRobot	AntiRobot\AntiRobot.layout.xml	AntiRobot\AntiRobot.lua	0	#N/A	0	0	
+145	Evaluate	Evaluate/Evaluate.layout.xml	Evaluate/Evaluate.lua	1	bpjjbhjn	19	20	
+146	Shop_Fitting	Shop_Fitting\Shop_Fitting.layout.xml	Shop_Fitting\Shop_Fitting.lua	1	#N/A	19	20	
+147	OtherRide	OtherRide/OtherRide.layout.xml	OtherRide/OtherRide.lua	3	zqzs	19	20	
+148	PetSavvyGGD	PetSavvyGGD\PetSavvyGGD.layout.xml	PetSavvyGGD\PetSavvyGGD.lua	3	cwwx	19	20	
+149	Pswprotect	Pswprotect\Pswprotect.layout.xml	Pswprotect\Pswprotect.lua	1	helpindex	0	0	
+150	SoftKeyBoard	SoftKeyBoard\SoftKeyBoard.layout.xml	SoftKeyBoard\SoftKeyBoard.lua	0		0	0	
+151	SafeTime	SafeTime\SafeTime.layout.xml	SafeTime\SafeTime.lua	1	yxaq	0	0	
+152	SelectFacestyle	SelectFacestyle\SelectFacestyle.layout.xml	SelectFacestyle\SelectFacestyle.lua	3	bhjjbhjn	19	20	
+153	PKWarning	PKWarning\PKWarning.layout.xml	PKWarning\PKWarning.lua	1		0	0	
+154	PetXingGe	PetXingGe\PetXingGe.layout.xml	PetXingGe\PetXingGe.lua	3		0	0	
+155	YuanBao_G	YuanBao_G\YuanBao_G.layout.xml	YuanBao_G\YuanBao_G.lua	3	bpjjbhzw	0	0	
+156	G_YuanBao	G_YuanBao\G_YuanBao.layout.xml	G_YuanBao\G_YuanBao.lua	3	bpjjbhzw	0	0	
+157	CommisionStall	CommisionStall\CommisionStall.layout.xml	CommisionStall\CommisionStall.lua	3		0	0	
+158	AutoSearch	AutoSearch\AutoSearch.layout.xml	AutoSearch\AutoSearch.lua	1	bpjjbpjj	0	0	
+159	ConfraternityPK	ConfraternityPK\ConfraternityPK.layout.xml	ConfraternityPK\ConfraternityPK.lua	1	bpjjbqfh	0	0	
+160	ConfraternityPKStart	ConfraternityPKStart\ConfraternityPKStart.layout.xml	ConfraternityPKStart\ConfraternityPKStart.lua	1	bpjjbqfh	0	0	
+161	Item_TuDunZhu	Item_TuDunZhu\Item_TuDunZhu.layout.xml	Item_TuDunZhu\Item_TuDunZhu.lua	0	#N/A	19	20	
+162	ChatSpeaker	ChatSpeaker\ChatSpeaker.layout.xml	ChatSpeaker\ChatSpeaker.lua	1		19	20	
+163	TextValidate	TextValidate\TextValidate.layout.xml	TextValidate\TextValidate.lua	0		0	0	
+164	MessageBall	MessageBall\MessageBall.layout.xml	MessageBall\MessageBall.lua	0		19	20	
+165	SelRecycleItem	SelectRecycleItem\SelectRecycleItem.layout.xml	SelectRecycleItem\SelectRecycleItem.lua	1	bpjjbsfl	19	20	
+166	RecycleShop	RecycleShop\RecycleShop.layout.xml	RecycleShop\RecycleShop.lua	1	bpjjbsfl	19	20	
+167	Recycle_InputBox	Recycle_InputBox\Recycle_InputBox.layout.xml	Recycle_InputBox\Recycle_InputBox.lua	1	bpjjbsfl	19	20	
+168	GemCarve	GemCarve/GemCarve.layout.xml	GemCarve/GemCarve.lua	3	bpjjbshc	19	20	
+169	CoupleQuestion	CoupleQuestion\CoupleQuestion.layout.xml	CoupleQuestion\CoupleQuestion.lua	0		19	20	
+170	PetAgname	PetAgname/PetAgname.layout.xml	PetAgname/PetAgname.lua	1	jbsx	19	20	
+171	EquipStrengthen	EquipStrengthen/EquipStrengthen.layout.xml	EquipStrengthen/EquipStrengthen.lua	3	#N/A	19	20	
+172	HuoDongRiCheng	Huodongricheng/Huodongricheng.layout.xml	Huodongricheng/Huodongricheng.lua	1	#N/A	0	0	
+173	TodayCampaignList	TodayCampaignList/TodayCampaignList.layout.xml	TodayCampaignList/TodayCampaignList.lua	2	#N/A	0	0	
+174	MainMenuBar_3	MainMenuBar_3/MainMenuBar_3.layout.xml	MainMenuBar_3/MainMenuBar_3.lua	0	#N/A	0	0	
+175	MessageBox_Friend	MessageBox_Friend/MessageBox_Friend.layout.xml	MessageBox_Friend/MessageBox_Friend.lua	1	bhzwbqfh	0	0	
+176	Agreement	Agreement/Agreement.layout.xml	Agreement/Agreement.lua	1		0	0	
+177	PetJian	PetJian/PetJian.layout.xml	PetJian/PetJian.lua	1		0	0	
+178	BankLockFast	BankLockFast/BankLockFast.layout.xml	BankLockFast/BankLockFast.lua	2	wjsd	0	0	
+179	XunZong	XunZong/XunZong.layout.xml	XunZong/XunZong.lua	1	#N/A	0	0	
+180	ShiMingRenZheng	ShiMingRenZheng/ShiMingRenZheng.layout.xml	ShiMingRenZheng/ShiMingRenZheng.lua	1		0	0	
+181	FangChenMi	FangChenMi/FangChenMi.layout.xml	FangChenMi/FangChenMi.lua	1		0	0	
+182	SelectHeadstyle	SelectHeadstyle\SelectHeadstyle.layout.xml	SelectHeadstyle\SelectHeadstyle.lua	3	gbfx	19	20	
+183	XingYun	XingYun/XingYun.layout.xml	XingYun/XingYun.lua	0		0	0	
+184	AcceSetup	AcceSetup/AcceSetup.layout.xml	AcceSetup/AcceSetup.lua	1		0	0	
+185	ConfraternityInfo2	ConfraternityInfo2/ConfraternityInfo2.layout.xml	ConfraternityInfo2/ConfraternityInfo2.lua	1	bhzs	19	20	
+186	PetZhengYou	PetZhengYou/PetZhengYou.layout.xml	PetZhengYou/PetZhengYou.lua	1		0	0	
+187	PetFriendSearch	PetFriendSearch/PetFriendSearch.layout.xml	PetFriendSearch/PetFriendSearch.lua	1		0	0	
+188	Confraternity_OfficialPositionList	Confraternity_OfficialPositionList/Confraternity_OfficialPositionList.layout.xml	Confraternity_OfficialPositionList/Confraternity_OfficialPositionList.lua	1	bhzs	19	20	
+189	Denaturalization	Denaturalization/Denaturalization.layout.xml	Denaturalization/Denaturalization.lua	1		0	0	
+190	ConfraternityCustomPosition	ConfraternityCustomPosition/ConfraternityCustomPosition.layout.xml	ConfraternityCustomPosition/ConfraternityCustomPosition.lua	1	bhzs	19	20	
+191	GuildLeagueInfo	GuildLeague/GuildLeagueInfo.layout.xml	GuildLeague/GuildLeagueInfo.lua	1		0	0	
+192	GuildLeagueList	GuildLeague/GuildLeagueList.layout.xml	GuildLeague/GuildLeagueList.lua	1		0	0	
+193	GuildLeagueCreate	GuildLeague/GuildLeagueCreate.layout.xml	GuildLeague/GuildLeagueCreate.lua	1		0	0	
+194	GuildLeagueApply	GuildLeague/GuildLeagueApply.layout.xml	GuildLeague/GuildLeagueApply.lua	1		0	0	
+195	EquipUnBind	EquipUnBind/EquipUnBind.layout.xml	EquipUnBind/EquipUnBind.lua	3	#N/A	0	0	
+196	CheckCustomPosition	CheckCustomPosition/CheckCustomPosition.layout.xml	CheckCustomPosition/CheckCustomPosition.lua	1	bhzs	19	20	
+197	Stiletto_Four	Stiletto_Four/Stiletto_Four.layout.xml	Stiletto_Four/Stiletto_Four.lua	3	bhzwbhzw	19	20	
+198	Enchase_Four	Enchase_Four/Enchase_Four.layout.xml	Enchase_Four/Enchase_Four.lua	3	#N/A	19	20	
+199	SplitGem_Four	SplitGem_Four/SplitGem_Four.layout.xml	SplitGem_Four/SplitGem_Four.lua	3	bsfl	19	20	
+200	FangDaohao	FangDaohao/FangDaohao.layout.xml	FangDaohao/FangDaohao.lua	0	bsfl	19	20	
+201	BanggongExchange	BanggongExchange/BanggongExchange.layout.xml	BanggongExchange/BanggongExchange.lua	1		0	0	
+202	MessageBoxCommon	MessageBoxCommon/MessageBoxCommon.layout.xml	MessageBoxCommon/MessageBoxCommon.lua	1	bsfl	19	20	
+203	ConfraternityJuanxian	ConfraternityJuanxian/ConfraternityJuanxian.layout.xml	ConfraternityJuanxian/ConfraternityJuanxian.lua	1		0	0	
+204	GemMelting	GemMelting/GemMelting.layout.xml	GemMelting/GemMelting.lua	3	#N/A	19	20	
+205	InputYuanbao	InputYuanbao/InputYuanbao.layout.xml	InputYuanbao/InputYuanbao.lua	1		0	0	
+206	PetLevelup	PetLevelup/PetLevelup.layout.xml	PetLevelup/PetLevelup.lua	3		0	0	
+207	PlayerZhengyouPT	PlayerZhengyouPT/PlayerZhengyouPT.layout.xml	PlayerZhengyouPT/PlayerZhengyouPT.lua	1		0	0	
+208	ZhengyouInfoFabu	ZhengyouInfoFabu/ZhengyouInfoFabu.layout.xml	ZhengyouInfoFabu/ZhengyouInfoFabu.lua	1		0	0	
+209	VotedPlayer	VotedPlayer/VotedPlayer.layout.xml	VotedPlayer/VotedPlayer.lua	1		0	0	
+210	ZhengyouSearch	ZhengyouSearch/ZhengyouSearch.layout.xml	ZhengyouSearch/ZhengyouSearch.lua	1		0	0	
+211	PlayerZhengyou	PlayerZhengyou/PlayerZhengyou.layout.xml	PlayerZhengyou/PlayerZhengyou.lua	1		0	0	
+212	ZhengyouYaoqiu	ZhengyouYaoqiu/ZhengyouYaoqiu.layout.xml	ZhengyouYaoqiu/ZhengyouYaoqiu.lua	1		0	0	
+213	PetMedicineHC	PetMedicineHC/PetMedicineHC.layout.xml	PetMedicineHC/PetMedicineHC.lua	3		0	0	
+214	PetShelizi	PetShelizi/PetShelizi.layout.xml	PetShelizi/PetShelizi.lua	3	#N/A	19	20	
+215	PlayerList	PlayerList/PlayerList.layout.xml	PlayerList/PlayerList.lua	1	bqfhbhzs	0	0	
+216	ConfraternityZTStart	ConfraternityZTStart\ConfraternityZTStart.layout.xml	ConfraternityZTStart\ConfraternityZTStart.lua	1	bpjjbqfh	0	0	
+217	ConfraternityZT	ConfraternityZT\ConfraternityZT.layout.xml	ConfraternityZT\ConfraternityZT.lua	1	bpjjbqfh	0	0	
+218	ConfraternityTiaozhan	ConfraternityTiaozhan\ConfraternityTiaozhan.layout.xml	ConfraternityTiaozhan\ConfraternityTiaozhan.lua	1		0	0	
+219	ConfraternityWar	ConfraternityWar\ConfraternityWar.layout.xml	ConfraternityWar\ConfraternityWar.lua	1		0	0	
+220	ConfraternityCount	ConfraternityCount\ConfraternityCount.layout.xml	ConfraternityCount\ConfraternityCount.lua	1		0	0	
+221	AnqiShuxing	AnqiShuxing\AnqiShuxing.layout.xml	AnqiShuxing\AnqiShuxing.lua	1	aqjs	19	20	
+222	YuanbaoShop	YuanbaoShop\YuanbaoShop.layout.xml	YuanbaoShop\YuanbaoShop.lua	3	cssd	19	20	
+223	YBShopReference	YBShopReference\YBShopReference.layout.xml	YBShopReference\YBShopReference.lua	1	cyxx	20	0	
+224	ErjimimaShezhi	ErjimimaShezhi\ErjimimaShezhi.layout.xml	ErjimimaShezhi\ErjimimaShezhi.lua	1	yxaq	0	0	
+225	ErjimimaXiugai	ErjimimaXiugai\ErjimimaXiugai.layout.xml	ErjimimaXiugai\ErjimimaXiugai.lua	1	yxaq	0	0	
+226	Fangdao	Fangdao\Fangdao.layout.xml	Fangdao\Fangdao.lua	1	yxaq	0	0	
+227	ExchangeSafe	ExchangeSafe\ExchangeSafe.layout.xml	ExchangeSafe\ExchangeSafe.lua	1	bgjmbshc	20	0	
+228	ErjimimaJiesuo	ErjimimaJiesuo\ErjimimaJiesuo.layout.xml	ErjimimaJiesuo\ErjimimaJiesuo.lua	1	yxaq	0	0	
+229	PetStudyNewSkill	PetStudyNewSkill\PetStudyNewSkill.layout.xml	PetStudyNewSkill\PetStudyNewSkill.lua	3	bhjj0	19	20	
+230	TodayGameList	TodayGameList/TodayGameList.layout.xml	TodayGameList/TodayGameList.lua	1	bqfhbhzs	0	0	
+231	DressPaint	DressPaint\DressPaint.layout.xml	DressPaint\DressPaint.lua	3	szssx	19	20	
+232	Item_DunJiaShu	Item_DunJiaShu\Item_DunJiaShu.layout.xml	Item_DunJiaShu\Item_DunJiaShu.lua	3	asq	19	20	
+233	SongliaoWarSingle	SongliaoWarSingle/SongliaoWarSingle.layout.xml	SongliaoWarSingle/SongliaoWarSingle.lua	0		0	0	
+234	SongliaoWarMulti	SongliaoWarMulti/SongliaoWarMulti.layout.xml	SongliaoWarMulti/SongliaoWarMulti.lua	1		0	0	
+235	UpdateInfo	UpdateInfo\UpdateInfo.layout.xml	UpdateInfo\UpdateInfo.lua	3	yxgg	19	20	
+236	UnionFrame	UnionFrame\UnionFrame.layout.xml	UnionFrame\UnionFrame.lua	3	tzzz	19	20	
+237	PlayerQuicklyEnter	PlayerQuicklyEnter/PlayerQuicklyEnter.layout.xml	PlayerQuicklyEnter/PlayerQuicklyEnter.lua	0		19	20	
+238	ServerNew	ServerNew/ServerNew.layout.xml	ServerNew/ServerNew.lua	0		19	20	
+239	TurnPlate	TurnPlate/TurnPlate.layout.xml	TurnPlate/TurnPlate.lua	0		19	20	
+240	Xiulian	Xiulian\Xiulian.layout.xml	Xiulian/Xiulian.lua	2		19	20	
+241	XiulianStudy	XiulianStudy\XiulianStudy.layout.xml	XiulianStudy/XiulianStudy.lua	3		19	20	
+242	Item_DJS_Confirm	Item_DJS_Confirm\Item_DJS_Confirm.layout.xml	Item_DJS_Confirm/Item_DJS_Confirm.lua	3		19	20	
+243	DWHecheng	DWHecheng/DWHecheng.layout.xml	DWHecheng/DWHecheng.lua	3	#N/A	19	20	
+244	DWQianghua	DWQianghua/DWQianghua.layout.xml	DWQianghua/DWQianghua.lua	3	#N/A	19	20	
+245	DWShike	DWShike/DWShike.layout.xml	DWShike/DWShike.lua	3	#N/A	19	20	
+246	DWChaichu	DWChaichu/DWChaichu.layout.xml	DWChaichu/DWChaichu.lua	3	#N/A	19	20	
+247	SelfShenDing	SelfShenDing/SelfShenDing.layout.xml	SelfShenDing/SelfShenDing.lua	3	#N/A	19	20	
+248	ServerPaiming	ServerPaiming/ServerPaiming.layout.xml	ServerPaiming/ServerPaiming.lua	3	whhcdj	19	20	
+249	LongwenUp	LongwenUp\LongwenUp.layout.xml	LongwenUp\LongwenUp.lua	3	LW	19	20	
+250	LongwenStarUp	LongwenStarUp/LongwenStarUp.layout.xml	LongwenStarUp/LongwenStarUp.lua	3		19	20	
+251	LongwenExtraPropertyUp	LongwenExtraPropertyUp/LongwenExtraPropertyUp.layout.xml	LongwenExtraPropertyUp/LongwenExtraPropertyUp.lua	3		19	20	
+252	LongwenPropertyReset	LongwenPropertyReset/LongwenPropertyReset.layout.xml	LongwenPropertyReset/LongwenPropertyReset.lua	3		19	20	
+253	LongwenExtraPropertyStudy2	LongwenExtraPropertyStudy2/LongwenExtraPropertyStudy2.layout.xml	LongwenExtraPropertyStudy2/LongwenExtraPropertyStudy2.lua	3		19	20	
+254	LongwenExtraPropertyStudy	LongwenExtraPropertyStudy/LongwenExtraPropertyStudy.layout.xml	LongwenExtraPropertyStudy/LongwenExtraPropertyStudy.lua	3		19	20	
+255	LongwenLevelUp	LongwenLevelUp/LongwenLevelUp.layout.xml	LongwenLevelUp/LongwenLevelUp.lua	3		19	20	
+256	ZhenYuan	ZhenYuan/ZhenYuan.layout.xml	ZhenYuan/ZhenYuan.lua	2		19	20	
+257	ZhenYuanActivation	ZhenYuanActivation/ZhenYuanActivation.layout.xml	ZhenYuanActivation\ZhenYuanActivation.lua	2		19	20	
+258	ZhenYuanNingLian	ZhenYuanNingLian/ZhenYuanNingLian.layout.xml	ZhenYuanNingLian\ZhenYuanNingLian.lua	2		19	20	
+259	SelfBaoJian	SelfBaoJian/SelfBaoJian.layout.xml	SelfBaoJian/SelfBaoJian.lua	0	#N/A	0	0	
+260	EquipBaoJianlingju	EquipBaoJianlingju/EquipBaoJianlingju.layout.xml	EquipBaoJianlingju/EquipBaoJianlingju.lua	2		19	20	
+261	EquipBaoJian_TianHuo_Tips	EquipBaoJian_TianHuo_Tips/EquipBaoJian_TianHuo_Tips.layout.xml	EquipBaoJian_TianHuo_Tips/EquipBaoJian_TianHuo_Tips.lua	2		19	20	
+262	EquipBaoJian_YuLuan_Tips	EquipBaoJian_YuLuan_Tips/EquipBaoJian_YuLuan_Tips.layout.xml	EquipBaoJian_YuLuan_Tips/EquipBaoJian_YuLuan_Tips.lua	2		19	20	
+263	EquipBaoJian_YunShui_Tips	EquipBaoJian_YunShui_Tips/EquipBaoJian_YunShui_Tips.layout.xml	EquipBaoJian_YunShui_Tips/EquipBaoJian_YunShui_Tips.lua	2		19	20	
+264	DanrenFB	DanrenFB/DanrenFB.layout.xml	DanrenFB\DanrenFB.lua	2		19	20	
+265	WuhunMagicUp_p	WuhunMagicUp_p/WuhunMagicUp_p.layout.xml	WuhunMagicUp_p/WuhunMagicUp_p.lua	3	whhcdj	19	20	
+266	WuhunExtraPropertyDel	WuhunExtraPropertyDel/WuhunExtraPropertyDel.layout.xml	WuhunExtraPropertyDel/WuhunExtraPropertyDel.lua	3	whkzsx	19	20	
+267	Wuhun	Wuhun/Wuhun.layout.xml	Wuhun/Wuhun.lua	2	whjs	34	20	
+268	WuhunExtraPropertyUp	WuhunExtraPropertyUp/WuhunExtraPropertyUp.layout.xml	WuhunExtraPropertyUp/WuhunExtraPropertyUp.lua	3	whkzsx	19	20	
+269	WuhunSkillStudy	WuhunSkillStudy/WuhunSkillStudy.layout.xml	WuhunSkillStudy/WuhunSkillStudy.lua	3	whjn	19	20	
+270	WuhunMagicUp	WuhunMagicUp/WuhunMagicUp.layout.xml	WuhunMagicUp/WuhunMagicUp.lua	3	whhcdj	19	20	
+271	WuhunSkillUp	WuhunSkillUp/WuhunSkillUp.layout.xml	WuhunSkillUp/WuhunSkillUp.lua	3	whjn	19	20	
+272	Jincanxianli	Jincanxianli/Jincanxianli.layout.xml	Jincanxianli/Jincanxianli.lua	3		19	20	
+273	SelfJunXian	SelfJunXian/SelfJunXian.layout.xml	SelfJunXian/SelfJunXian.lua	2		19	20	
+275	SuperWeaponQH	SuperWeaponQH/SuperWeaponQH.layout.xml	SuperWeaponQH/SuperWeaponQH.lua	3		19	20	
+276	SuperWeaponUp	SuperWeaponUp/SuperWeaponUp.layout.xml	SuperWeaponUp/SuperWeaponUp.lua	2		19	20	
+277	FunctionBarRight_2	FunctionBarRight_2/FunctionBarRight_2.layout.xml	FunctionBarRight_2/FunctionBarRight_2.lua	0	#N/A	0	0	
+279	TouZi	TouZi/TouZi.layout.xml	TouZi/TouZi.lua	3		19	20	
+280	PetHuanhua	PetHuanhua/PetHuanhua.layout.xml	PetHuanhua/PetHuanhua.lua	3		19	20	
+281	PetChangeModel	PetChangeModel/PetChangeModel.layout.xml	PetChangeModel/PetChangeModel.lua	3		19	20	
+282	ZhenYuanGold	ZhenYuanGold/ZhenYuanGold.layout.xml	ZhenYuanGold/ZhenYuanGold.lua	1		19	20	
+283	Valentine	Valentine/Valentine.layout.xml	Valentine/Valentine.lua	1		19	20	
+284	BangHuiFuLi	BangHuiFuLi/BangHuiFuLi.layout.xml	BangHuiFuLi/BangHuiFuLi.lua	2		32	33	
+285	VIP_Shop	VIP_Shop/VIP_Shop.layout.xml	VIP_Shop/VIP_Shop.lua	3		19	20	
+286	Gemzhuoke	Gemzhuoke/Gemzhuoke.layout.xml	Gemzhuoke/Gemzhuoke.lua	3		19	20	
+287	Gemfenli	Gemfenli/Gemfenli.layout.xml	Gemfenli/Gemfenli.lua	3		19	20	
+288	TheFireStove	TheFireStove/TheFireStove.layout.xml	TheFireStove/TheFireStove.lua	3		19	20	
+289	EquipEducation_Decompose	EquipEducation_Decompose/EquipEducation_Decompose.layout.xml	EquipEducation_Decompose/EquipEducation_Decompose.lua	3		19	20	
+290	EquipEducation_Update	EquipEducation_Update/EquipEducation_Update.layout.xml	EquipEducation_Update/EquipEducation_Update.lua	3		19	20	
+291	EquipEducation_Temper	EquipEducation_Temper/EquipEducation_Temper.layout.xml	EquipEducation_Temper/EquipEducation_Temper.lua	3		19	20	
+292	EquipEducation_Transfer	EquipEducation_Transfer/EquipEducation_Transfer.layout.xml	EquipEducation_Transfer/EquipEducation_Transfer.lua	3		19	20	
+293	SelfJingMai	JingMai/SelfJingMai.layout.xml	JingMai/JingMai.lua	2		19	20	
+294	ChessBox	ChessBox/ChessBox.layout.xml	ChessBox/ChessBox.lua	1		0	0	
+295	EquipLingPai_OperatingSJ	EquipLingPai_OperatingSJ\EquipLingPai_OperatingSJ.layout.xml	EquipLingPai_OperatingSJ\EquipLingPai_OperatingSJ.lua	3	asq	19	20	
+296	EquipLingPai_OperatingXQ	EquipLingPai_OperatingXQ\EquipLingPai_OperatingXQ.layout.xml	EquipLingPai_OperatingXQ\EquipLingPai_OperatingXQ.lua	3	asq	19	20	
+297	EquipLingPai_ShengJie	EquipLingPai_ShengJie\EquipLingPai_ShengJie.layout.xml	EquipLingPai_ShengJie\EquipLingPai_ShengJie.lua	3	asq	19	20	
+299	EquipLingPai_OperatingZC	EquipLingPai_OperatingZC\EquipLingPai_OperatingZC.layout.xml	EquipLingPai_OperatingZC\EquipLingPai_OperatingZC.lua	3	asq	19	20	
+300	EquipLingPai_OperatingJS	EquipLingPai_OperatingJS\EquipLingPai_OperatingJS.layout.xml	EquipLingPai_OperatingJS\EquipLingPai_OperatingJS.lua	3	asq	19	20	
+301	AnqiCuidu	AnqiCuidu/AnqiCuidu.layout.xml	AnqiCuidu/AnqiCuidu.lua	1		19	20	
+302	AnqiJinjie	AnqiJinjie/AnqiJinjie.layout.xml	AnqiJinjie/AnqiJinjie.lua	1		19	20	
+303	AnqiLianDu	AnqiLianDu/AnqiLianDu.layout.xml	AnqiLianDu/AnqiLianDu.lua	1		19	20	
+304	SweepAll	SweepAll/SweepAll.layout.xml	SweepAll/SweepAll.lua	2		19	20	
+305	FuJiangTianLongHD	FuJiangTianLongHD/FuJiangTianLongHD.layout.xml	FuJiangTianLongHD/FuJiangTianLongHD.lua	1		19	20	
+306	EquipNewStrengthen	EquipNewStrengthen/EquipNewStrengthen.layout.xml	EquipNewStrengthen/EquipNewStrengthen.lua	3		19	20	
+307	VIP_KuaiJie	VIP_KuaiJie/VIP_KuaiJie.layout.xml	VIP_KuaiJie/VIP_KuaiJie.lua	3		19	20	
+308	EquipEducation_ShengLing	EquipEducation_ShengLing/EquipEducation_ShengLing.layout.xml	EquipEducation_ShengLing/EquipEducation_ShengLing.lua	3		19	20	
+309	JinBiJiaoZi	JinBiJiaoZi\JinBiJiaoZi.layout.xml	JinBiJiaoZi\JinBiJiaoZi.lua	2		19	20	
+310	NewSalaryTask	NewSalaryTask/NewSalaryTask.layout.xml	NewSalaryTask/NewSalaryTask.lua	3		19	20	
+311	Sns	Sns\Sns.layout.xml	Sns\Sns.lua	1	gzd	19	20	
+312	Shop_Dresser	Shop_Dresser\Shop_Dresser.layout.xml	Shop_Dresser\Shop_Dresser.lua	1	gzd	19	20	
+313	SnsGame	SnsGame/SnsGame.layout.xml	SnsGame/SnsGame.lua	1		0	0	
+316	EquipEducation_JinJie	EquipEducation_JinJie/EquipEducation_JinJie.layout.xml	EquipEducation_JinJie/EquipEducation_JinJie.lua	3		19	20	
+317	GemcomupDate	GemcomupDate/GemcomupDate.layout.xml	GemcomupDate/GemcomupDate.lua	3		19	20	
+318	Jianghumingrentang	Jianghumingrentang/Jianghumingrentang.layout.xml	Jianghumingrentang/Jianghumingrentang.lua	3	mrt	19	20	
+319	WLBook	WLBook\WLBook.layout.xml	WLBook\WLBook.lua	2		19	20	
+320	Zhen_chonglou	Zhen_chonglou/Zhen_chonglou.layout.xml	Zhen_chonglou/Zhen_chonglou.lua	3		19	20	
+321	DecorateWeapon	DecorateWeapon/DecorateWeapon.layout.xml	DecorateWeapon/DecorateWeapon.lua	3		19	20	
+322	YbMarket	YbMarket\YbMarket.layout.xml	YbMarket\YbMarket.lua	1		0	0	
+323	YbMarketSale	YbMarketSale\YbMarketSale.layout.xml	YbMarketSale\YbMarketSale.lua	3		0	0	
+324	YbMarketUpItem	YbMarketUpItem\YbMarketUpItem.layout.xml	YbMarketUpItem\YbMarketUpItem.lua	3		0	0	
+325	HolidayGiftSP	HolidayGiftSP/HolidayGiftSP.layout.xml	HolidayGiftSP/HolidayGiftSP.lua	1		0	0	
+327	PetEquipSuitUp	PetEquipSuitUp/PetEquipSuitUp.layout.xml	PetEquipSuitUp/PetEquipSuitUp.lua	3	cwzb	0	0	
+328	PetEquipSuitDepart	PetEquipSuitDepart/PetEquipSuitDepart.layout.xml	PetEquipSuitDepart/PetEquipSuitDepart.lua	3	cwzb	0	0	
+329	Huoyuehaoli	Huoyuehaoli/Huoyuehaoli.layout.xml	Huoyuehaoli/Huoyuehaoli.lua	2	hyhl	19	20	
+330	Infant_HeroChoice	Infant_HeroChoice/Infant_HeroChoice.layout.xml	Infant_HeroChoice/Infant_HeroChoice.lua	3		19	20	
+331	Infant_SkillLevelUp	Infant_SkillLevelUp/Infant_SkillLevelUp.layout.xml	Infant_SkillLevelUp/Infant_SkillLevelUp.lua	3		19	20	
+332	Infant	Infant/Infant.layout.xml	Infant/Infant.lua	3		19	20	
+333	Infant_SkillReset	Infant_SkillReset/Infant_SkillReset.layout.xml	Infant_SkillReset/Infant_SkillReset.lua	3		19	20	
+334	InfantCardGift	InfantCardGift/InfantCardGift.layout.xml	InfantCardGift/InfantCardGift.lua	3		19	20	
+335	CardCompose	CardCompose/CardCompose.layout.xml	CardCompose/CardCompose.lua	3		19	20	
+336	Cardtip	Cardtip/Cardtip.layout.xml	Cardtip/Cardtip.lua	1		0	0	
+337	CardStrengthen	CardStrengthen/CardStrengthen.layout.xml	CardStrengthen/CardStrengthen.lua	3		19	20	
+338	GemChange	GemChange/GemChange.layout.xml	GemChange/GemChange.lua	3		19	20	
+339	SelectCharHeadFrame	SelectCharHeadFrame\SelectCharHeadFrame.layout.xml	SelectCharHeadFrame\SelectCharHeadFrame.lua	3	gbtx	19	20	
+340	Martial_WuYi	Martial_WuYi/Martial_WuYi.layout.xml	Martial_WuYi/Martial_WuYi.lua	2		19	20	
+341	SuperWeapon9_DIYSkill	SuperWeapon9_DIYSkill/SuperWeapon9_DIYSkill.layout.xml	SuperWeapon9_DIYSkill/SuperWeapon9_DIYSkill.lua	2		19	20	
+342	SuperWeapon9_DIYSkill2	SuperWeapon9_DIYSkill2/SuperWeapon9_DIYSkill2.layout.xml	SuperWeapon9_DIYSkill2/SuperWeapon9_DIYSkill2.lua	2		19	20	
+343	SuperWeaponUp2	SuperWeaponUp2/SuperWeaponUp2.layout.xml	SuperWeaponUp2/SuperWeaponUp2.lua	3		0	0	
+344	SuperWeapon9_ShengJie	SuperWeapon9_ShengJie/SuperWeapon9_ShengJie.layout.xml	SuperWeapon9_ShengJie/SuperWeapon9_ShengJie.lua	3		19	20	
+345	TheUIforGM	TheUIforGM\TheUIforGM.layout.xml	TheUIforGM\TheUIforGM.lua	3		19	20	
+346	Agname_Kong	Agname_Kong/Agname_Kong.layout.xml	Agname_Kong/Agname_Kong.lua	1	27	19	20	
+347	MonthlySignSP	MonthlySignSP/MonthlySignSP.layout.xml	MonthlySignSP/MonthlySignSP.lua	2		19	20	
+348	NewSalaryTaskSP	NewSalaryTaskSP/NewSalaryTaskSP.layout.xml	NewSalaryTaskSP/NewSalaryTaskSP.lua	2		19	20	
+349	OneDayGiftSP	OneDayGiftSP/OneDayGiftSP.layout.xml	OneDayGiftSP/OneDayGiftSP.lua	2		19	20	
+350	YuShou_ZhuQue	YuShou_ZhuQue/YuShou_ZhuQue.layout.xml	YuShou_ZhuQue/YuShou_ZhuQue.lua	2		19	20	
+351	YuShou_XuanWu	YuShou_XuanWu/YuShou_XuanWu.layout.xml	YuShou_XuanWu/YuShou_XuanWu.lua	2		19	20	
+352	YuShou_QingLong	YuShou_QingLong/YuShou_QingLong.layout.xml	YuShou_QingLong/YuShou_QingLong.lua	2		19	20	
+353	YuShou_BaiHu	YuShou_BaiHu/YuShou_BaiHu.layout.xml	YuShou_BaiHu/YuShou_BaiHu.lua	2		19	20	
+354	SelfBaoJian_Tips	SelfBaoJian_Tips/SelfBaoJian_Tips.layout.xml	SelfBaoJian_Tips/SelfBaoJian_Tips.lua	1		0	0	
+355	Ronglu	Ronglu/Ronglu.layout.xml	Ronglu/Ronglu.lua	1		0	0	
+356	EquipEffectSelfTips	EquipEffectSelfTips/EquipEffectSelfTips.layout.xml	EquipEffectSelfTips/EquipEffectSelfTips.lua	2		19	20	
+357	EquipEffectTargetTips	EquipEffectTargetTips/EquipEffectTargetTips.layout.xml	EquipEffectTargetTips/EquipEffectTargetTips.lua	2		19	20	
+358	ModifyMenPai_Confirm	ModifyMenPai_Confirm/ModifyMenPai_Confirm.layout.xml	ModifyMenPai_Confirm/ModifyMenPai_Confirm.lua	3		19	20	
+359	ModifyMenPai	ModifyMenPai/ModifyMenPai.layout.xml	ModifyMenPai/ModifyMenPai.lua	3		19	20	
+360	ModifyMenPai_Select	ModifyMenPai_Select/ModifyMenPai_Select.layout.xml	ModifyMenPai_Select/ModifyMenPai_Select.lua	3		19	20	
+361	BW_Match_Stage	BW_Match_Stage/BW_Match_Stage.layout.xml	BW_Match_Stage/BW_Match_Stage.lua	3		19	20	
+362	BW_Match_Ing	BW_Match_Ing/BW_Match_Ing.layout.xml	BW_Match_Ing/BW_Match_Ing.lua	3		19	20	
+364	EquipLingPai_Update	EquipLingPai_Update/EquipLingPai_Update.layout.xml	EquipLingPai_Update/EquipLingPai_Update.lua	3		19	20	
+365	EquipLingPai_SkillQH	EquipLingPai_SkillQH/EquipLingPai_SkillQH.layout.xml	EquipLingPai_SkillQH/EquipLingPai_SkillQH.lua	3		19	20	
+366	TaoZhuangLiHe	TaoZhuangLiHe/TaoZhuangLiHe.layout.xml	TaoZhuangLiHe/TaoZhuangLiHe.lua	3		19	20	
+367	DWRonghe	DWRonghe/DWRonghe.layout.xml	DWRonghe/DWRonghe.lua	3		19	20	
+368	Token_Shop	Token_Shop/Token_Shop.layout.xml	Token_Shop/Token_Shop.lua	3		19	20	
+369	HD_LongZhengHandBook	HD_LongZhengHandBook/HD_LongZhengHandBook.layout.xml	HD_LongZhengHandBook/HD_LongZhengHandBook.lua	3		19	20	
+370	ModifyMenPai_Preheat1	ModifyMenPai_Preheat1/ModifyMenPai_Preheat1.layout.xml	ModifyMenPai_Preheat1/ModifyMenPai_Preheat1.lua	3		19	20	
+371	PlayerReturnRGDL	PlayerReturnRGDL/PlayerReturnRGDL.layout.xml	PlayerReturnRGDL/PlayerReturnRGDL.lua	3		19	20	
+372	ZiNvDressPaint	ZiNvDressPaint/ZiNvDressPaint.layout.xml	ZiNvDressPaint/ZiNvDressPaint.lua	3		19	20	
+373	Miyu_zhizuo	Miyu_zhizuo/Miyu_zhizuo.layout.xml	Miyu_zhizuo/Miyu_zhizuo.lua	3		19	20	
+375	YouLongKa	YouLongKa/YouLongKa.layout.xml	YouLongKa/YouLongKa.lua	3		19	20	
+376	YouLongKa2	YouLongKa2/YouLongKa2.layout.xml	YouLongKa2/YouLongKa2.lua	3		19	20	
+377	EquipLingPai_Star	EquipLingPai_Star/EquipLingPai_Star.layout.xml	EquipLingPai_Star/EquipLingPai_Star.lua	3		19	20	
+378	PetHuanSe	PetHuanSe/PetHuanSe.layout.xml	PetHuanSe/PetHuanSe.lua	3		19	20	
+381	Rune_Stars	Rune_Stars\Rune_Stars.layout.xml	Rune_Stars\Rune_Stars.lua	3		19	20	星阵主界面
+382	Rune_Stars_Cardtip	Rune_Stars_Cardtip\Rune_Stars_Cardtip.layout.xml	Rune_Stars_Cardtip\Rune_Stars_Cardtip.lua	1		-1	-1	星阵tips界面
+383	Rune_Stars_Cardtip4	Rune_Stars_Cardtip4\Rune_Stars_Cardtip4.layout.xml	Rune_Stars_Cardtip4\Rune_Stars_Cardtip4.lua	1		-1	-1	星阵tips4界面
+384	Rune_Stars_Reel	Rune_Stars_Reel\Rune_Stars_Reel.layout.xml	Rune_Stars_Reel\Rune_Stars_Reel.lua	3		19	20	星阵星卷技能界面
+385	Rune_Stars_Skill	Rune_Stars_Skill\Rune_Stars_Skill.layout.xml	Rune_Stars_Skill\Rune_Stars_Skill.lua	3		19	20	星阵星卷技能升级界面
+386	maozirateWeapon	maozirateWeapon\maozirateWeapon.layout.xml	maozirateWeapon\maozirateWeapon.lua	3		19	20	神器更改外观
+##572	Decoratemaozi	Decoratemaozi/Decoratemaozi.layout.xml	Decoratemaozi/Decoratemaozi.lua	3		19	20	
+573	EquipBaoJian_Transfer	EquipBaoJian_Transfer/EquipBaoJian_Transfer.layout.xml	EquipBaoJian_Transfer/EquipBaoJian_Transfer.lua	3		19	20	
+577	haizinvsheng	haizinvsheng/haizinvsheng.layout.xml	haizinvsheng/haizinvsheng.lua	3		19	20	
+578	CampaignTrack	CampaignTrack\CampaignTrack.layout.xml	CampaignTrack\CampaignTrack.lua	0		19	20	
+579	MissionTrack	MissionTrack\MissionTrack.layout.xml	MissionTrack\MissionTrack.lua	0		19	20	
+580	ModifyMenPai_HandBook	ModifyMenPai_HandBook\ModifyMenPai_HandBook.layout.xml	ModifyMenPai_HandBook\ModifyMenPai_HandBook.lua	2		19	20	转门派-指引手册界面
+581	WuLin_StartEnd	WuLin_StartEnd\WuLin_StartEnd.layout.xml	WuLin_StartEnd\WuLin_StartEnd.lua	0		19	20	观山海开始结束界面
+582	VIP_EquipItem	VIP_EquipItem/VIP_EquipItem.layout.xml	VIP_EquipItem/VIP_EquipItem.lua	1	9	19	20	GM在线权限
+583	Packet_Temporary	Packet_Temporary\Packet_Temporary.layout.xml	Packet_Temporary\Packet_Temporary.lua	0		19	20	临时背包
+584	TreasureBox_MBuy2	TreasureBox_MBuy2/TreasureBox_MBuy2.layout.xml	TreasureBox_MBuy2/TreasureBox_MBuy2.lua	1	9	19	20	九州行囊取出
+585	ItemExchange	ItemExchange/ItemExchange.layout.xml	ItemExchange/ItemExchange.lua	1	9	19	20	物品兑换元宝

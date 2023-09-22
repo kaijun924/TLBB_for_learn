@@ -5,6 +5,7 @@ function ItemExchange_PreLoad()
 	this:RegisterEvent("UPDATE_NOTIFY");
 	this:RegisterEvent("ADJEST_UI_POS",false)
 	this:RegisterEvent("VIEW_RESOLUTION_CHANGED",false)
+	this:RegisterEvent("PACKAGE_ITEM_CHANGED")
 	this : RegisterEvent( "HIDE_ON_SCENE_TRANSED" );			-- 离开场景
 end
 
@@ -14,9 +15,8 @@ end
 
 
 function ItemExchange_OnEvent(event)
-	
 	if(event == "UI_COMMAND" and arg0 == "20200428") then
-		SetNotifyTip("被调用了");
+		--SetNotifyTip("被调用了");
 		--ItemExchange_Init()
 		this:Show();
 	end
@@ -26,7 +26,24 @@ function ItemExchange_OnEvent(event)
 		ItemExchange_Frame_On_ResetPos()
 	elseif (event == "HIDE_ON_SCENE_TRANSED" ) then
         this:Hide()	
+	elseif (event == "UI_COMMAND" and arg0 == "20200103" and this:IsVisible()) then
+		SetNotifyTip("这里是"..arg1);
+		ItemExchange_Update(arg1)
 	end
+end
+
+function ItemExchange_Update(itemIndex)
+	local index = tonumber(itemIndex)
+	local theAction = EnumAction(index, "packageitem")
+
+	if theAction:GetID() ~= 0 then
+		ItemExchange_Object:SetActionItem(theAction:GetID())
+		LifeAbility:Lock_Packet_Item(index, 1)
+	end
+end
+
+function ItemExchange_Resume_Equip()
+	--SetNotifyTip("右键了");
 end
 
 
