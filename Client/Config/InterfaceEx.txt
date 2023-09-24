@@ -388,3 +388,4 @@ ID	相关	界面	脚本	不懂	缩写之类的	不懂	不懂	备注
 583	Packet_Temporary	Packet_Temporary\Packet_Temporary.layout.xml	Packet_Temporary\Packet_Temporary.lua	0		19	20	临时背包
 584	TreasureBox_MBuy2	TreasureBox_MBuy2/TreasureBox_MBuy2.layout.xml	TreasureBox_MBuy2/TreasureBox_MBuy2.lua	1	9	19	20	九州行囊取出
 585	ItemExchange	ItemExchange/ItemExchange.layout.xml	ItemExchange/ItemExchange.lua	1	9	19	20	物品兑换元宝
+586	FourSlot	FourSlot/FourSlot.layout.xml	FourSlot/FourSlot.lua	1	9	19	20	物品兑换元宝

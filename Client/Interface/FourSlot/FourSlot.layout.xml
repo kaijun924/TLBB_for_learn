@@ -1,71 +1,72 @@
 ﻿<?xml version="1.0" ?>
 <GUILayout>
-	<Window Type="TLBB_MainFrame0" Name="ItemExchange_Frame">
+	<Window Type="TLBB_MainFrame0" Name="FourSlot_Frame">
 		<Property Name="UnifiedPosition" Value="{{0.5,-230},{0.5,-200}}" />
 		<Property Name="AbsoluteSize" Value="w:250 h:270" />
-		<Window Type="TLBB_DragTitle" Name="ItemExchange_DragTitle">
+		<Window Type="TLBB_DragTitle" Name="FourSlot_DragTitle">
 			<Property Name="AbsolutePosition" Value="x:40.000000 y:3.000000" />
 			<Property Name="UnifiedSize" Value="{{1.000000,-80.000000},{0.000000,20.000000}" />
-			<Property Name="DragTarget" Value="ItemExchange_Frame" />
-			<Window Type="TLBB_SimpleText" Name="ItemExchange_Title">
+			<Property Name="DragTarget" Value="FourSlot_Frame" />
+			<Window Type="TLBB_SimpleText" Name="FourSlot_Title">
 			<Property Name="Position" Value="x:0.0 y:0.0" />
 			<Property Name="Size" Value="w:1.0 h:1.0" />
 		    <Property Name="Font" Value="YouYuan11.25" />
             <Property Name="HorzFormatting" Value="HorzCentred"/>
-  			<Property Name="Text" Value="#gFF0FA0物品兑换工具" />
+  			<Property Name="Text" Value="#gFF0FA0装备打孔" />
 			</Window>
 		</Window> 
-		<Window Type="TLBB_ButtonClose" Name="ItemExchange_Close">
+		<Window Type="TLBB_ButtonClose" Name="FourSlot_Close">
 			<Property Name="UnifiedPosition" Value="{{1.000000,-39.000000},{0.000000,7.000000}" />
 			<Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
-			<Event Name="Clicked" Function="ItemExchange_OnHiden();" />
+			<Event Name="Clicked" Function="FourSlot_OnHiden();" />
 		</Window>
 		<!-- 增加或减少元宝 -->
-    <Window Type="TLBB_SimpleText" Name="ItemExchange_Info2">
+    <Window Type="TLBB_SimpleText" Name="FourSlot_Info2">
 				<Property Name="AbsolutePosition" Value="x:20.000000 y:64.000000" />
 				<Property Name="UnifiedSize" Value="{{0.695473,0.000000},{0.000000,40.000000}}" />
 				<Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
 				<Property Name="RiseOnClick" Value="False" />
-				<Property Name="Text" Value="请放入需要兑换的物品" />
+				<Property Name="Text" Value="请放入需要打孔的装备" />
 				<Property Name="TextColor" Value="FFFFF263" />
 			</Window>
-    <Window Type="TLBB_ActionButton" Name="ItemExchange_Object">
+    <Window Type="TLBB_ActionButton" Name="FourSlot_Object">
 				<Property Name="AbsolutePosition" Value="x:190.000000 y:66.000000" />
 				<Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
 				<Property Name="DragAcceptName" Value="G96" />
 				<Property Name="DraggingEnabled" Value="True" />
-				<Event Name="RBClicked" Function="ItemExchange_Resume_Equip();" />
-		</Window>	
-		<Window Type="TLBB_SimpleMulitiTextFrame" Name="ItemExchange_RewardYuanbao_Text">
-        <Property Name="UnifiedPosition" Value="{{0.05,0.000000},{1.000000,-105.000000}" />
-        <Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,22.000000}" />
-        <Property Name="HorzFormatting" Value="LeftAligned" />
-        <Property Name="VertFormatting" Value="VertCentred" />
-        <Property Name="Text" Value="#典当价格(元宝):" />
-        <Property Name="TextColor" Value="FFFFF263" />
-        <Property Name="RiseOnClick" Value="False" />
-        <Window Type="TLBB_SimpleText" Name="ItemExchange_RewardYuanbao">
-          <Property Name="UnifiedSize" Value="{{1.000000,-6.000000},{0.000000,20.000000}}"/>
-          <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}}"/>
-          <Property Name="HorzFormatting" Value="RightAligned" />
-        </Window>
-      </Window>
-      <Window Type="TLBB_SimpleMulitiTextFrame" Name="ItemExchange_RewardMoney_Text">
+				<Event Name="RBClicked" Function="FourSlot_Resume_Equip();" />
+		</Window>
+	<Window Type="TLBB_SimpleText" Name="FourSlot_Info3">
+				<Property Name="AbsolutePosition" Value="x:20.000000 y:104.000000" />
+				<Property Name="UnifiedSize" Value="{{0.695473,0.000000},{0.000000,40.000000}}" />
+				<Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Text" Value="请放入打孔道具" />
+				<Property Name="TextColor" Value="FFFFF263" />
+			</Window>
+    <Window Type="TLBB_ActionButton" Name="FourSlot_Object2">
+				<Property Name="AbsolutePosition" Value="x:190.000000 y:106.000000" />
+				<Property Name="AbsoluteSize" Value="w:36.000000 h:36.000000" />
+				<Property Name="DragAcceptName" Value="G96" />
+				<Property Name="DraggingEnabled" Value="True" />
+				<Event Name="RBClicked" Function="FourSlot_Resume_Equip2();" />
+		</Window>		
+      <Window Type="TLBB_SimpleMulitiTextFrame" Name="FourSlot_RewardMoney_Text">
 				<Property Name="UnifiedPosition" Value="{{0.050000,0.000000},{1.000000,-85.000000}}" />
 				<Property Name="UnifiedSize" Value="{{0.900000,0.000000},{0.000000,22.000000}}" />
 				<Property Name="HorzFormatting" Value="LeftAligned" />
 				<Property Name="RiseOnClick" Value="False" />
-				<Property Name="Text" Value="#典当价格(金币):" />
+				<Property Name="Text" Value="#需要金币:" />
 				<Property Name="TextColor" Value="FFFFF263" />
 				<Property Name="VertFormatting" Value="VertCentred" />
-				<Window Type="TLBB_Money" Name="ItemExchange_RewardMoney">
+				<Window Type="TLBB_Money" Name="FourSlot_RewardMoney">
 					<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}}" />
 					<Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,20.000000}}" />
 					<Property Name="HorzFormatting" Value="RightAligned" />
 					<Property Name="MoneyNumber" Value="0" />
 				</Window>
 			</Window>
-      <Window Type="TLBB_SimpleMulitiTextFrame" Name="ItemExchange_SelfYuanbao_Text">
+      <Window Type="TLBB_SimpleMulitiTextFrame" Name="FourSlot_SelfYuanbao_Text">
         <Property Name="UnifiedPosition" Value="{{0.05,0.000000},{1.000000,-65.000000}" />
         <Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,22.000000}" />
         <Property Name="HorzFormatting" Value="LeftAligned" />
@@ -73,23 +74,23 @@
         <Property Name="Text" Value="#拥有元宝:" />
         <Property Name="TextColor" Value="FFFFF263" />
         <Property Name="RiseOnClick" Value="False" />
-        <Window Type="TLBB_SimpleText" Name="ItemExchange_SelfYuanbao">
+        <Window Type="TLBB_SimpleText" Name="FourSlot_SelfYuanbao">
           <Property Name="UnifiedSize" Value="{{1.000000,-6.000000},{0.000000,20.000000}}"/>
           <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}}"/>
           <Property Name="HorzFormatting" Value="RightAligned" />
         </Window>
       </Window>
-	  <Window Type="TLBB_ButtonCommon" Name="ItemExchange_OK">
+	  <Window Type="TLBB_ButtonCommon" Name="FourSlot_OK">
         <Property Name="UnifiedPosition" Value="{{1.000000,-128.000000},{1.000000,-40.000000}" />
         <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
         <Property Name="Text" Value="#确认兑换" />
-        <Event Name="Clicked" Function="ItemExchange_Submit();" />
+        <Event Name="Clicked" Function="FourSlot_Submit();" />
       </Window>
-      <Window Type="TLBB_ButtonCommon" Name="ItemExchange_Cancel">
+      <Window Type="TLBB_ButtonCommon" Name="FourSlot_Cancel">
         <Property Name="UnifiedPosition" Value="{{1.000000,-68.000000},{1.000000,-40.000000}" />
         <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
         <Property Name="Text" Value="#取消" />
-        <Event Name="Clicked" Function="ItemExchange_OnHiden();" />	
+        <Event Name="Clicked" Function="FourSlot_OnHiden();" />	
       </Window> 					
 	</Window>
 </GUILayout>

@@ -695,7 +695,7 @@ end
 
 function Minimap_OpenSuperHelp()
 	PushEvent("UI_COMMAND",20200428)
-	SetNotifyTip("这是帮助");
+	--SetNotifyTip("这是帮助");
 end
 --bug反馈
 function MiniMap_BugFeedBack()
