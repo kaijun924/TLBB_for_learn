@@ -397,13 +397,16 @@ end
 		return
 	end	
 	if GetNumText() == 10 then
-		BeginEvent(sceneId)						
-		AddNumText( sceneId, x000110_g_scriptId, "寒玉极限", 6, 30 )
-		AddNumText( sceneId, x000110_g_scriptId, "点金极限", 6, 11 )
-		AddNumText( sceneId, x000110_g_scriptId, "#W返回上一页", 8, 18 )
-		EndEvent(sceneId)
-		DispatchEventList(sceneId,selfId,targetId)
-		return
+		-- BeginEvent(sceneId)						
+		-- AddNumText( sceneId, x000110_g_scriptId, "寒玉极限", 6, 30 )
+		-- AddNumText( sceneId, x000110_g_scriptId, "点金极限", 6, 11 )
+		-- AddNumText( sceneId, x000110_g_scriptId, "#W返回上一页", 8, 18 )
+		-- EndEvent(sceneId)
+		-- DispatchEventList(sceneId,selfId,targetId)
+		BeginUICommand( sceneId )
+		UICommand_AddInt( sceneId, targetId )
+		EndUICommand( sceneId )
+		DispatchUICommand( sceneId, selfId, 20200433 )
 	end	
 		
 	if GetNumText() == 30 then

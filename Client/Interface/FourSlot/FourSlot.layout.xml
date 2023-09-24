@@ -66,24 +66,25 @@
 					<Property Name="MoneyNumber" Value="0" />
 				</Window>
 			</Window>
-      <Window Type="TLBB_SimpleMulitiTextFrame" Name="FourSlot_SelfYuanbao_Text">
-        <Property Name="UnifiedPosition" Value="{{0.05,0.000000},{1.000000,-65.000000}" />
-        <Property Name="UnifiedSize" Value="{{0.9,0.000000},{0.000000,22.000000}" />
-        <Property Name="HorzFormatting" Value="LeftAligned" />
-        <Property Name="VertFormatting" Value="VertCentred" />
-        <Property Name="Text" Value="#拥有元宝:" />
-        <Property Name="TextColor" Value="FFFFF263" />
-        <Property Name="RiseOnClick" Value="False" />
-        <Window Type="TLBB_SimpleText" Name="FourSlot_SelfYuanbao">
-          <Property Name="UnifiedSize" Value="{{1.000000,-6.000000},{0.000000,20.000000}}"/>
-          <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}}"/>
-          <Property Name="HorzFormatting" Value="RightAligned" />
-        </Window>
-      </Window>
+     <Window Type="TLBB_SimpleMulitiTextFrame" Name="FourSlot_SelfMoney_Text">
+				<Property Name="UnifiedPosition" Value="{{0.050000,0.000000},{1.000000,-65.000000}}" />
+				<Property Name="UnifiedSize" Value="{{0.900000,0.000000},{0.000000,22.000000}}" />
+				<Property Name="HorzFormatting" Value="LeftAligned" />
+				<Property Name="RiseOnClick" Value="False" />
+				<Property Name="Text" Value="#拥有金币:" />
+				<Property Name="TextColor" Value="FFFFF263" />
+				<Property Name="VertFormatting" Value="VertCentred" />
+				<Window Type="TLBB_Money" Name="FourSlot_SelfMoney">
+					<Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}}" />
+					<Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,20.000000}}" />
+					<Property Name="HorzFormatting" Value="RightAligned" />
+					<Property Name="MoneyNumber" Value="0" />
+				</Window>
+			</Window>
 	  <Window Type="TLBB_ButtonCommon" Name="FourSlot_OK">
         <Property Name="UnifiedPosition" Value="{{1.000000,-128.000000},{1.000000,-40.000000}" />
         <Property Name="AbsoluteSize" Value="w:60.000000 h:20.000000" />
-        <Property Name="Text" Value="#确认兑换" />
+        <Property Name="Text" Value="#确认打孔" />
         <Event Name="Clicked" Function="FourSlot_Submit();" />
       </Window>
       <Window Type="TLBB_ButtonCommon" Name="FourSlot_Cancel">

@@ -392,6 +392,10 @@ function Packet_OnEvent( event )
   	nTheTabIndex = 0
   	PACKAGE_TAB[nTheTabIndex]:SetCheck(1)
   	Packet_Open()
+	elseif (event == "UI_COMMAND" and tonumber(arg0) == 20200431 ) then
+	nTheTabIndex = 0
+	PACKAGE_TAB[nTheTabIndex]:SetCheck(1)
+	Packet_Open()
  	elseif (event == "OPEN_UP_ITEM" ) then
 		if this:IsVisible()  then
 			return
@@ -625,6 +629,8 @@ local nIndex = ( nLine - 1 ) * PACKAGE_NUM_PER_LINE + nRow;
 		PushEvent("UI_COMMAND",201401111,tonumber(nIndex2-1))
 		elseif (IsWindowShow("ItemExchange")) then
 		PushEvent("UI_COMMAND",20200103,tonumber(nIndex2-1))
+		elseif (IsWindowShow("FourSlot")) then
+		PushEvent("UI_COMMAND",20200104,tonumber(nIndex2-1))
        else
 		PACKAGE_BUTTONS[nIndex]:DoAction()
        end	
