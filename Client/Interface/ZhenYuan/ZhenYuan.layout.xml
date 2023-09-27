@@ -1,0 +1,797 @@
+﻿<?xml version="1.0" ?>
+<GUILayout>
+  <Window Type="TLBB_MainFrameNULL" Name="ZhenYuan_Frame">
+    <Property Name="UnifiedSize" Value="{{0.000000,590.000000},{0.000000,461.000000}}"/>
+    <Property Name="UnifiedPosition" Value="{{0.500000,-334.000000},{0.200000,0.000000}}"/>
+    <Event Name="Moved" Function="ZhenYuan_OnMoved();" />
+    <Event Name="Hidden" Function="ZhenYuan_OnHidden();" />
+    <Window Type="TLBB_MainFrame3" Name="ZhenYuan_Main_Frame">
+      <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{1.000000,-18.000000}}"/>
+      <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}}"/>
+      <Window Type="TLBB_DragTitle" Name="ZhenYuan_DragTitle">
+        <Property Name="UnifiedPosition" Value="{{0.000000,109.000000},{0.000000,2.000000}}"/>
+        <Property Name="UnifiedSize" Value="{{1.000000,-152.000000},{0.000000,20.000000}}"/>
+        <Property Name="Font" Value="YouYuan11.25" />
+        <Property Name="HorzFormatting" Value="HorzCentred" />
+        <Property Name="VertFormatting" Value="VertCentred" />
+        <Property Name="Text" Value="#{ZYXT_120528_20}" />
+        <Property Name="DragTarget" Value="ZhenYuan_Frame" />
+      </Window>
+      <Window Type="TLBB_ButtonHelp" Name="ZhenYuan_Help">
+        <Property Name="UnifiedPosition" Value="{{0.000000,95.000000},{0.000000,5.000000}" />
+        <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+        <Event Name="Clicked" Function='Helper:GotoHelper(&quot;*ZhenYuan&quot;);' />
+      </Window>
+      <Window Type="TLBB_ButtonClose" Name="ZhenYuan_Close">
+        <Property Name="UnifiedPosition" Value="{{1.000000,-43.000000},{0.000000,5.000000}" />
+        <Property Name="AbsoluteSize" Value="w:14.000000 h:14.000000" />
+        <Event Name="Clicked" Function="ZhenYuan_Refuse_Click();" />
+      </Window>
+      <Window Type="DefaultWindow" Name="ZhenYuan_Frame_Client">
+        <Property Name="AbsolutePosition" Value="x:6.000000 y:32.000000" />
+        <Property Name="UnifiedSize" Value="{{1.000000,-12.000000},{1.000000,-41.000000}" />
+        <Window Type="TLBB_ButtonFenYe2" Name="ZhenYuan_FenYe1">
+          <Property Name="UnifiedSize" Value="{{0.000000,90.000000},{0.000000,25.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,6.0},{0.000000,0.400024}}"/>
+          <Property Name="Text" Value="#{ZYXT_120528_22}"/>
+          <Property Name="Selected" Value="True"/>
+          <Property Name="CheckMode" Value="1"/>
+          <Event Name="MouseLButtonDown" Function="ZhenYuan_ChangeTabIndex(0);" />
+        </Window>
+        <Window Type="TLBB_ButtonFenYe2" Name="ZhenYuan_FenYe2">
+          <Property Name="UnifiedSize" Value="{{0.000000,90.000000},{0.000000,25.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,95.0},{0.000000,0.400024}}"/>
+          <Property Name="Text" Value="#{ZYXT_120528_21}"/>
+          <Property Name="Selected" Value="True"/>
+          <Property Name="CheckMode" Value="1"/>
+          <Event Name="MouseLButtonDown" Function="ZhenYuan_ChangeTabIndex(1);" />
+        </Window>
+        <Window Type="TLBB_Frame_Lace2" Name="ZhenYuan_List">
+          <Property Name="UnifiedSize" Value="{{0.000000,385.000000},{1.000000,-23.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,3.000000},{0.000000,23.000000}}"/>
+          <Window Type="TLBB_StaticImageNULL" Name="ZhenYuan_NV">
+            <Property Name="UnifiedSize" Value="{{0.000000,383.000000},{0.000000,349.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,1.000000},{0.000000,0.000000}}"/>
+            <Property Name="RiseOnClick" Value="False"/>
+            <Property Name="Image" Value="set:ZhenYuanUI1 image:ZhenYuan_NV"/>
+          </Window>
+          <Window Type="TLBB_StaticImageNULL" Name="ZhenYuan_NAN">
+            <Property Name="UnifiedSize" Value="{{0.000000,383.000000},{0.000000,349.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,1.000000},{0.000000,0.000000}}"/>
+            <Property Name="RiseOnClick" Value="False"/>
+            <Property Name="Image" Value="set:ZhenYuanUI2 image:ZhenYuan_NAN"/>
+          </Window>
+          <Window Type="TLBB_StaticImageNULL" Name="ZhenYuan_Lock">
+            <Property Name="UnifiedSize" Value="{{0.000000,30.000000},{0.000000,30.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,179.000000},{0.000000,158.000000}}"/>
+            <Property Name="Image" Value="set:Agname3 image:ZhenYuan_Lock"/>
+            <Event Name="MouseLeave" Function="ZhenYuan_Set_MouseLeave(0);"/>
+            <Event Name="MouseEnter" Function="ZhenYuan_Set_MouseEnter(0);"/>
+          </Window>
+          <Window Type="TLBB_Animate" Name="ZhenYuan_Blue">
+            <Property Name="UnifiedSize" Value="{{0.000000,30.000000},{0.000000,30.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,179.000000},{0.000000,158.000000}}"/>
+            <Property Name="HoverImage" Value="" />
+            <Property Name="NormalImage" Value="" />
+            <Property Name="PushedImage" Value="" />
+            <Property Name="AlwaysOnTop" Value="True" />
+            <Property Name="Animate" Value="ZhenYuanBlue" />
+            <Event Name="MouseLeave" Function="ZhenYuan_Set_MouseLeave(3);"/>
+            <Event Name="MouseEnter" Function="ZhenYuan_Set_MouseEnter(3);"/>
+          </Window>
+          <Window Type="TLBB_Animate" Name="ZhenYuan_Purple">
+            <Property Name="UnifiedSize" Value="{{0.000000,30.000000},{0.000000,30.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,179.000000},{0.000000,158.000000}}"/>
+            <Property Name="HoverImage" Value="" />
+            <Property Name="NormalImage" Value="" />
+            <Property Name="PushedImage" Value="" />
+            <Property Name="AlwaysOnTop" Value="True" />
+            <Property Name="Animate" Value="ZhenYuanPurple" />
+            <Event Name="MouseLeave" Function="ZhenYuan_Set_MouseLeave(4);"/>
+            <Event Name="MouseEnter" Function="ZhenYuan_Set_MouseEnter(4);"/>
+          </Window>
+          <Window Type="TLBB_Animate" Name="ZhenYuan_Orange">
+            <Property Name="UnifiedSize" Value="{{0.000000,30.000000},{0.000000,30.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,179.000000},{0.000000,158.000000}}"/>
+            <Property Name="HoverImage" Value="" />
+            <Property Name="NormalImage" Value="" />
+            <Property Name="PushedImage" Value="" />
+            <Property Name="AlwaysOnTop" Value="True" />
+            <Property Name="Animate" Value="ZhenYuanOrange" />
+            <Event Name="MouseLeave" Function="ZhenYuan_Set_MouseLeave(5);"/>
+            <Event Name="MouseEnter" Function="ZhenYuan_Set_MouseEnter(5);"/>
+          </Window>
+          <Window Type="DefaultWindow" Name="ZhenYuan_Bk1">
+            <Property Name="UnifiedSize" Value="{{0.000000,115.000000},{0.000000,105.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,40.000000},{0.000000,41.000000}}"/>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Equip1">
+              <Property Name="UnifiedSize" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,77.000000},{0.000000,8.000000}}"/>
+              <Property Name="Tooltip" Value="#{ZYXT_120528_167}"/>
+            </Window>
+            <Window Type="TLBB_StaticImageNULL" Name="ZhenYuan_Feng1">
+              <Property Name="UnifiedSize" Value="{{0.000000,46.000000},{0.000000,46.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,18.000000},{0.000000,0.000000}}"/>
+              <Property Name="Tooltip" Value="#{ZYXT_120528_26}"/>
+              <Property Name="Image" Value="set:ZhenYuanUI1 image:ZhenYuanActivation_Feng"/>
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Slots1">
+              <Property Name="UnifiedSize" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,25.000000},{0.000000,8.000000}}"/>
+              <Property Name="DraggingEnabled" Value="True"/>
+              <Event Name="MouseEnter" Function="ZhenYuan_ShowPneumaToolTips(1);" />
+              <Event Name="RBClicked" Function="ZhenYuan_PickUpToBag(1);" />
+              <Event Name="Clicked" Function="ZhenYuan_SlotClicked(1);" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZhenYuan_Info1">
+              <Property Name="UnifiedSize" Value="{{1.000000,-4.000000},{0.000000,53.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,2.000000},{0.000000,51}}"/>
+              <Property Name="HorzFormatting" Value="WordWrapLeftAligned"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="ZhenYuan_Tips1">
+              <Property Name="UnifiedSize" Value="{{0.000000,21.000000},{0.000000,21.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,13.000000}}"/>
+              <Event Name="MouseEnter" Function="ZhenYuan_UpgradeToolTips(1);" />
+              <Window Type="TLBB_ButtonNULL" Name="ZhenYuan_Button1">
+                <Property Name="UnifiedSize" Value="{{0.000000,21.000000},{0.000000,21.000000}}"/>
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}}"/>
+                <Property Name="PushedImage" Value="set:ZhenYuanUI1 image:ZhenYuan_LevetUp_Pushed"/>
+                <Property Name="NormalImage" Value="set:ZhenYuanUI1 image:ZhenYuan_LevetUp_Normal"/>
+                <Property Name="HoverImage" Value="set:ZhenYuanUI1 image:ZhenYuan_LevetUp_Hover"/>
+                <Property Name="DisabledImage" Value="set:ZhenYuanUI1 image:ZhenYuan_LevetUp_Disabled"/>
+                <Event Name="Clicked" Function="ZhenYuan_UpgradeClicked(1);" />
+                <Event Name="MouseEnter" Function="ZhenYuan_UpgradeBtnToolTips(1);" />
+              </Window>
+            </Window>
+          </Window>
+          <Window Type="DefaultWindow" Name="ZhenYuan_Bk2">
+            <Property Name="UnifiedSize" Value="{{0.000000,115.000000},{0.000000,105.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,1.000000},{0.000000,151.000000}}"/>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Equip2">
+              <Property Name="UnifiedSize" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,77.000000},{0.000000,8.000000}}"/>
+              <Property Name="Tooltip" Value="#{ZYXT_120528_167}"/>
+            </Window>
+            <Window Type="TLBB_StaticImageNULL" Name="ZhenYuan_Feng2">
+              <Property Name="UnifiedSize" Value="{{0.000000,46.000000},{0.000000,46.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,18.000000},{0.000000,0.000000}}"/>
+              <Property Name="Tooltip" Value="#{ZYXT_120528_26}"/>
+              <Property Name="Image" Value="set:ZhenYuanUI1 image:ZhenYuanActivation_Feng"/>
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Slots2">
+              <Property Name="UnifiedSize" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,25.000000},{0.000000,8.000000}}"/>
+              <Event Name="MouseEnter" Function="ZhenYuan_ShowPneumaToolTips(2);" />
+              <Event Name="RBClicked" Function="ZhenYuan_PickUpToBag(2);" />
+              <Event Name="Clicked" Function="ZhenYuan_SlotClicked(2);" />
+              <Property Name="DraggingEnabled" Value="True"/>
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZhenYuan_Info2">
+              <Property Name="UnifiedSize" Value="{{1.000000,-4.000000},{0.000000,53.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,2.000000},{0.000000,51}}"/>
+              <Property Name="HorzFormatting" Value="WordWrapLeftAligned"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="ZhenYuan_Tips2">
+              <Property Name="UnifiedSize" Value="{{0.000000,21.000000},{0.000000,21.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,15.000000}}"/>
+              <Event Name="MouseEnter" Function="ZhenYuan_UpgradeToolTips(2);" />
+              <Window Type="TLBB_ButtonNULL" Name="ZhenYuan_Button2">
+                <Property Name="UnifiedSize" Value="{{0.000000,21.000000},{0.000000,21.000000}}"/>
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}}"/>
+                <Property Name="PushedImage" Value="set:ZhenYuanUI1 image:ZhenYuan_LevetUp_Pushed"/>
+                <Property Name="NormalImage" Value="set:ZhenYuanUI1 image:ZhenYuan_LevetUp_Normal"/>
+                <Property Name="HoverImage" Value="set:ZhenYuanUI1 image:ZhenYuan_LevetUp_Hover"/>
+                <Property Name="DisabledImage" Value="set:ZhenYuanUI1 image:ZhenYuan_LevetUp_Disabled"/>
+                <Event Name="Clicked" Function="ZhenYuan_UpgradeClicked(2);" />
+                <Event Name="MouseEnter" Function="ZhenYuan_UpgradeBtnToolTips(2);" />
+              </Window>
+            </Window>
+          </Window>
+          <Window Type="DefaultWindow" Name="ZhenYuan_Bk3">
+            <Property Name="UnifiedSize" Value="{{0.000000,115.000000},{0.000000,105.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,40.000000},{0.000000,261.000000}}"/>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Equip3">
+              <Property Name="UnifiedSize" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,77.000000},{0.000000,8.000000}}"/>
+              <Property Name="Tooltip" Value="#{ZYXT_120528_167}"/>
+            </Window>
+            <Window Type="TLBB_StaticImageNULL" Name="ZhenYuan_Feng3">
+              <Property Name="UnifiedSize" Value="{{0.000000,46.000000},{0.000000,46.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,18.000000},{0.000000,0.000000}}"/>
+              <Property Name="Tooltip" Value="#{ZYXT_120528_26}"/>
+              <Property Name="Image" Value="set:ZhenYuanUI1 image:ZhenYuanActivation_Feng"/>
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Slots3">
+              <Property Name="UnifiedSize" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,25.000000},{0.000000,8.000000}}"/>
+              <Event Name="MouseEnter" Function="ZhenYuan_ShowPneumaToolTips(3);" />
+              <Event Name="RBClicked" Function="ZhenYuan_PickUpToBag(3);" />
+              <Event Name="Clicked" Function="ZhenYuan_SlotClicked(3);" />
+              <Property Name="DraggingEnabled" Value="True"/>
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZhenYuan_Info3">
+              <Property Name="UnifiedSize" Value="{{1.000000,-4.000000},{0.000000,53.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,2.000000},{0.000000,51}}"/>
+              <Property Name="HorzFormatting" Value="WordWrapLeftAligned"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="ZhenYuan_Tips3">
+              <Property Name="UnifiedSize" Value="{{0.000000,21.000000},{0.000000,21.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,14.000000}}"/>
+              <Event Name="MouseEnter" Function="ZhenYuan_UpgradeToolTips(3);" />
+              <Window Type="TLBB_ButtonNULL" Name="ZhenYuan_Button3">
+                <Property Name="UnifiedSize" Value="{{0.000000,21.000000},{0.000000,21.000000}}"/>
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}}"/>
+                <Property Name="PushedImage" Value="set:ZhenYuanUI1 image:ZhenYuan_LevetUp_Pushed"/>
+                <Property Name="NormalImage" Value="set:ZhenYuanUI1 image:ZhenYuan_LevetUp_Normal"/>
+                <Property Name="HoverImage" Value="set:ZhenYuanUI1 image:ZhenYuan_LevetUp_Hover"/>
+                <Property Name="DisabledImage" Value="set:ZhenYuanUI1 image:ZhenYuan_LevetUp_Disabled"/>
+                <Event Name="Clicked" Function="ZhenYuan_UpgradeClicked(3);" />
+                <Event Name="MouseEnter" Function="ZhenYuan_UpgradeBtnToolTips(3);" />
+              </Window>
+            </Window>
+          </Window>
+          <Window Type="DefaultWindow" Name="ZhenYuan_Bk4">
+            <Property Name="UnifiedSize" Value="{{0.000000,115.000000},{0.000000,105.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,231.000000},{0.000000,41.000000}}"/>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Equip4">
+              <Property Name="UnifiedSize" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,1.000000},{0.000000,8.000000}}"/>
+              <Property Name="Tooltip" Value="#{ZYXT_120528_167}"/>
+            </Window>
+            <Window Type="TLBB_StaticImageNULL" Name="ZhenYuan_Feng4">
+              <Property Name="UnifiedSize" Value="{{0.000000,46.000000},{0.000000,46.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,46.000000},{0.000000,0.000000}}"/>
+              <Property Name="Tooltip" Value="#{ZYXT_120528_26}"/>
+              <Property Name="Image" Value="set:ZhenYuanUI1 image:ZhenYuanActivation_Feng"/>
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Slots4">
+              <Property Name="UnifiedSize" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,53.000000},{0.000000,8.000000}}"/>
+              <Property Name="DraggingEnabled" Value="True"/>
+              <Event Name="MouseEnter" Function="ZhenYuan_ShowPneumaToolTips(4);" />
+              <Event Name="RBClicked" Function="ZhenYuan_PickUpToBag(4);" />
+              <Event Name="Clicked" Function="ZhenYuan_SlotClicked(4);" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZhenYuan_Info4">
+              <Property Name="UnifiedSize" Value="{{1.000000,-4.000000},{0.000000,53.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,2.000000},{0.000000,51}}"/>
+              <Property Name="HorzFormatting" Value="WordWrapLeftAligned"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="ZhenYuan_Tips4">
+              <Property Name="UnifiedSize" Value="{{0.000000,21.000000},{0.000000,21.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,93.000000},{0.000000,13.000000}}"/>
+              <Event Name="MouseEnter" Function="ZhenYuan_UpgradeToolTips(4);" />
+              <Window Type="TLBB_ButtonNULL" Name="ZhenYuan_Button4">
+                <Property Name="UnifiedSize" Value="{{0.000000,21.000000},{0.000000,21.000000}}"/>
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}}"/>
+                <Property Name="PushedImage" Value="set:ZhenYuanUI1 image:ZhenYuan_LevetUp_Pushed"/>
+                <Property Name="NormalImage" Value="set:ZhenYuanUI1 image:ZhenYuan_LevetUp_Normal"/>
+                <Property Name="HoverImage" Value="set:ZhenYuanUI1 image:ZhenYuan_LevetUp_Hover"/>
+                <Property Name="DisabledImage" Value="set:ZhenYuanUI1 image:ZhenYuan_LevetUp_Disabled"/>
+                <Event Name="Clicked" Function="ZhenYuan_UpgradeClicked(4);" />
+                <Event Name="MouseEnter" Function="ZhenYuan_UpgradeBtnToolTips(4);" />
+              </Window>
+            </Window>
+          </Window>
+          <Window Type="DefaultWindow" Name="ZhenYuan_Bk5">
+            <Property Name="UnifiedSize" Value="{{0.000000,115.000000},{0.000000,105.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,270.000000},{0.000000,151.000000}}"/>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Equip5">
+              <Property Name="UnifiedSize" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,1.000000},{0.000000,8.000000}}"/>
+              <Property Name="Tooltip" Value="#{ZYXT_120528_167}"/>
+            </Window>
+            <Window Type="TLBB_StaticImageNULL" Name="ZhenYuan_Feng5">
+              <Property Name="UnifiedSize" Value="{{0.000000,46.000000},{0.000000,46.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,46.000000},{0.000000,0.000000}}"/>
+              <Property Name="Tooltip" Value="#{ZYXT_120528_26}"/>
+              <Property Name="Image" Value="set:ZhenYuanUI1 image:ZhenYuanActivation_Feng"/>
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Slots5">
+              <Property Name="UnifiedSize" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,53.000000},{0.000000,8.000000}}"/>
+              <Event Name="MouseEnter" Function="ZhenYuan_ShowPneumaToolTips(5);" />
+              <Event Name="RBClicked" Function="ZhenYuan_PickUpToBag(5);" />
+              <Event Name="Clicked" Function="ZhenYuan_SlotClicked(5);" />
+              <Property Name="DraggingEnabled" Value="True"/>
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZhenYuan_Info5">
+              <Property Name="UnifiedSize" Value="{{1.000000,-4.000000},{0.000000,53.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,2.000000},{0.000000,51}}"/>
+              <Property Name="HorzFormatting" Value="WordWrapLeftAligned"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="ZhenYuan_Tips5">
+              <Property Name="UnifiedSize" Value="{{0.000000,21.000000},{0.000000,21.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,93.000000},{0.000000,15.000000}}"/>
+              <Event Name="MouseEnter" Function="ZhenYuan_UpgradeToolTips(5);" />
+              <Window Type="TLBB_ButtonNULL" Name="ZhenYuan_Button5">
+                <Property Name="UnifiedSize" Value="{{0.000000,21.000000},{0.000000,21.000000}}"/>
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}}"/>
+                <Property Name="PushedImage" Value="set:ZhenYuanUI1 image:ZhenYuan_LevetUp_Pushed"/>
+                <Property Name="NormalImage" Value="set:ZhenYuanUI1 image:ZhenYuan_LevetUp_Normal"/>
+                <Property Name="HoverImage" Value="set:ZhenYuanUI1 image:ZhenYuan_LevetUp_Hover"/>
+                <Property Name="DisabledImage" Value="set:ZhenYuanUI1 image:ZhenYuan_LevetUp_Disabled"/>
+                <Event Name="Clicked" Function="ZhenYuan_UpgradeClicked(5);" />
+                <Event Name="MouseEnter" Function="ZhenYuan_UpgradeBtnToolTips(5);" />
+              </Window>
+            </Window>
+          </Window>
+          <Window Type="DefaultWindow" Name="ZhenYuan_Bk6">
+            <Property Name="UnifiedSize" Value="{{0.000000,115.000000},{0.000000,105.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,231.000000},{0.000000,261.000000}}"/>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Equip6">
+              <Property Name="UnifiedSize" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,1.000000},{0.000000,8.000000}}"/>
+              <Property Name="Tooltip" Value="#{ZYXT_120528_167}"/>
+            </Window>
+            <Window Type="TLBB_StaticImageNULL" Name="ZhenYuan_Feng6">
+              <Property Name="UnifiedSize" Value="{{0.000000,46.000000},{0.000000,46.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,46.000000},{0.000000,0.000000}}"/>
+              <Property Name="Tooltip" Value="#{ZYXT_120528_26}"/>
+              <Property Name="Image" Value="set:ZhenYuanUI1 image:ZhenYuanActivation_Feng"/>
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Slots6">
+              <Property Name="UnifiedSize" Value="{{0.000000,34.000000},{0.000000,34.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,53.000000},{0.000000,8.000000}}"/>
+              <Event Name="MouseEnter" Function="ZhenYuan_ShowPneumaToolTips(6);" />
+              <Property Name="DraggingEnabled" Value="True"/>
+              <Event Name="RBClicked" Function="ZhenYuan_PickUpToBag(6);" />
+              <Event Name="Clicked" Function="ZhenYuan_SlotClicked(6);" />
+            </Window>
+            <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZhenYuan_Info6">
+              <Property Name="UnifiedSize" Value="{{1.000000,-4.000000},{0.000000,53.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,2.000000},{0.000000,51}}"/>
+              <Property Name="HorzFormatting" Value="WordWrapLeftAligned"/>
+            </Window>
+            <Window Type="TLBB_SimpleText" Name="ZhenYuan_Tips6">
+              <Property Name="UnifiedSize" Value="{{0.000000,21.000000},{0.000000,21.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,93.000000},{0.000000,14.000000}}"/>
+              <Event Name="MouseEnter" Function="ZhenYuan_UpgradeToolTips(6);" />
+              <Window Type="TLBB_ButtonNULL" Name="ZhenYuan_Button6">
+                <Property Name="UnifiedSize" Value="{{0.000000,21.000000},{0.000000,21.000000}}"/>
+                <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}}"/>
+                <Property Name="PushedImage" Value="set:ZhenYuanUI1 image:ZhenYuan_LevetUp_Pushed"/>
+                <Property Name="NormalImage" Value="set:ZhenYuanUI1 image:ZhenYuan_LevetUp_Normal"/>
+                <Property Name="HoverImage" Value="set:ZhenYuanUI1 image:ZhenYuan_LevetUp_Hover"/>
+                <Property Name="DisabledImage" Value="set:ZhenYuanUI1 image:ZhenYuan_LevetUp_Disabled"/>
+                <Event Name="Clicked" Function="ZhenYuan_UpgradeClicked(6);" />
+                <Event Name="MouseEnter" Function="ZhenYuan_UpgradeBtnToolTips(6);" />
+              </Window>
+            </Window>
+          </Window>
+        </Window>
+        <Window Type="TLBB_Frame_Lace2" Name="ZhenYuan_List2">
+          <Property Name="UnifiedSize" Value="{{0.000000,180.000000},{1.000000,-23.000000}}"/>
+          <Property Name="UnifiedPosition" Value="{{0.000000,388.000000},{0.000000,23.000000}}"/>
+          <Window Type="DefaultWindow" Name="ZhenYuan_BK">
+            <Property Name="UnifiedSize" Value="{{0.000000,150.000000},{0.000000,226.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,15.000000},{0.000000,17.000000}}"/>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Item1">
+              <Property Name="UnifiedSize" Value="{{0.000000,36.000000},{0.000000,36.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}}"/>
+              <Property Name="Empty" Value="True" />
+              <Property Name="DraggingEnabled" Value="True"/>
+              <Event Name="Clicked" Function="ZhenYuan_ItemClicked(1);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Item2">
+              <Property Name="UnifiedSize" Value="{{0.000000,36.000000},{0.000000,36.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,38.000000},{0.000000,0.000000}}"/>
+              <Property Name="Empty" Value="True" />
+              <Property Name="DraggingEnabled" Value="True"/>
+              <Event Name="Clicked" Function="ZhenYuan_ItemClicked(2);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Item3">
+              <Property Name="UnifiedSize" Value="{{0.000000,36.000000},{0.000000,36.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,76.000000},{0.000000,0.000000}}"/>
+              <Property Name="Empty" Value="True" />
+              <Property Name="DraggingEnabled" Value="True"/>
+              <Event Name="Clicked" Function="ZhenYuan_ItemClicked(3);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Item4">
+              <Property Name="UnifiedSize" Value="{{0.000000,36.000000},{0.000000,36.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,114.000000},{0.000000,0.000000}}"/>
+              <Property Name="Empty" Value="True" />
+              <Property Name="DraggingEnabled" Value="True"/>
+              <Event Name="Clicked" Function="ZhenYuan_ItemClicked(4);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Item5">
+              <Property Name="UnifiedSize" Value="{{0.000000,36.000000},{0.000000,36.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,38.000000}}"/>
+              <Property Name="Empty" Value="True" />
+              <Property Name="DraggingEnabled" Value="True"/>
+              <Event Name="Clicked" Function="ZhenYuan_ItemClicked(5);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Item6">
+              <Property Name="UnifiedSize" Value="{{0.000000,36.000000},{0.000000,36.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,38.000000},{0.000000,38.000000}}"/>
+              <Property Name="Empty" Value="True" />
+              <Property Name="DraggingEnabled" Value="True"/>
+              <Event Name="Clicked" Function="ZhenYuan_ItemClicked(6);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Item7">
+              <Property Name="UnifiedSize" Value="{{0.000000,36.000000},{0.000000,36.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,76.000000},{0.000000,38.000000}}"/>
+              <Property Name="Empty" Value="True" />
+              <Property Name="DraggingEnabled" Value="True"/>
+              <Event Name="Clicked" Function="ZhenYuan_ItemClicked(7);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Item8">
+              <Property Name="UnifiedSize" Value="{{0.000000,36.000000},{0.000000,36.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,114.000000},{0.000000,38.000000}}"/>
+              <Property Name="Empty" Value="True" />
+              <Property Name="DraggingEnabled" Value="True"/>
+              <Event Name="Clicked" Function="ZhenYuan_ItemClicked(8);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Item9">
+              <Property Name="UnifiedSize" Value="{{0.000000,36.000000},{0.000000,36.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,76.000000}}"/>
+              <Property Name="Empty" Value="True" />
+              <Property Name="DraggingEnabled" Value="True"/>
+              <Event Name="Clicked" Function="ZhenYuan_ItemClicked(9);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Item10">
+              <Property Name="UnifiedSize" Value="{{0.000000,36.000000},{0.000000,36.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,38.000000},{0.000000,76.000000}}"/>
+              <Property Name="Empty" Value="True" />
+              <Property Name="DraggingEnabled" Value="True"/>
+              <Event Name="Clicked" Function="ZhenYuan_ItemClicked(10);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Item11">
+              <Property Name="UnifiedSize" Value="{{0.000000,36.000000},{0.000000,36.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,76.000000},{0.000000,76.000000}}"/>
+              <Property Name="Empty" Value="True" />
+              <Property Name="DraggingEnabled" Value="True"/>
+              <Event Name="Clicked" Function="ZhenYuan_ItemClicked(11);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Item12">
+              <Property Name="UnifiedSize" Value="{{0.000000,36.000000},{0.000000,36.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,114.000000},{0.000000,76.000000}}"/>
+              <Property Name="Empty" Value="True" />
+              <Property Name="DraggingEnabled" Value="True"/>
+              <Event Name="Clicked" Function="ZhenYuan_ItemClicked(12);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Item13">
+              <Property Name="UnifiedSize" Value="{{0.000000,36.000000},{0.000000,36.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,114.000000}}"/>
+              <Property Name="Empty" Value="True" />
+              <Property Name="DraggingEnabled" Value="True"/>
+              <Event Name="Clicked" Function="ZhenYuan_ItemClicked(13);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Item14">
+              <Property Name="UnifiedSize" Value="{{0.000000,36.000000},{0.000000,36.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,38.000000},{0.000000,114.000000}}"/>
+              <Property Name="Empty" Value="True" />
+              <Property Name="DraggingEnabled" Value="True"/>
+              <Event Name="Clicked" Function="ZhenYuan_ItemClicked(14);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Item15">
+              <Property Name="UnifiedSize" Value="{{0.000000,36.000000},{0.000000,36.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,76.000000},{0.000000,114.000000}}"/>
+              <Property Name="Empty" Value="True" />
+              <Property Name="DraggingEnabled" Value="True"/>
+              <Event Name="Clicked" Function="ZhenYuan_ItemClicked(15);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Item16">
+              <Property Name="UnifiedSize" Value="{{0.000000,36.000000},{0.000000,36.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,114.000000},{0.000000,114.000000}}"/>
+              <Property Name="Empty" Value="True" />
+              <Property Name="DraggingEnabled" Value="True"/>
+              <Event Name="Clicked" Function="ZhenYuan_ItemClicked(16);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Item17">
+              <Property Name="UnifiedSize" Value="{{0.000000,36.000000},{0.000000,36.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,152.000000}}"/>
+              <Property Name="Empty" Value="True" />
+              <Property Name="DraggingEnabled" Value="True"/>
+              <Event Name="Clicked" Function="ZhenYuan_ItemClicked(17);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Item18">
+              <Property Name="UnifiedSize" Value="{{0.000000,36.000000},{0.000000,36.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,38.000000},{0.000000,152.000000}}"/>
+              <Property Name="Empty" Value="True" />
+              <Property Name="DraggingEnabled" Value="True"/>
+              <Event Name="Clicked" Function="ZhenYuan_ItemClicked(18);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Item19">
+              <Property Name="UnifiedSize" Value="{{0.000000,36.000000},{0.000000,36.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,76.000000},{0.000000,152.000000}}"/>
+              <Property Name="Empty" Value="True" />
+              <Property Name="DraggingEnabled" Value="True"/>
+              <Event Name="Clicked" Function="ZhenYuan_ItemClicked(19);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Item20">
+              <Property Name="UnifiedSize" Value="{{0.000000,36.000000},{0.000000,36.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,114.000000},{0.000000,152.000000}}"/>
+              <Property Name="Empty" Value="True" />
+              <Property Name="DraggingEnabled" Value="True"/>
+              <Event Name="Clicked" Function="ZhenYuan_ItemClicked(20);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Item21">
+              <Property Name="UnifiedSize" Value="{{0.000000,36.000000},{0.000000,36.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,190.000000}}"/>
+              <Property Name="Empty" Value="True" />
+              <Property Name="DraggingEnabled" Value="True"/>
+              <Event Name="Clicked" Function="ZhenYuan_ItemClicked(21);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Item22">
+              <Property Name="UnifiedSize" Value="{{0.000000,36.000000},{0.000000,36.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,38.000000},{0.000000,190.000000}}"/>
+              <Property Name="Empty" Value="True" />
+              <Property Name="DraggingEnabled" Value="True"/>
+              <Event Name="Clicked" Function="ZhenYuan_ItemClicked(22);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Item23">
+              <Property Name="UnifiedSize" Value="{{0.000000,36.000000},{0.000000,36.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,76.000000},{0.000000,190.000000}}"/>
+              <Property Name="Empty" Value="True" />
+              <Property Name="DraggingEnabled" Value="True"/>
+              <Event Name="Clicked" Function="ZhenYuan_ItemClicked(23);" />
+            </Window>
+            <Window Type="TLBB_ActionButton" Name="ZhenYuan_Item24">
+              <Property Name="UnifiedSize" Value="{{0.000000,36.000000},{0.000000,36.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,114.000000},{0.000000,190.000000}}"/>
+              <Property Name="Empty" Value="True" />
+              <Property Name="DraggingEnabled" Value="True"/>
+              <Event Name="Clicked" Function="ZhenYuan_ItemClicked(24);" />
+            </Window>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZhenYuan_YuanJing">
+            <Property Name="UnifiedSize" Value="{{0.000000,150.000000},{0.000000,22.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,15.000000},{1.000000,-47.000000}}"/>
+            <Property Name="Text" Value="#{ZYXT_120528_24}"/>
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned"/>
+            <Window Type="TLBB_SimpleText" Name="ZhenYuan_YuanJing_Amount">
+              <Property Name="UnifiedSize" Value="{{1.000000,-5.000000},{1.000000,0.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}}"/>
+              <Property Name="AlwaysOnTop" Value="True" />
+              <Property Name="HorzFormatting" Value="RightAligned" />
+              <Property Name="Tooltip" Value="#{ZYXT_120528_169}" />
+              <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+          </Window>
+          <Window Type="TLBB_SimpleMulitiTextFrame" Name="ZhenYuan_ZhenYuanSuiPian">
+            <Property Name="UnifiedSize" Value="{{0.000000,150.000000},{0.000000,22.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,15.000000},{1.000000,-25.000000}}"/>
+            <Property Name="Text" Value="#{ZYXT_120528_25}"/>
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned"/>
+            <Window Type="TLBB_SimpleText" Name="ZhenYuan_ZhenYuanSuiPian_Amount">
+              <Property Name="UnifiedSize" Value="{{1.000000,-5.000000},{1.000000,0.000000}}"/>
+              <Property Name="UnifiedPosition" Value="{{0.000000,0.000000},{0.000000,0.000000}}"/>
+              <Property Name="AlwaysOnTop" Value="True" />
+              <Property Name="Tooltip" Value="#{ZYXT_120528_170}" />
+              <Property Name="HorzFormatting" Value="RightAligned"/>
+              <Property Name="TextColor" Value="FFFFF263" />
+            </Window>
+          </Window>
+          <Window Type="TLBB_SimpleText" Name="ZhenYuan_LianHua_Text">
+            <Property Name="UnifiedSize" Value="{{0.000000,60.000000},{0.000000,20.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,20.000000},{0.000000,290.000000}}"/>
+            <Property Name="Text" Value="#{ZYXT_120528_23}"/>
+            <Property Name="TextColor" Value="FFFFF263" />
+          </Window>
+          <Window Type="TLBB_ActionButtonNULL2" Name="ZhenYuan_LianHua">
+            <Property Name="UnifiedSize" Value="{{0.000000,54.000000},{0.000000,54.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{1.000000,-70.000000},{0.000000,270.000000}}"/>
+			<Event Name="MouseEnter" Function="ZhenYuan_ShowPneumaToolTips(-1);" />
+			<Property Name="DragAcceptName" Value="G35" />
+            <Property Name="DraggingEnabled" Value="True"/>
+            <Property Name="BackImage" Value="set:ZhenYuanUI1 image:ZhenYuan_LianHua"/>
+            <Property Name="NormalImage" Value="set:ZhenYuanUI1 image:ZhenYuan_LianHua"/>
+            <Property Name="HoverImage" Value="set:ZhenYuanUI1 image:ZhenYuan_LianHua2"/>
+            <Property Name="Tooltip" Value="#{ZYXT_120528_41}" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZhenYuan_Lock_Button">
+            <Property Name="UnifiedSize" Value="{{0.000000,50.000000},{0.000000,20.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,15.000000},{0.000000,246.000000}}"/>
+            <Property Name="Text" Value="#{INTERFACE_XML_675}" />
+            <Event Name="MouseLButtonDown" Function="ZhenYuan_LockClicked();" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZhenYuan_Relieve_Button">
+            <Property Name="UnifiedSize" Value="{{0.000000,50.000000},{0.000000,20.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,65.000000},{0.000000,246.000000}}"/>
+            <Property Name="Text" Value="#{INTERFACE_XML_377}" />
+            <Event Name="MouseLButtonDown" Function="ZhenYuan_UnLockClicked();" />
+          </Window>
+          <Window Type="TLBB_ButtonCommon" Name="ZhenYuan_Arrange_Button">
+            <Property Name="UnifiedSize" Value="{{0.000000,50.000000},{0.000000,20.000000}}"/>
+            <Property Name="UnifiedPosition" Value="{{0.000000,115.000000},{0.000000,246.000000}}"/>
+            <Property Name="Text" Value="#{INTERFACE_XML_861}" />
+            <Event Name="MouseLButtonDown" Function="ZhenYuan_Tidy();" />
+          </Window>
+        </Window>
+      </Window>
+    </Window>
+    <Window Type="DefaultWindow" Name="ZhenYuan_Checkbox_Frame">
+      <Property Name="UnifiedPosition" Value="{{0.0,0.000000},{1.000000,-18.000000}" />
+      <Property Name="UnifiedSize" Value="{{1.000000,0.000000},{0.000000,18.000000}" />
+      <Window Type="TLBB_ButtonPageDown" Name="ZhenYuan_SelfEquip">
+        <Property Name="AbsolutePosition" Value="x:0.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Text" Value="#{INTERFACE_XML_877}" />
+        <Property Name="HorzLabelFormatting" Value="WordWrapCentreAligned" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Event Name="MouseButtonUp" Function="ZhenYuan_SelfEquip_Page_Switch();" />
+      </Window>
+      <Window Type="TLBB_ButtonPageDown" Name="ZhenYuan_SelfData">
+        <Property Name="AbsolutePosition" Value="x:36.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Text" Value="#{INTERFACE_XML_882}" />
+        <Property Name="HorzLabelFormatting" Value="WordWrapCentreAligned" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Event Name="MouseButtonUp" Function="ZhenYuan_SelfData_Switch();" />
+      </Window>
+      <Window Type="TLBB_ButtonPageDown" Name="ZhenYuan_Pet">
+        <Property Name="AbsolutePosition" Value="x:72 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Text" Value="#{INTERFACE_XML_854}" />
+        <Property Name="HorzLabelFormatting" Value="WordWrapCentreAligned" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Event Name="MouseButtonUp" Function="ZhenYuan_Pet_Switch();" />
+      </Window>
+      <Window Type="TLBB_ButtonPageDown" Name="ZhenYuan_Infant">
+        <Property Name="AbsolutePosition" Value="x:108 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="HorzLabelFormatting" Value="WordWrapCentreAligned" />
+        <Property Name="Text" Value="#{ZNJCS_130825_7}" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Event Name="MouseButtonUp" Function="ZhenYuan_Infant_Switch();" />
+      </Window>
+      <Window Type="TLBB_SimpleText" Name="ZhenYuan_Infant_tips">
+        <Property Name="AbsolutePosition" Value="x:108 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Tooltip" Value="#{RWYQ_150707_01}"/>
+      </Window>
+      <Window Type="TLBB_ButtonPageDown" Name="ZhenYuan_Wuhun">
+        <Property Name="AbsolutePosition" Value="x:144 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Text" Value="#{WH_xml_XX(95)}" />
+        <Property Name="HorzLabelFormatting" Value="WordWrapCentreAligned" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Event Name="MouseButtonUp" Function="ZhenYuan_Wuhun_Switch();" />
+      </Window>
+      <Window Type="TLBB_SimpleText" Name="ZhenYuan_Wuhun_tips">
+        <Property Name="AbsolutePosition" Value="x:144 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Tooltip" Value="#{RWYQ_150707_02}"/>
+      </Window>
+      <Window Type="TLBB_ButtonPageDown" Name="ZhenYuan_Xiulian">
+        <Property Name="AbsolutePosition" Value="x:180.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="HorzLabelFormatting" Value="WordWrapCentreAligned" />
+        <Property Name="Text" Value="#{XL_XML_35}" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Event Name="MouseButtonUp" Function="ZhenYuan_Xiulian_Switch();" />
+      </Window>
+      <Window Type="TLBB_SimpleText" Name="ZhenYuan_Xiulian_tips">
+        <Property Name="AbsolutePosition" Value="x:180.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Tooltip" Value="#{RWYQ_150707_03}"/>
+      </Window>
+      <Window Type="TLBB_ButtonPageDown" Name="ZhenYuan_Miji">
+        <Property Name="AbsolutePosition" Value="x:216.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Text" Value="#{WLMJ_130121_54}" />
+        <Property Name="HorzLabelFormatting" Value="WordWrapCentreAligned" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Event Name="MouseButtonUp" Function="ZhenYuan_Miji_Page_Switch();" />
+      </Window>
+      <Window Type="TLBB_SimpleText" Name="ZhenYuan_Miji_tips">
+        <Property Name="AbsolutePosition" Value="x:216.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Tooltip" Value="#{RWYQ_150707_04}"/>
+      </Window>
+      <Window Type="TLBB_ButtonPageDown" Name="ZhenYuan_ZhenYuan">
+        <Property Name="AbsolutePosition" Value="x:252.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Text" Value="#{ZYXT_120528_154}" />
+        <Property Name="HorzLabelFormatting" Value="WordWrapCentreAligned" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Property Name="CheckMode" Value="1" />
+      </Window>
+      <Window Type="TLBB_SimpleText" Name="ZhenYuan_ZhenYuan_tips">
+        <Property Name="AbsolutePosition" Value="x:252.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Tooltip" Value="#{RWYQ_150707_05}"/>
+      </Window>
+      <Window Type="TLBB_ButtonPageDown" Name="ZhenYuan_JingMai">
+        <Property Name="AbsolutePosition" Value="x:288.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="HorzLabelFormatting" Value="WordWrapCentreAligned" />
+        <Property Name="Text" Value="#{MPJJ_XT_XML_01}" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Property Name="CheckMode" Value="1" />
+        <Event Name="MouseButtonUp" Function="ZhenYuan_JingMai_Page_Switch();" />
+      </Window>
+      <Window Type="TLBB_SimpleText" Name="ZhenYuan_JingMai_tips">
+        <Property Name="AbsolutePosition" Value="x:288.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Tooltip" Value="#{RWYQ_150707_06}"/>
+      </Window>
+      <Window Type="TLBB_ButtonPageDown" Name="ZhenYuan_ShenDing">
+        <Property Name="AbsolutePosition" Value="x:324.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="HorzLabelFormatting" Value="WordWrapCentreAligned" />
+        <Property Name="Text" Value="#{XLDL_140606_04}" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Event Name="MouseButtonUp" Function="ZhenYuan_ShenDing_Page_Switch();" />
+      </Window>
+      <Window Type="TLBB_SimpleText" Name="ZhenYuan_ShenDing_tips">
+        <Property Name="AbsolutePosition" Value="x:324.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Tooltip" Value="#{RWYQ_150707_07}"/>
+      </Window>
+      <Window Type="TLBB_ButtonPageDown" Name="ZhenYuan_JueWei">
+        <Property Name="UnifiedSize" Value="{{0.000000,35.000000},{0.000000,18.000000}}"/>
+        <Property Name="UnifiedPosition" Value="{{0.000000,360.000000},{0.000000,0.000000}}"/>
+        <Property Name="Text" Value="#{JXJW_140822_22}"/>
+        <Property Name="HorzLabelFormatting" Value="WordWrapCentreAligned" />
+        <Property Name="MouseRButtonHollow" Value="True"/>
+        <Event Name="MouseButtonUp" Function="ZhenYuan_JueWei_Page_Switch();"/>
+      </Window>
+      <Window Type="TLBB_SimpleText" Name="ZhenYuan_JueWei_tips">
+        <Property Name="UnifiedSize" Value="{{0.000000,35.000000},{0.000000,18.000000}}"/>
+        <Property Name="UnifiedPosition" Value="{{0.000000,360.000000},{0.000000,0.000000}}"/>
+        <Property Name="Tooltip" Value="#{RWYQ_150707_08}"/>
+      </Window>
+      <Window Type="TLBB_ButtonPageDown" Name="ZhenYuan_BaoJian">
+        <Property Name="AbsolutePosition" Value="x:396.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="HorzLabelFormatting" Value="WordWrapCentreAligned" />
+        <Property Name="Text" Value="#{ZZZB_150811_113}" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Property Name="CheckMode" Value="1" />
+        <Event Name="MouseButtonUp" Function="ZhenYuan_OpenBaoJian();" />
+      </Window>
+      <Window Type="TLBB_SimpleText" Name="ZhenYuan_BaoJian_tips">
+        <Property Name="AbsolutePosition" Value="x:396.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Tooltip" Value="#{ZZZB_150811_114}"/>
+      </Window>
+      <Window Type="TLBB_ButtonPageDown" Name="ZhenYuan_WuYi">
+        <Property Name="AbsolutePosition" Value="x:432.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Text" Value="#{WYXT_20170807_86}" />
+        <Property Name="HorzLabelFormatting" Value="WordWrapCentreAligned" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Property Name="CheckMode" Value="1" />
+        <Event Name="MouseButtonUp" Function="ZhenYuan_OpenWuYi();" />
+      </Window>
+      <Window Type="TLBB_SimpleText" Name="ZhenYuan_WuYi_tips">
+        <Property Name="AbsolutePosition" Value="x:432.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Tooltip" Value="#{WYXT_20170907_302}"/>
+      </Window>
+      <Window Type="TLBB_ButtonPageDown" Name="ZhenYuan_ShenQi">
+        <Property Name="AbsolutePosition" Value="x:468.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="HorzLabelFormatting" Value="WordWrapCentreAligned" />
+        <Property Name="Text" Value="#{JXSQ_170829_216}" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Property Name="CheckMode" Value="1" />
+	<Event Name="MouseButtonUp" Function="ZhenYuan_OpenShenQi();" />
+      </Window>
+      <Window Type="TLBB_SimpleText" Name="ZhenYuan_ShenQi_tips">
+        <Property Name="AbsolutePosition" Value="x:468.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="Tooltip" Value="#{JXSQ_170829_217}"/>
+      </Window>
+      <Window Type="TLBB_ButtonPageDown" Name="ZhenYuan_Ride">
+        <Property Name="AbsolutePosition" Value="x:504.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="HorzLabelFormatting" Value="WordWrapCentreAligned" />
+        <Property Name="Text" Value="#{INTERFACE_XML_497}" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Event Name="MouseButtonUp" Function="ZhenYuan_Ride_Page_Switch();" />
+      </Window>
+      <Window Type="TLBB_ButtonPageDown" Name="ZhenYuan_OtherInfo">
+        <Property Name="AbsolutePosition" Value="x:540.0 y:0.0" />
+        <Property Name="AbsoluteSize" Value="w:35.000000 h:18.000000" />
+        <Property Name="HorzLabelFormatting" Value="WordWrapCentreAligned" />
+        <Property Name="Text" Value="#{INTERFACE_XML_496}" />
+        <Property Name="MouseRButtonHollow" Value="true" />
+        <Property Name="CheckMode" Value="1" />
+        <Event Name="MouseButtonUp" Function="ZhenYuan_OtherInfo_Page_Switch();" />
+      </Window>
+    </Window>
+  </Window>
+</GUILayout>

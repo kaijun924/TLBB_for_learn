@@ -19,7 +19,7 @@ function x002102_OnDefaultEvent( sceneId, selfId,targetId )
 		AddNumText( sceneId, x002102_g_ScriptId, "蓝晶石(1级)合成",6,7) --OK
 		AddNumText( sceneId, x002102_g_ScriptId, "黄晶石(1级)合成",6,8) --OK
 		AddNumText( sceneId, x002102_g_ScriptId, "其他宝石转换为绿晶石(1级)",6,9) --OK
-		AddNumText( sceneId, x002102_g_ScriptId, "测试",6,10) --OK
+		--AddNumText( sceneId, x002102_g_ScriptId, "测试",6,10) --OK
 	EndEvent(sceneId)
 	DispatchEventList(sceneId,selfId,targetId)
 end
@@ -106,7 +106,7 @@ function x002102_OnEventRequest(sceneId,selfId,targetId,eventId)
 		x002102_ShowNotice( sceneId, selfId,"您转换了个"..total_gem.."绿晶石(1级)。" )
 	elseif Choose_id == 10 then
 		ZengDian(sceneId,selfId, targetId, 1, 1000 )
-		addSomeBuff(sceneId, selfId, 12134)
+		addSomeBuff(sceneId, selfId, 80000)
 		local coldQ = GetHumanAttr(sceneId, selfId, 3)
 		SetMissionData(sceneId,selfId,SD_HUOKANGX,900)
 		x002102_ShowNotice( sceneId, selfId,"测试"..coldQ.."。" )
