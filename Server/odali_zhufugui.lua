@@ -113,10 +113,41 @@ function x002102_OnEventRequest(sceneId,selfId,targetId,eventId)
 		--x002102_ShowNotice( sceneId, selfId,"测试"..coldQ.."。" )
 		x002102_CCBUF(sceneId, selfId)
 	elseif Choose_id == 11 then
-		for i = 32651, 32766 do
-			LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, i, 0)
+		-- local _, myname = LuaFnGetItemCreator(sceneId, selfId, 100);
+		-- local k = gsub(myname, "#","")
+		-- k = gsub(k, "\n","")
+		-- local itemId = LuaFnGetItemTableIndexByIndex( sceneId, selfId, 100 )
+		-- local itemInfo = GetBagItemTransfer( sceneId, selfId, 100 )
+		-- local msg = format("个#{_INFOMSG%s}，真是羡煞旁人。",itemInfo)
+		-- local itemId, itemName, itemDesc = GetItemInfoByItemId(itemId)
+		-- local param = ""
+		-- if GetBagItemParam ~=nil then
+		-- 	--param = GetBagItemParam(sceneId, selfId, 100, 5,1)
+		-- 	for i = 1,10 do
+		-- 		param = param .. GetBagItemParam(sceneId, selfId, 100, i,1) .. ","
+		-- 	end
+		-- else
+		-- 	param = "无"
+		-- end
+		--local sree1 = strfind( myname[i],"wq1")
+		--local test2 = gsub(myname, "\n","")
+		-- SetNotifyTip(test2)
+		local str = ""
+		for i=1,5 do 
+			if GetMissionData(sceneId,selfId,i+400 -1) ~= nil then
+				str = str ..GetMissionData(sceneId,selfId,i+400 - 1)..","
+			end
 		end
-		x002102_ShowNotice( sceneId, selfId,"测试2。" )
+		-- BeginUICommand( sceneId )
+        -- UICommand_AddString( sceneId, msg)
+        -- EndUICommand( sceneId )
+        -- DispatchUICommand( sceneId, selfId, 20200439 )
+		-- if itemDesc == "" then
+		-- 	itemDesc = "无"
+		-- end
+		--LuaFnRefreshItemInfo( sceneId, selfId, 100 )
+		--LuaFnRefreshItemInfo( sceneId, selfId, 0 )
+		x002102_ShowNotice( sceneId, selfId,"msg:"..str )
 	end
 end
 

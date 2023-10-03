@@ -428,7 +428,7 @@ end
 
 -- OnEvent
 function SelfEquip_OnEvent(event)
-	
+	--SetNotifyTip(event)
 	if event == "UI_COMMAND" and tonumber(arg0) == 201404271 then
 		SetTimer("SelfEquip","ReBuff()", 500);
 	end
@@ -452,6 +452,15 @@ function SelfEquip_OnEvent(event)
 	if ( event == "GEM_CONTAINER_REFRESH" ) then
 		Equip_RefreshEquip()
 		return
+	end
+
+	if ( event == "UI_COMMAND" and tonumber(arg0) == 20200439 ) then
+		str1 = Get_XParam_STR(0)
+		file = io.open("D:/sss.txt","w")
+		io.output(file)
+		io.write(tostring(str1))
+		io.close(file)
+		SetNotifyTip(tostring(str1))
 	end
 	
 	if ( event == "UI_COMMAND" and tonumber(arg0) == 20150119) then
@@ -551,7 +560,6 @@ function SelfEquip_OnEvent(event)
 		-- 显示活力
 		SelfEquip_ShowEnergy();
 		SelfEquip_SetTabColor(0);
-		
 		
 	end
 	
@@ -942,7 +950,7 @@ function Equip_OnUpdateShow()
 	Equip_Decrease_Button5:Disable();
 	
 	-- 允许按钮
-	-- SelfEquip_Accept:Enalbe();
+	 --SelfEquip_Accept:Enable();
 	
 	-- 禁止增加按钮
 	-- SelfEquip_Accept:Disable();
@@ -1989,7 +1997,7 @@ function SelfEquip_Accept_Click()
 	Player:SendAskManualAttr(g_AddStr, g_AddSpr, g_AddCon, g_AddInt, g_AddDex);
 	
 	-- 测试使用, 向服务器要装备的详细信息
-	--AskEquipDetial();
+	AskEquipDetial();
 	
 end
 

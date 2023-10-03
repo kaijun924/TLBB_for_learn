@@ -126,6 +126,7 @@ local g_supertooltip_space_num = {
     [14] = { spaceStr = "- "},
 }
 
+
 local g_nUnlockingTimeNeeded = 259200;
 local y_offset = 25
 local g_left , g_top , g_right , g_bottom
@@ -178,6 +179,7 @@ function SuperTooltip_OnLoad()
 end
 
 function SuperTooltip_OnEvent(event)
+	--SetNotifyTip(event)
 	if (event == "SHOW_SUPERTOOLTIP") then
 		
 		if ( arg0 == "1" and SuperTooltips:IsPresent()) then
@@ -191,6 +193,8 @@ function SuperTooltip_OnEvent(event)
 				g_mCmpWndCount = tonumber(arg6)
 				if isAsk == 0 then
 				end
+				--用来更新真元
+				PushEvent("UI_COMMAND",20200440)
 				this:Show();
 			end;
 			return;
@@ -228,6 +232,7 @@ function WQstr()
 end
 
 function SuperTooltip_Update()
+	--SetNotifyTip("被调用了")
 	-- 先清空以前显示的文字
 	SuperTooltip_ClearText();
 	typeDesc = SuperTooltips:GetTypeDesc();
@@ -330,6 +335,10 @@ function SuperTooltip_Update()
 	--属性
 	if (szPropertys ~= nil) then
 		toDisplay = toDisplay .. ";SuperTooltip_Property";
+		-- local test2 = string.gsub(SuperTooltips:GetPropertys(),"\n","")
+		-- test2 = string.gsub(test2,"#W","")
+		-- test2 = string.gsub(test2,"#","")
+		-- SetNotifyTip(test2)
 	end
 	--作者
 	if nYuanbaotrade == nil then
@@ -394,6 +403,9 @@ function SuperTooltip_Update()
 	SuperTooltip_StaticPart_Animate:Hide()
 	SuperTooltip_StaticPart_ZhiZun:SetText("")
 	if  szPropertys ~= nil and szAuthor ~=nil and is_shengling ==1 then
+		-- local test = "值是11111\n 222"
+		-- local test2 = string.gsub(szPropertys,"\n","")
+		-- SetNotifyTip(test2)
 		local sl_cs={ ---升灵百分比参数
 		[0] ={1,2,4,6,8,10,13,16,19,[0]=0},
 		[1] ={28,31,34,37,40,43,46,50,54,[0]=25},
@@ -752,17 +764,38 @@ end
 	
 	
 	--真元
+	--#region
+	--1. 查找真元类型进行区分（ 属性攻击，基本属性 & 其他）
+	--2. 其他为点，前者为%
+	--#endregion
+	local newZY = {
+		["真元·沉冰"] = 1,["真元·炽火"] = 1,["真元·印玄"] = 1, ["真元·蛊毒"] = 1,
+		["真元·厚体"] = 1,["真元·勇力"] = 1,["真元·灵慧"] = 1, ["真元·气定"] = 1, ["真元·迅捷"] = 1
+	}
+
 	if ( szPropertys ~= nil) then
 		local zhenyuanpos1,zhenyuanxpos1 = string.find(ItemID, "真元·")
+
 		if  zhenyuanpos1 ~= nil and  zhenyuanxpos1 ~= nil then
 			local mytypeDesc = tonumber(string.sub(typeDesc,9,16))
 			local zhenyuanYS = math.mod(math.floor(tonumber(mytypeDesc)/100000),10)
 			local zhenyuanTP = math.mod(math.floor(tonumber(mytypeDesc)/1000),100)
 			local zhenyuanLEV = math.mod(tonumber(mytypeDesc),10)
-			if zhenyuanLEV < 9 then
-				szPropertys = "#W装备原有#G"..g_zhenyuantype[zhenyuanTP].."#W效果提升#G"..tonumber(g_zhenyuanpoint[zhenyuanTP]*zhenyuanLEV*zhenyuanYS).."#W点#r#cffcc99下一级：#r#W装备原有#G"..g_zhenyuantype[zhenyuanTP].."#W效果提升#G"..tonumber(g_zhenyuanpoint[zhenyuanTP]*(zhenyuanLEV+1)*zhenyuanYS).."#W点"
+			local zhenyuanTable = {
+				{2,4,6,8,10,12,14,16,18},{5,9,13,17,21,25,29,33,37},{9,16,23,30,37,44,51,58,65},{20,38,56,74,92,110,128,146,164},{24,46,67,89,111,132,154,176,197}
+			}
+			if newZY[ItemID] ~= nil then
+				if zhenyuanLEV < 9 then
+					szPropertys = "#W装备原有#G"..g_zhenyuantype[zhenyuanTP].."#W效果提升#G"..tonumber(zhenyuanTable[zhenyuanYS][zhenyuanLEV]).."#G%#r#cffcc99下一级：#r#W装备原有#G"..g_zhenyuantype[zhenyuanTP].."#W效果提升#G"..tonumber(zhenyuanTable[zhenyuanYS][zhenyuanLEV + 1]).."#G%"
+				else
+					szPropertys = "#W装备原有#G"..g_zhenyuantype[zhenyuanTP].."#W效果提升#G"..tonumber(zhenyuanTable[zhenyuanYS][zhenyuanLEV]).."#G%#r#cffcc99下一级：#r#W当前真元已达最高等级。"
+				end
 			else
-				szPropertys = "#W装备原有#G"..g_zhenyuantype[zhenyuanTP].."#W效果提升#G"..tonumber(g_zhenyuanpoint[zhenyuanTP]*zhenyuanLEV*zhenyuanYS).."#W点#r#cffcc99下一级：#r#W当前真元已达最高等级。"
+				if zhenyuanLEV < 9 then
+					szPropertys = "#W装备原有#G"..g_zhenyuantype[zhenyuanTP].."#W效果直接提升#G"..tonumber(g_zhenyuanpoint[zhenyuanTP]*zhenyuanLEV*zhenyuanYS).."#W点#r#cffcc99下一级：#r#W装备原有#G"..g_zhenyuantype[zhenyuanTP].."#W效果提升#G"..tonumber(g_zhenyuanpoint[zhenyuanTP]*(zhenyuanLEV+1)*zhenyuanYS).."#W点"
+				else
+					szPropertys = "#W装备原有#G"..g_zhenyuantype[zhenyuanTP].."#W效果直接提升#G"..tonumber(g_zhenyuanpoint[zhenyuanTP]*zhenyuanLEV*zhenyuanYS).."#W点#r#cffcc99下一级：#r#W当前真元已达最高等级。"
+				end
 			end
 			SuperTooltip_ShortDesc_Text:SetText("#cffcc99真元")
 		end
