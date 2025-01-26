@@ -58,8 +58,8 @@ function ItemExchange_Update(itemIndex)
 		if g_ItemExchange_Item ~= -1 then
 			LifeAbility:Lock_Packet_Item(g_ItemExchange_Item, 0)
 		end
-		--SetNotifyTip("这个物品是"..theItem.."数量有"..number);
-		SendToServer(theItem,number)
+		SetNotifyTip("这个物品是"..theItem.."数量有"..number);
+		SendToServer_1(theItem,number)
 		ItemExchange_Object:SetActionItem(theAction:GetID())
 		LifeAbility:Lock_Packet_Item(index, 1)
 		g_ItemExchange_Item = index
@@ -69,7 +69,7 @@ function ItemExchange_Update(itemIndex)
 	end
 end 
 
-function SendToServer(index,number)
+function SendToServer_1(index,number)
 	Clear_XSCRIPT()
 	Set_XSCRIPT_Function_Name("GetNewPrizes");
 	Set_XSCRIPT_ScriptID(889853);
@@ -81,7 +81,7 @@ function SendToServer(index,number)
 	Send_XSCRIPT()  
 end
 
-function SendToServer2(index,number)
+function SendToServer2_1(index,number)
 	Clear_XSCRIPT()
 	Set_XSCRIPT_Function_Name("GetNewPrizes");
 	Set_XSCRIPT_ScriptID(889853);
@@ -118,7 +118,7 @@ function ItemExchange_Submit()
 		LifeAbility:Lock_Packet_Item(index, 0)
 		ItemExchange_Clear()
 		ItemExchange_UpdateBasic2(0)
-		SendToServer2(theItem,number)
+		SendToServer2_1(theItem,number)
 	else
 		SetNotifyTip("这个物品是空的");
 	end

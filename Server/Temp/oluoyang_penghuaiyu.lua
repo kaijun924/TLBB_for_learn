@@ -182,32 +182,36 @@ end
 		end
 -------------------------装备打孔-----------------------------------
 		if GetNumText() == 2 then
-			local equipMaxGemCount = GetBagGemCount( sceneId, selfId, 0 )
-			local equipId = LuaFnGetItemTableIndexByIndex( sceneId, selfId, 0 )
-			local equipLevel = GetBagItemLevel( sceneId, selfId, 0 )
-			x000110_NotifyTip( sceneId, selfId, " 当前装备等级是"..equipLevel.."级"  )
-			if equipMaxGemCount  >= 3 then
-				x000110_NotifyTip( sceneId, selfId, " 当前打孔数已满！"  )
-				return
-			end
-			local hasItem = LuaFnGetAvailableItemCount(sceneId, selfId, 20109011) 
-			if hasItem >= 1 then
-				LuaFnDelAvailableItem(sceneId,selfId,20109011,1)
-				local ret = AddBagItemSlot( sceneId, selfId, 0 )
-				if ret == 1 then
-					LuaFnSendSpecificImpactToUnit(sceneId,selfId,selfId,selfId,18,0)
-					x000110_NotifyTip( sceneId, selfId, "打孔成功！"  )
+			BeginUICommand( sceneId )
+			UICommand_AddInt( sceneId, targetId )
+			EndUICommand( sceneId )
+			DispatchUICommand( sceneId, selfId, 20200431 )
+			-- local equipMaxGemCount = GetBagGemCount( sceneId, selfId, 0 )
+			-- --local equipId = LuaFnGetItemTableIndexByIndex( sceneId, selfId, 0 )
+			-- --local equipLevel = GetBagItemLevel( sceneId, selfId, 0 )
+			-- --x000110_NotifyTip( sceneId, selfId, " 当前装备等级是"..equipLevel.."级"  )
+			-- if equipMaxGemCount  >= 3 then
+			-- 	x000110_NotifyTip( sceneId, selfId, " 当前打孔数已满！"  )
+			-- 	return
+			-- end
+			-- local hasItem = LuaFnGetAvailableItemCount(sceneId, selfId, 20109011) 
+			-- if hasItem >= 1 then
+			-- 	LuaFnDelAvailableItem(sceneId,selfId,20109011,1)
+			-- 	local ret = AddBagItemSlot( sceneId, selfId, 0 )
+			-- 	if ret == 1 then
+			-- 		LuaFnSendSpecificImpactToUnit(sceneId,selfId,selfId,selfId,18,0)
+			-- 		x000110_NotifyTip( sceneId, selfId, "打孔成功！"  )
 
-				else
-					x000110_NotifyTip( sceneId, selfId, "打孔失败"  )
-				end
-				return			
-			end
+			-- 	else
+			-- 		x000110_NotifyTip( sceneId, selfId, "打孔失败"  )
+			-- 	end
+			-- 	return			
+			-- end
 
-			x000110_NotifyTip( sceneId, selfId, "请检查是否有若水之角"  )
-			return
+			-- x000110_NotifyTip( sceneId, selfId, "请检查是否有若水之角"  )
+			-- return
 		end
-		
+
 	if GetNumText() == 7000 then
              	BeginEvent( sceneId )
 		AddText( sceneId, "#{ZZQH_180929_5}" )				
@@ -320,7 +324,7 @@ end
 	return
         end	
 
-	
+
 	if GetNumText() == 888 then
 		BeginUICommand( sceneId )
 			UICommand_AddInt( sceneId, targetId )
@@ -328,7 +332,7 @@ end
 		DispatchUICommand( sceneId, selfId,2013060601 )
 		return
 	end	
-	
+
 	if GetNumText() == 100 then
 		BeginUICommand( sceneId )
 		UICommand_AddInt( sceneId, targetId )
@@ -342,7 +346,7 @@ end
 		DispatchUICommand( sceneId, selfId,  201210121)
 		return
 	end
-	
+
 	if GetNumText() == 889 then
 		BeginUICommand( sceneId )
 			UICommand_AddInt( sceneId, targetId )
@@ -393,15 +397,18 @@ end
 		return
 	end	
 	if GetNumText() == 10 then
-		BeginEvent(sceneId)						
-		AddNumText( sceneId, x000110_g_scriptId, "寒玉极限", 6, 30 )
-		AddNumText( sceneId, x000110_g_scriptId, "点金极限", 6, 11 )
-		AddNumText( sceneId, x000110_g_scriptId, "#W返回上一页", 8, 18 )
-		EndEvent(sceneId)
-		DispatchEventList(sceneId,selfId,targetId)
-		return
+		-- BeginEvent(sceneId)						
+		-- AddNumText( sceneId, x000110_g_scriptId, "寒玉极限", 6, 30 )
+		-- AddNumText( sceneId, x000110_g_scriptId, "点金极限", 6, 11 )
+		-- AddNumText( sceneId, x000110_g_scriptId, "#W返回上一页", 8, 18 )
+		-- EndEvent(sceneId)
+		-- DispatchEventList(sceneId,selfId,targetId)
+		BeginUICommand( sceneId )
+		UICommand_AddInt( sceneId, targetId )
+		EndUICommand( sceneId )
+		DispatchUICommand( sceneId, selfId, 20200433 )
 	end	
-		
+
 	if GetNumText() == 30 then
 		local equipMaxGemCount = GetBagGemCount( sceneId, selfId, 0 )
 		if equipMaxGemCount  < 3 then
@@ -421,7 +428,7 @@ end
 		x000110_NotifyTip( sceneId, selfId, "请检查是否有寒玉精粹")
 		return
 	end
-		
+
 	if GetNumText() == 31 then
 		BeginUICommand( sceneId )
 			UICommand_AddInt( sceneId, targetId )
@@ -429,7 +436,7 @@ end
 		DispatchUICommand( sceneId, selfId, 751107 )
 		return
 	end
-		
+
 	if GetNumText() == 32 then
 		BeginUICommand( sceneId )
 			UICommand_AddInt( sceneId, targetId )
@@ -437,7 +444,7 @@ end
 		DispatchUICommand( sceneId, selfId, 25702 )
 		return
 	end
-		
+
 	if GetNumText() == 11 then
 		local equipMaxGemCount = GetBagGemCount( sceneId, selfId, 0 )
 		if equipMaxGemCount  < 3 then
@@ -485,7 +492,7 @@ end
 		DispatchUICommand( sceneId, selfId, 27 )
 		return
 	end
-	
+
 	if GetNumText() == 5 then
 		BeginUICommand( sceneId )
 		UICommand_AddInt( sceneId, targetId )
@@ -500,7 +507,7 @@ end
 		DispatchUICommand( sceneId, selfId, 112236 )
 		return
 	end
-		
+
 	if GetNumText() == 7 then
 	  BeginUICommand( sceneId )
 		UICommand_AddInt( sceneId, targetId )
@@ -527,7 +534,7 @@ function x000110_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 		return
 	end
 	local bagindex = GetBagItemTransfer( sceneId, selfId, 30 )
-	
+
 	ret = LuaFnIsItemAvailable( sceneId, selfId, 30 )
 	if ret ~= 1 then
 	x000110_NotifyTip( sceneId, selfId, "加锁宝石不可兑换" )
@@ -543,7 +550,7 @@ function x000110_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 		return
 	 end
 	local idxa = 30503177  --4级的副
-	
+
 	--if  GetItemQuality( itemid ) == 6 then
 	--idxa = 30503179
 	--elseif GetItemQuality( itemid ) == 7 then
@@ -551,14 +558,14 @@ function x000110_OnMissionSubmit( sceneId, selfId, targetId, missionScriptId, se
 	--elseif GetItemQuality( itemid ) == 8 then
 	--idxa = 30503181
 	--end
-	
-	
+
+
 	if LuaFnGetAvailableItemCount(sceneId, selfId,idxa) < 1 then
-		
+
 	x000110_NotifyTip(sceneId, selfId, "你缺少"..GetItemName( sceneId,idxa))	
 		return
 	end	
-	
+
 	LuaFnDelAvailableItem(sceneId,selfId,idxa,1)
 		if LuaFnEraseItem(sceneId, selfId, 30) ~= 1 then
 			x000110_NotifyTip(sceneId, selfId, "扣除物品失败！")
@@ -642,7 +649,7 @@ function x000110_OneKey4Slot( sceneId, selfId,isTips )
 			end
 		end
 	end
-	
+
 	if isTips==1 then
 	x000110_NotifyTip( sceneId, selfId, "恭喜您，您包裹所有装备已经成功开了四孔" )
 	LuaFnSendSpecificImpactToUnit(sceneId, selfId, selfId, selfId, 18, 0)
@@ -740,7 +747,7 @@ end
 								GemEnchasing( sceneId, selfId, BagIndex, i )
 							end
 						end
-						
+
 					elseif EquipType == 1 or EquipType == 2 or EquipType == 3 or EquipType == 4 or EquipType == 5 or EquipType == 15  then
 						local nMenpai = GetMenPai(sceneId, selfId)
 						local Gem = mybiaoshilist_g_Gem[nMenpai + 1]

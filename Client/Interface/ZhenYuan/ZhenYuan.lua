@@ -251,6 +251,7 @@ function ZhenYuan_pickinitem(seeswe, keyid)
 		Set_XSCRIPT_Parameter(1, seeswe);
 		Set_XSCRIPT_ParamCount(2);
 		Send_XSCRIPT();
+		ZhenYuan_OnUpdateBag()
 	else
 		Clear_XSCRIPT();
 		Set_XSCRIPT_Function_Name("ApplyNiangLian");
@@ -383,6 +384,7 @@ function ZhenYuan_OnEvent(event)
 		ZhenYuan_OnUpdate()
 	elseif (event == "UI_COMMAND" and tonumber(arg0) == 2015074499) then
 		if ZhenYuan_upitemos ~= 0 and this:IsVisible() and tonumber(arg1) ~= nil then
+			SetNotifyTip("ZhenYuan_upitemos  "..ZhenYuan_upitemos.."  arg1  "..arg1)
 			if ZhenYuan_upitemos ~= -1 then
 				ZhenYuan_pickinitem(tonumber(arg1), 1)
 			else
@@ -464,6 +466,13 @@ function ZhenYuanUpdate_kaijun()
 	end
 	select = select + ZhenYuan_TabIndex * 6
 	equip_info = SuperTooltips:GetPropertys()
+	--local check = string.gsub(equip_info,"#","")
+	--local findposx2,findposy2,shuxinzhi2 = string.find(equip_info,"{equip_attr_attack_fire}%s%p(%d+)%s")
+	--check = string.gsub(check,"\n","")
+	-- file = io.open("D:/sss.txt","w")
+	-- io.output(file)
+	-- io.write(tostring(shuxinzhi2))
+	-- io.close(file)
 	local shuxingtable ={0,0,0,0,0,0,0,0,0,0} --前五个为属性，后四个为属性攻击
 	local wqstr = {
 		"{equip_attr_str}","{equip_attr_spr}","{equip_attr_con}","{equip_attr_int}","{equip_attr_dex}",
@@ -472,9 +481,12 @@ function ZhenYuanUpdate_kaijun()
 	}
 	local info = "";
 	for i, str in wqstr do
-		local findposx,findposy,shuxinzhi = string.find(equip_info,str.."%s%p(%d+)".."\n")  
-		if shuxinzhi~=nil then
-			shuxingtable[i] = tonumber(shuxinzhi)
+		-- local findposx,findposy,shuxinzhi = string.find(equip_info,str.."%s%p(%d+)".."\n")  
+		-- if shuxinzhi~=nil then
+		-- 	shuxingtable[i] = tonumber(shuxinzhi)
+		-- end
+		for s in string.gfind(equip_info,str.."%s%p(%d+)%s") do
+			shuxingtable[i] = shuxingtable[i] + tonumber(s)
 		end
 	end
 

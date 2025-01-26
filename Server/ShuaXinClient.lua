@@ -785,10 +785,29 @@ function x892002_AHa_ReMyBuff(sceneId, selfId)  --函数入口
 		end
 	end
 
+	--获取魂器
+	local attr = {}
+	for i=1,4 do
+		attr[i] = 0
+	end
+	local charToChar = {[1]="bg",[2]="hg",[3]="xg",[4]="dg"}
+	local pos = GetItemBagPos( sceneId, selfId, 39910023, 0 )
+	if pos ~=nil and pos > 0 then
+		local _,skilstring = LuaFnGetItemCreator(sceneId, selfId,pos)
+
+		if skilstring == nil or skilstring == "" then
+			skilstring = "&A0bg0hg0xg0dg0"
+		end
+		for i=1,4 do
+			_,_,attr[i] = strfind(skilstring,charToChar[i].."(%d+)")
+			attr[i] = tonumber(attr[i])
+		end
+	end
+
 	--这里重写属性添加的功能（属性攻击，基本人物5大属性）
 	--目前来说属性步长10，属性攻击15
 	for i=1,4 do
-		x892002_SetAbility(sceneId,selfId,x892002_g_numToChar[i],NewBuff[i] * 15 + DWBuff[i+16] + zytable[i])
+		x892002_SetAbility(sceneId,selfId,x892002_g_numToChar[i],NewBuff[i] * 15 + DWBuff[i+16] + zytable[i] + attr[i])
 	end
 	local dw = {DWBuff[23],DWBuff[22],DWBuff[21],0,DWBuff[24]}
 	for i=13,17 do
@@ -1959,7 +1978,7 @@ function x892002_GetZhenYuan(sceneId, selfId) --真元
 end
 
 function x892002_SetZhenYuan(sceneId, selfId,pr1,pr2,pr3,pr4,pr5,pos)
-	--x892002_ShowNotice(sceneId,selfId,"被调用了")
+	--x892002_ShowNotice(sceneId,selfId,"pr1 = "..pr1.." pr2 = "..pr2.." pr3 = "..pr3.." pr4 = "..pr4.." pr5 = "..pr5.." pos = "..pos)
 	--SetMissionData( sceneId, selfId, x892002_g_ZYtable[pos],0 )
 	local equip_info = {}
 
@@ -2042,7 +2061,7 @@ function x892002_SetZhenYuan(sceneId, selfId,pr1,pr2,pr3,pr4,pr5,pos)
 			x892002_SetAbility(sceneId,selfId,x892002_g_numToChar[typeOf],humanAttr)
 		end
 	end
-	x892002_ShowNotice(sceneId,selfId,"真元品质"..datalist[pos][1].." 类型是"..datalist[pos][2].." 等级为"..datalist[pos][3])
+	--x892002_ShowNotice(sceneId,selfId,"真元品质"..datalist[pos][1].." 类型是"..datalist[pos][2].." 等级为"..datalist[pos][3])
 
 	return
 end

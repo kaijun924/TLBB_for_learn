@@ -243,12 +243,12 @@ function x770003_OnKillObject( sceneId, selfId, objdataId ,objId)
 					-- end
 					if nNum == x770003_g_DemandTrueKill[1].num - 1 then
 						SetMissionByIndex(sceneId,humanObjId,misIndex,1,0)
+						addSomeBuff(sceneId, selfId, x770003_g_addofBuff[humanLevel + 1])
 						BeginEvent(sceneId)
 						strText = "Í»ÆÆÆ¿¾±£¡"
 						AddText(sceneId,strText);
 						EndEvent(sceneId)
 						DispatchMissionTips(sceneId,humanObjId)
-						addSomeBuff(sceneId, selfId, x770003_g_addofBuff[my_level])
 					else
 						SetMissionByIndex(sceneId,humanObjId,misIndex,1,nNum+1)
 						BeginEvent(sceneId)

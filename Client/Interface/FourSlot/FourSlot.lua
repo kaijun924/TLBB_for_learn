@@ -52,7 +52,7 @@ function FourSlot_OnEvent(event)
 		local money = Get_XParam_INT(0)
 		--SetNotifyTip(" money:"..money);
 		FourSlot_UpdateBasic2(money)
-	elseif (event == "UNIT_MONEY") then
+	elseif (event == "UNIT_MONEY" and this:IsVisible()) then
 		FourSlot_UpdateBasic()
 	end
 end

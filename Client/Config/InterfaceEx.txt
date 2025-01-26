@@ -389,3 +389,5 @@ ID	相关	界面	脚本	不懂	缩写之类的	不懂	不懂	备注
 584	TreasureBox_MBuy2	TreasureBox_MBuy2/TreasureBox_MBuy2.layout.xml	TreasureBox_MBuy2/TreasureBox_MBuy2.lua	1	9	19	20	九州行囊取出
 585	ItemExchange	ItemExchange/ItemExchange.layout.xml	ItemExchange/ItemExchange.lua	1	9	19	20	物品兑换元宝
 586	FourSlot	FourSlot/FourSlot.layout.xml	FourSlot/FourSlot.lua	1	9	19	20	物品兑换元宝
+587	JunShenJian	JunShenJian/JunShenJian.layout.xml	JunShenJian/JunShenJian.lua	1	9	19	20	噬魂军神系统
+588	ShouGongChaiLiao	ShouGongChaiLiao/ShouGongChaiLiao.layout.xml	ShouGongChaiLiao/ShouGongChaiLiao.lua	1	9	19	20	手工材料系统
